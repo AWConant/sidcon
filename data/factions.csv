@@ -1,0 +1,19 @@
+Species,Faction,Colony Support,Tie Breaker,Impact,Game
+Caylion,Caylion Plutocracy,3,1,0,Base
+Caylion,Caylion Collaborative,3,0,3,Bifurcation
+Eni Et,Eni Et Ascendancy,3,3,1,Base
+Eni Et,Eni Et Engineers,3,1.5,0,Bifurcation
+Faderan,Faderan Conclave,4,7,0,Base
+Faderan,Society of Falling Light,8,-1,2,Bifurcation
+Im'dril,Im'dril Nomads,0,8,0,Base
+Im'dril,Grand Fleet,0,5.5,0,Bifurcation
+Kjasjavikalimm,Kjasjavikalimm Directorate,6,6,0,Base
+Kjasjavikalimm,Kjasjavikalimm Independent Nations,5,7.5,0,Bifurcation
+Kt’Zr’Kt’Rtl,Kt’Zr’Kt’Rtl Adhocracy,∞,∞,0,Base
+Kt’Zr’Kt’Rtl,Kt’Zr’Kt’Rtl Technophiles,3,10,1,Bifurcation
+Unity,Unity,1,4,0,Base
+Unity,Deep Unity,3,π,0,Bifurcation
+Yengii,Yengii Society,3,5,0,Base
+Yengii,Yengii Jii,3,6.5,2,Bifurcation
+Zeth,Zeth Anocracy,3,2,2,Base
+Zeth,Charity Syndicate,0,4.5,1,Bifurcation

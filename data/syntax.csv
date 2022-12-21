@@ -1,0 +1,35 @@
+Symbol,Meaning
+➪,white arrow
+→,purple arrow
+➾,red arrow
++,"output before is normal, output after is donation"
+/,alternate inputs
+*,ship
+g,green
+w,white
+b,brown
+T,teal (blue)
+Y,yellow
+B,black
+U,ultratech
+$,point
+X,sharing bonus points
+s,"small, any color"
+L,"large, any color"
+a,small wild
+A,large wild
+F,Im'dril fleet support
+Z,Zeth Envoy
+digits,number of previous resource
+J,jungle world
+W,water world
+D,desert world
+I,ice world
+N,any world
+R,relic world
+",",multiple items on card
+§,Input Varies Due to Multiple Converters. Value listed is Max Input
+K,Kt cost of an Ultratech
+½,Eni Et Engineer half cost arrow
+o,Im'dril Grand Fleet small orbital
+O,Im'dril Grand Fleet large orbital

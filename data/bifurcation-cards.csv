@@ -1,0 +1,117 @@
+s,Faction,Front Name,Era,Cost,Front Factory,Upgrade1,Upgrade2,Upgrade3,Back Name,Back Factory,Input,Front Output,Front Efficiency,Back Output,Back Efficiency,Upgrades
+1,Caylion Collaborative,Diplomatic Enclave,2,Starting,➪Tw*,JBB→$,Cross Species Ethical Equality,,Interspecies Parliament,➪Twwg*,0,3.5,1000.000,5.5,1000.000,1.571
+2,Caylion Collaborative,Ocean Leasing,1,Starting,T➪Yg,JB→$,Clinical Immortality,,Alient Oceanic Settling,T➪YBg,1.5,2.5,1.667,4,2.667,1.600
+3,Caylion Collaborative,Antigravity Exports,2,Starting,gg➪YBb,JTT→$,Interspecies Medical Exchange,,Personal Gravity Manipulation,gg➪YBbbw,2,4,2.000,6,3.000,1.500
+4,Caylion Collaborative,Orbital Manufacturing,1,Starting,BB➪bbw**,JT→$,Quantum Computers,,Interplanetary Mining Partnership,BB➪Ybbw**,3,5,1.667,6.5,2.167,1.300
+5,Caylion Collaborative,Starting Race Card,,Reference,TBggwwwbb***,,1 Era 2 Research Team,,,,,,,,,
+6,Caylion,The Uprooted,2,Undesirable,T➪Bwg*,Hyperspace Mining,Achronal Analysis,,Galactic Explorers,T➪BBwwg*,1.5,4.5,3.000,7,4.667,1.556
+7,Eni Et Engineers,Ship Fabricator,,Starting,➪w**,Www→$,JU→$$,,Orbital Moot,➪Tw**,0,3,1000.000,4.5,1000.000,1.500
+8,Eni Et Engineers,Hydrothermal Smelting,,Starting,"T➪w½,T➪**",WU→$,ITTT→$$$,,Endless Refinement,"T➪w½,T➪**,T➪Ybw",3,6,2.000,9.5,3.167,1.583
+9,Eni Et Engineers,Education Mythology,,Starting,"ww➪b½,ww➪TB",WTTT→$,Dwwwwww→$$$,,Technological Apprenticeships,"ww➪b½,ww➪TB,ww➪UY",4,7,1.750,11.5,2.875,1.643
+10,Eni Et Engineers,Alien Efficiency Studies,,Starting,U➪bg½,Wwwww→$,IUU→$$$,,Atomic Recycling,"U➪bg½,U➪Twgbb",3,5,1.667,10.5,3.500,2.100
+11,Eni Et Engineers,Starting Race Card,,Reference,UTYw**½½,1 Colony,,,,,,,,,,
+12,Eni Et,Hadopelagic Exiles,,Undesirable,wwwg➪UT+w$,WTT→$,Achronal Analysis,,Abyssal Chorus,wwwg➪UT+Twb$,4,8.5,2.125,11,2.750,1.294
+13,Society of Falling Light,Rim Gate Network,,Starting,➪Yggw*,Ibbwg→,,,Imperial Ambition,➪UYggw*,0,5.5,1000.000,8.5,1000.000,1.545
+14,Society of Falling Light,Memory Harvest,,Starting,ggggg➪Uwwb*,IYYY→*,,,Reckless Innovation,ggggg➪$UBwwb*,5,7,1.400,11.5,2.300,1.643
+15,Society of Falling Light,Im'dril Auxiliaries,,Starting,bbbb➪YT***,ITTT→*,,,Client Species,bbbb➪$YTT***,4,6,1.500,10.5,2.625,1.750
+16,Society of Falling Light,Diplomats,,Starting,wwwww➪BBTY*,IBBBB→*,,,Advisors,wwwww➪$$BBTY*,5,7,1.400,13,2.600,1.857
+17,Society of Falling Light,Starting Race Card,,Reference,UYYBBTTgggwwwbb*,"3 Colonies: Jungle, Water, Desert",1 Research Team,,,,,,,,,
+18,Faderan,Zealots,2,Undesirable,bbb➪Uwwg,Iww→$,Organic Construction,,Masterminds,"bbb➪UTwwgg,9 Tie Breaker",3,6,2.000,8.5,2.833,1.417
+19,Grand Fleet,Nebular Harvest,2,Starting,F➪Bb*,Organic Construction,Antimatter Power,,Vacuum Distillers,F➪BYb*,0,3.5,1000.000,5,1000.000,1.429
+20,Grand Fleet,Aquaculture,1,Starting,bbF➪Tg,Ubiquitous Cultural Repository,Nanotechnology,,Celestial Gardens,bbF➪TYg,2,2.5,1.250,4,2.000,1.600
+21,Grand Fleet,Orbital Construction,1,Starting,BBF➪oo,Quantum Computers,Universal Translator,,Anchorages,BBF➪ooO,3,6,2.000,10,3.333,1.667
+22,Grand Fleet,Explorer Societies,2,Starting,UF➪gw**,Singularity Control,Interspecies Medical Exchange,,Exploration City Ships,UF➪gwb***,3,4,1.333,6,2.000,1.500
+23,Grand Fleet,Grand Fleet 3,,Starting,FFF,,,,,,,,,,,
+24,Grand Fleet,Grand Fleet 1,,Starting,F,,,,,,,,,,,
+25,Grand Fleet,Grand Fleet 1,,Starting,F,,,,,,,,,,,
+26,Grand Fleet,Starting Race Card,,Reference,UUYYTTTBB5g4w3b***,,1 Research Team,,,,,,,,,
+27,Im'dril,Disaffected Artists,1,Undesirable,BBF➪UYbw,Ubiquitous Cultural Repository,Genetic Engineering,,Smuggling Guild,BB➪UYTbw,3,6.5,2.167,8,2.667,1.231
+28,Kjasjavikalimm Independent Nations,Oskir Nation,1,Starting,➪**+wb,+Ubiquitous Cultural Repository,+Quantum Computers,+Genetic Engineering,Oskir Stellar Nation,➪**+Ywb,0,4,1000.000,5.5,1000.000,1.375
+29,Kjasjavikalimm Independent Nations,Republic of Katkaseni,1,Starting,bbb➪**+Twg,+Nanotechnology,+Universal Translator,+Atomic Transmutation,Katkaseni Trade Republic,bbb➪**+Twwgg,3,5.5,1.833,7.5,2.500,1.364
+30,Kjasjavikalimm Independent Nations,Lattik Domain,1,Starting,TT➪+wYBB,+Clinical Immortality,+Universal Translator,+Ubiquitous Cultural Repository,Lattik Interstellar Domain,TT➪+wwbYBB,3,5.5,1.833,7.5,2.500,1.364
+31,Kjasjavikalimm Independent Nations,People's Monarchy of Korlynd,2,Starting,YYY➪+gbTU**,+Cross Species Ethical Equality,+Hyperspace Mining,+Antimatter Power,Multispecies Monarchy of Korlynd,YYY➪+gbbTTU***,4.5,8.5,1.889,12,2.667,1.412
+32,Kjasjavikalimm Independent Nations,Hoslonik Collective,2,Starting,+L➪+Bb*,+Cross Species Ethical Equality,+Achronal Analysis,+Interspecies Medical Exchange,Hoslonik Diplomatic Understanding,+L➪+Bb*$,1.5,3.5,2.333,6.5,4.333,1.857
+33,Kjasjavikalimm Independent Nations,Arjsend Commonwealth,2,Starting,+ss➪+TYB,+Interspecies Medical Exchange,+Singularity Control,+Organic Construction,Arjsend Multiplanetary ENclaves,+ss➪+TYBBgw,2,4.5,2.250,8,4.000,1.778
+34,Kjasjavikalimm Independent Nations,Incoming Donations,,,,,,,Incoming Donations,,,,,,,
+35,Kjasjavikalimm Independent Nations,Starting Race Card,,Reference,+YYBTbbwggg,2 Colonies,+Linguistic Analysis,,,,,,,,,
+36,Kjasjavikalimm,Anosmia,1,Undesirable,Y➪TBb*,Ubiquitous Cultural Repository,Universal Translator,,Spy Network,Y➪TBbwg*,1.5,5,3.333,7,4.667,1.400
+37,Kt'Zr'Kt'Rtl Technophiles,Vast Distance,,Starting,➪Yg,Jg→$,Tech invention,,Orthogonal Physics,➪YY,0,4.5,1000.000,6,1000.000,1.333
+38,Kt'Zr'Kt'Rtl Technophiles,Bending Engines,,Starting,**,Dg→$,Tech invention,,Truncation,U,,,,,,
+39,Kt'Zr'Kt'Rtl Technophiles,Diverse,,Starting,YY➪b,Ig→$,Tech invention,,Megalithic,YY➪bb,3,5,1.667,7,2.333,1.400
+40,Kt'Zr'Kt'Rtl Technophiles,Interspecies Housing,,Starting,U*,Wg→$,Tech invention,,Chronophysics,Uw*,,,,,,
+41,Kt'Zr'Kt'Rtl Technophiles,Alien Cultural,,Starting,U➪,Ig→$,Tech invention,,Ancient Artifact,U➪g,3,6,2.000,8,2.667,1.333
+42,Kt'Zr'Kt'Rtl Technophiles,Inspiration,,Starting,TB***,Jg→$,Tech invention,,Reverse Engineering,TB****,,,,,,
+43,Kt'Zr'Kt'Rtl Technophiles,Retrocontinuity,,ggg,Kwwwwww→$4X,,,,Retrocontinuity,Run a white arrow as purple,,,,,,
+44,Kt'Zr'Kt'Rtl Technophiles,Stellar Harvesting,,ggg,KYYYYY→$5X,,,,Stellar Harvesting,Era 2 upgrade,,,,,,
+45,Kt'Zr'Kt'Rtl Technophiles,Metauniversal Adapter,,ggg,KBBB→$3X,,,,Metauniversal Adapter,Era 1 upgrade,,,,,,
+46,Kt'Zr'Kt'Rtl Technophiles,Biohacking,,ggg,KTTT→$3X,,,,Biohacking,Era 1 upgrade,,,,,,
+47,Kt'Zr'Kt'Rtl Technophiles,Planetary Rotogyro,,gg,Kwww→X,,,,Planetary Rotogyro,Colony upgrade,,,,,,
+48,Kt'Zr'Kt'Rtl Technophiles,Ecology Inversion,,gg,Kbbb→X,,,,Ecology Inversion,Colony upgrade,,,,,,
+49,Kt'Zr'Kt'Rtl Technophiles,Coordinated Anarchy,,gg,KU→X,,,,Coordinated Anarchy,+1 Colony Support,,,,,,
+50,Kt'Zr'Kt'Rtl Technophiles,Leadership Timeshare,,gg,Kbbb→X,,,,Leadership Timeshare,+1 Colony Support,,,,,,
+51,Kt'Zr'Kt'Rtl Technophiles,Idea Spindles,,g,KU→X,,,,Idea Spindles,Research Team track extension,,,,,,
+52,Kt'Zr'Kt'Rtl Technophiles,Hybrid FTL,,g,Kggg→X,,,,Hybrid FTL,Colony track extension,,,,,,
+53,Kt'Zr'Kt'Rtl Technophiles,Yengii License Idea Spindles,,,,,,,Falling Light Idea Spindles,,,,,,,
+54,Kt'Zr'Kt'Rtl Technophiles,Yengii License Hybrid FTL,,,,,,,Falling Light Hybrid FTL,,,,,,,
+55,Kt'Zr'Kt'Rtl Technophiles,Starting Race Card,,Reference,UYTBggb*,1 Colony,1 Research Team,,,,,,,,,
+56,Kt'Zr'Kt'Rtl,Loafers,2,Undesirable,U➪YBwbg,Interspecies Medical Exchange,Antimatter Power,,Gluttonous Ne'er-do-wells,U➪YBwbg$,3,6,2.000,9,3.000,1.500
+57,Deep Unity,Reality Maintenance Division,,Dice not triples,➪Aa,Dice triples,,,λf.(λx.f(x x))(λx.f(x x)),"➪Aa,ssssss➪UTYgb*",0,2.5,1000.000,11.5,1.917,4.600
+58,Deep Unity,Coxeter diagram Poincaré disk,,Die 1,BBB➪BBTgw*,Die double 1s,,,Coxeter diagram for 120-cell,"BB➪BTww*,U➪Ubg*",4.5,7.5,1.667,12,2.000,1.600
+59,Deep Unity,|G|≤84(g-1),,Die 2,gggg➪Uggg*,Die double 2s,,,∀x(x≠∅→∃y∈x(x∩y=∅)),"gggg➪YYggg*,U➪Ugw*",3,6,2.000,13,1.857,2.167
+60,Deep Unity,Purple lines,,Die 3,TTT➪TTBgw*,Die double 3s,,,Green lines,"TT➪TYgb*,UU➪UYTBw*",4.5,7.5,1.667,15.5,1.722,2.067
+61,Deep Unity,Circles,,Die 4,wwww➪wwwbbg*,Die double 4s,,,Pattern,"wwww➪wwwYB*,U➪Uwb*",4,7,1.750,13,1.857,1.857
+62,Deep Unity,Conway's Life Spaceship,,Die 5,YYY➪YYBwb*,Die double 5s,,,Conway's Life Glider Gun,"YY➪YBbg*,UU➪UTYYw*",4.5,7.5,1.667,15.5,1.722,2.067
+63,Deep Unity,Dragon Curve,,Die 6,bbbb➪bbbTY*,Die double 6s,,,Chaos,"bbbb➪bbbYB*,U➪Ubg*",4,7,1.750,13,1.857,1.857
+64,Deep Unity,3+1 Dimensional Field Theory,1,"Nanotechnology,Quantum Computers,Atomic Transmutation",+1 to a die,Singularity Control,Antimatter Power,,Physical Mastery,"+1 to a die,+1 to a die",,,,,,
+65,Deep Unity,Organic Neurology Modeling,1,"Clinical Immortality,Ubiquitous Cultural Repository,Universal Translator",-1 to a die,Organic Construction,Interspecies Medical Exchange,,Perfect Social Mimicry,"-1 to a die,-1 to a die",,,,,,
+66,Deep Unity,Starting Race Card,,Reference,ATYBagwb**,,1 Research Team,3 Dice,,,,,,,,
+67,Unity,Free Slices,1,Undesirable,sL➪ABag,Ubiquitous Cultural Repository,Genetic Engineering,,Rampant Agents,sL➪ABaagw,2.5,7,2.800,9,3.600,1.286
+68,Yengii Jii,Outflying of Words,1,Starting,➪B*,Jww→$,Clinical Immortality,,Empowering the Outsider,➪B*+gw,0,2.5,1000.000,4.5,1000.000,1.800
+69,Yengii Jii,Foresight of Paths,2,Starting,YBT➪bbww**,WYBT→$,Hyperspace Mining,,Planning Towards the Other,YBT➪bbbwwg***,4.5,6,1.333,9,2.000,1.500
+70,Yengii Jii,Sympathy of Mules,1,Starting,bgw➪UT,Ibb→$,Universal Translator,,Supporting the Unknowable,bgw➪UTY,3,4.5,1.500,6,2.000,1.333
+71,Yengii Jii,Reimagining of Hands,2,Starting,U➪Yggb,DU→$,Organic Construction,,Crafting for the Inexpressible,U➪YBTggb,3,4.5,1.500,7.5,2.500,1.667
+72,Yengii Jii,Starting Race Card,,Reference,BBYTbbgw*,1 Colony,,,,,,,,,,
+73,Yengii,Iconoclasts,1,Undesirable,*TB➪YYggwb,Genetic Engineering,Quantum Computers,,Unbound Yengii,*TB➪YYggwwbb,4,7,1.750,9,2.250,1.286
+74,Charity Syndicate,Hill Zeth,,Starting,➪Bgb*,Cross-Colonization,,,Industrialized Craton,➪Bgbb*,0,4.5,1000.000,5.5,1000.000,1.222
+75,Charity Syndicate,Reputation Brokers,,Starting,BB➪+wwB$,Cross-Colonization,,,Plausible Culpability Distribution,BB➪+wwgbB$,3,6.5,2.167,8.5,2.833,1.308
+76,Charity Syndicate,Zeth Philosophers,,Starting,ww➪Bb,Cross-Colonization,,,Memeticists,ww➪BYb,2,2.5,1.250,4,2.000,1.600
+77,Charity Syndicate,Independent Smugglers,,Starting,YY➪g***,Cross-Colonization,,,Gray Market Investments,YY➪Bg***,3,4,1.333,5.5,1.833,1.375
+78,Charity Syndicate,Liaisons,,Starting,Undesirable Limit: 3,Cross-Colonization,,,Interspecies Coordinators,Undesirable Limit: 5,,,,,,
+79,Charity Syndicate,Starting Race Card,,Reference,YTBgwwbb**,,1 Research Team,,,,,,,,,
+80,Caylion Collaborative,Hyperspace Consortium,,4 votes,"*→N,+1 Colony Support This Turn",,,3 votes,Automation Services,"N→double output; then discard",,,,,,
+81,Caylion Collaborative,Hyperspace Consortium,,4 votes,"*→N,+1 Colony Support This Turn",,,3 votes,Automation Services,"N→double output; then discard",,,,,,
+82,Caylion Collaborative,Hyperspace Consortium,,4 votes,"*→N,+1 Colony Support This Turn",,,3 votes,Automation Services,"N→double output; then discard",,,,,,
+83,Caylion Collaborative,Hyperspace Consortium,,4 votes,"*→N,+1 Colony Support This Turn",,,3 votes,Automation Services,"N→double output; then discard",,,,,,
+84,Caylion Collaborative,Low Caylius Orbital Factories,,4 votes,bb➪UY,,,5 votes,Shipborne Groves,bwg➪U$,2,4.5,2.250,6,2.000,1.333
+85,Caylion Collaborative,Low Caylius Orbital Factories,,4 votes,gb➪UB,,,5 votes,Shipborne Groves,bwg➪YB$,2,4.5,2.250,6,2.000,1.333
+86,Caylion Collaborative,Low Caylius Orbital Factories,,4 votes,gg➪UT,,,5 votes,Shipborne Groves,TT➪U$,2,4.5,2.250,6,2.000,1.333
+87,Caylion Collaborative,Low Caylius Orbital Factories,,4 votes,wg➪UY,,,5 votes,Shipborne Groves,BB➪wbg$,2,4.5,2.250,6,2.000,1.333
+88,Caylion Collaborative,Low Caylius Orbital Factories,,4 votes,ww➪UB,,,5 votes,Shipborne Groves,YY➪wbg$,2,4.5,2.250,6,2.000,1.333
+89,Caylion Collaborative,Low Caylius Orbital Factories,,4 votes,wb➪UT,,,5 votes,Shipborne Groves,U➪wbg$,2,4.5,2.250,6,2.000,1.333
+90,Caylion Collaborative,Gamified Research,,5 votes,B→wwg,,,5 votes,Telenet Xenointerface,T→wgg,1.5,3,2.000,3,2.000,1.000
+91,Caylion Collaborative,Gamified Research,,5 votes,B→bbg,,,5 votes,Telenet Xenointerface,T→bbw,1.5,3,2.000,3,2.000,1.000
+92,Caylion Collaborative,Gamified Research,,5 votes,B→TY,,,5 votes,Telenet Xenointerface,T→BY,1.5,3,2.000,3,2.000,1.000
+93,Caylion Collaborative,Gamified Research,,5 votes,B→YY,,,5 votes,Telenet Xenointerface,T→YY,1.5,3,2.000,3,2.000,1.000
+94,Caylion Collaborative,Gamified Research,,5 votes,B→U,,,5 votes,Telenet Xenointerface,T→U,1.5,3,2.000,3,2.000,1.000
+95,Caylion Collaborative,Oceanic Settlement,,6 votes,U➪$$$,,,4 votes,Floating Parliament,YBT➪$$$$,4.5,9,2.000,12,2.667,1.333
+96,Caylion Collaborative,Oceanic Settlement,,6 votes,U➪******$,,,4 votes,Floating Parliament,YBT➪$$$gw,4.5,9,2.000,11,2.667,1.222
+97,Caylion Collaborative,Oceanic Settlement,,6 votes,U➪TTTY,,,4 votes,Floating Parliament,YBT➪$wwggbb,4.5,9,2.000,9,2.667,1.000
+98,Caylion Collaborative,Oceanic Settlement,,6 votes,U➪BBBY,,,4 votes,Floating Parliament,YBT➪T5/Y5/B5,4.5,9,2.000,7.5,2.667,0.833
+99,Yengii Jii,May Not Eat,,Jii Constraint,"➪gg,may not use g",,,,May Not Eat,"➪gg,may not use g",0,2,1000.000,2,1000.000,1.000
+100,Yengii Jii,May Not Eat,,Jii Constraint,"➪gg,may not use g",,,,May Not Eat,"➪gg,may not use g",0,2,1000.000,2,1000.000,1.000
+101,Yengii Jii,May Not Build,,Jii Constraint,"➪bb,may not use b",,,,May Not Build,"➪bb,may not use b",0,2,1000.000,2,1000.000,1.000
+102,Yengii Jii,May Not Build,,Jii Constraint,"➪bb,may not use b",,,,May Not Build,"➪bb,may not use b",0,2,1000.000,2,1000.000,1.000
+103,Yengii Jii,May Not Read,,Jii Constraint,"➪ww,may not use w",,,,May Not Read,"➪ww,may not use w",0,2,1000.000,2,1000.000,1.000
+104,Yengii Jii,May Not Read,,Jii Constraint,"➪ww,may not use w",,,,May Not Read,"➪ww,may not use w",0,2,1000.000,2,1000.000,1.000
+105,Yengii Jii,May Not Power,,Jii Constraint,"g➪YY,may not use Y",,,,May Not Power,"w➪YY,may not use Y",1,3,3.000,3,3.000,1.000
+106,Yengii Jii,May Not Power,,Jii Constraint,"b➪YY,may not use Y",,,,May Not Power,"*➪YY,may not use Y",1,3,3.000,3,3.000,1.000
+107,Yengii Jii,May Not Understand,,Jii Constraint,"w➪BB,may not use B",,,,May Not Understand,"b➪BB,may not use B",1,3,3.000,3,3.000,1.000
+108,Yengii Jii,May Not Understand,,Jii Constraint,"g➪BB,may not use B",,,,May Not Understand,"*➪BB,may not use B",1,3,3.000,3,3.000,1.000
+109,Yengii Jii,May Not Shape,,Jii Constraint,"b➪TT,may not use T",,,,May Not Shape,"g➪TT,may not use T",1,3,3.000,3,3.000,1.000
+110,Yengii Jii,May Not Shape,,Jii Constraint,"w➪TT,may not use T",,,,May Not Shape,"*➪TT,may not use T",1,3,3.000,3,3.000,1.000
+111,Yengii Jii,May Not Perfect,,Jii Constraint,"b➪U,may not use U",,,,May Not Perfect,"w➪U,may not use U",1,3,3.000,3,3.000,1.000
+112,Yengii Jii,May Not Perfect,,Jii Constraint,"g➪U,may not use U",,,,May Not Perfect,"*➪U,may not use U",1,3,3.000,3,3.000,1.000
+T1,Deep Unity,Community Cluster Network,,Die 0,s7➪Uaa**+YBgbw,Die double 0s,,,Pattern Line,"s9➪Uabbwwgg**+BYTA,UUU➪YBTAAaa**+Ugbw",7,13,1.857,35.5,1.972,2.731
+T2,Deep Unity,(i∂-m)ψ=0,,Die 7,L5➪UYTT**+BAa,Die double 7s,,,Binary Tree,"L6➪AATYBgw**+UU,UUU➪UUwbga**+YTBA",7.5,13.5,1.800,35.5,1.972,2.630
+T3,Kt'Zr'Kt'Rtl Technophiles,Kt' Technology Reference,,Reference,,,,,,,,,,,,
+T4,Zeth Charity Syndicate,Undesirables Reference,,Reference,,,,,,,,,,,,

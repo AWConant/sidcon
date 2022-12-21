@@ -1,0 +1,393 @@
+s,Faction,Front Name,Era,Cost,Front Factory,Upgrade1,Upgrade2,Back Name,Back Factory,Input,Front Output,Front Efficiency,Back Output,Back Efficiency,Upgrades
+1,Caylion Plutocracy,Nanotechnology,1,Researched,bbb➪Ug,Genetic Engineering,Atomic Transmutation,Nanofabricators,bbb➪UgY,3,4,1.333,5.5,1.833,1.375
+2,Caylion Plutocracy,Genetic Engineering,1,Researched,ggg➪YBb,Nanotechnology,Clinical Immortality,Genetic Resynthesis,ggg➪YBbY,3,4,1.333,5.5,1.833,1.375
+3,Caylion Plutocracy,Universal Translator,1,Researched,www➪$+B,Ubiquitous Cultural Repository,Quantum Computers,Universal Empathic Communication,www➪$+Bbw,3,4.5,1.500,6.5,2.167,1.444
+4,Caylion Plutocracy,Antimatter Power,2,Researched,bbbb➪YYBw,Hyperspace Mining,Organic Construction,Antimatter Compounds,bbbb➪YYBwgw,4,5.5,1.375,7.5,1.875,1.364
+5,Caylion Plutocracy,Interspecies Medical Exchange,2,Researched,gggg➪$w+gb,Cross Species Ethical Equality,Organic Construction,Panbiologic Medicine,gggg➪$wbY+gb,4,6,1.500,8.5,2.125,1.417
+6,Caylion Plutocracy,Cross Species Ethical Equality,2,Researched,wwww➪$+$b,Interspecies Medical Exchange,Achronal Analysis,Concrete Universal Metaethics,wwww➪$U+$b,4,7,1.750,10,2.500,1.429
+7,Caylion Plutocracy,Xeno Cultural Exchange,3,Researched,bbbbb➪$Bwwwg+$,Megastructures,Social Exodus,Multispecies Hybrid Cultures,bbbbb➪$$Bwwwg+$Bw,5,11.5,2.300,17,3.400,1.478
+8,Caylion Plutocracy,Poly Species Corporations,3,Researched,ggggg➪$YY**+bbbg,Galactic Telecomm Control,Xeno Cultural Exchange,Full Interspecies Integration,ggggg➪$$YY**+bbbgw,5,12,2.400,16,3.200,1.333
+9,Caylion Plutocracy,Social Exodus,3,Researched,wwwww➪$**B+$**YT,Galactic Telecomm Control,Xeno Cultural Exchange,Galactic Colonization,wwwww➪$$**B+$**YTb,5,14.5,2.900,18.5,3.700,1.276
+10,Caylion Plutocracy,Quantum Computers,1,Researched,BB➪TYg,Universal Translator,Clinical Immortality,Nondeterministic Polynomial Collapse,BB➪YTgY,3,4,1.333,5.5,1.833,1.375
+11,Caylion Plutocracy,Clinical Immortality,1,Researched,TT➪$w,Genetic Engineering,Atomic Transmutation,Practical Immortality,TT➪$wY,3,4,1.333,5.5,1.833,1.375
+12,Caylion Plutocracy,Ubiquitous Cultural Repository,1,Researched,YY➪$g,Universal Translator,Quantum Computers,Memetic Lifeforms,YY➪$gB,3,4,1.333,5.5,1.833,1.375
+13,Caylion Plutocracy,Achronal Analysis,2,Researched,BBB➪UYwb,Antimatter Power,Singularity Control,Time Viewers,BBB➪UYTwwb,4.5,6.5,1.444,9,2.000,1.385
+14,Caylion Plutocracy,Organic Construction,2,Researched,TTT➪**bbwg,Interspecies Medical Exchange,Cross Species Ethical Equality,Living Infrastructure,TTT➪Y**bbwg,4.5,6,1.333,7.5,1.667,1.250
+15,Caylion Plutocracy,Hyperspace Mining,2,Researched,YYY➪UB+YY,Antimatter Power,Singularity Control,Hyperspace Settlements,YYY➪UBBwb+YY,4.5,7.5,1.667,11,2.444,1.467
+16,Caylion Plutocracy,Galactic Telecomm Control,3,Researched,BBBB➪$$$bbw,Poly Species Corporations,Social Exodus,Galactic Domination,BBBB➪$$$$Ybbw,6,12,2.000,16.5,2.750,1.375
+17,Caylion Plutocracy,Temporal Dilation,3,Researched,TTTT➪$$Uggw,Megastructures,Matter Generation,Stasis Field,TTTT➪$$$Uggw+U,6,12,2.000,18,3.000,1.500
+18,Caylion Plutocracy,Matter Generation,3,Researched,YYYY➪$$UTwb,Poly Species Corporations,Temporal Dilation,Macroscale Teleportation,YYYY➪$$$UTwbb,6,12.5,2.083,16.5,2.750,1.320
+19,Caylion Plutocracy,Lunar Mining Consortium,0,Starting,TT➪**Bw,BBJ→$Y,Organic Construction,Auxonic Outersystem Harvesting,TT➪**BYg,3,4.5,1.500,6,2.000,1.333
+20,Caylion Plutocracy,Planetary Ecological Dominance,0,Starting,➪gggw*,TTJ→$Y,Genetic Engineering,Systemwide Gravitic Dominance,➪gggwT*,0,5,1000.000,6.5,1000.000,1.300
+21,Caylion Plutocracy,Atomic Transmutation,1,Researched,U➪YTb,Ubiquitous Cultural Repository,Nanotechnology,Pseudomaterials,U➪YTbT,3,4,1.333,5.5,1.833,1.375
+22,Caylion Plutocracy,Oceanic Processing,0,Starting,gg➪Tb,BBJ→$Y,Antimatter Power,Planet-wide Industrial Mariculture,gg➪BTb,2,2.5,1.250,4,2.000,1.600
+23,Caylion Plutocracy,Distributed Telenet,0,Starting,B➪bw,TTJ→$Y,Ubiquitous Cultural Repository,Ansible Driven Intersystem Society,B➪Tbw,1.5,2,1.333,3.5,2.333,1.750
+24,Caylion Plutocracy,Singularity Control,2,Researched,UU➪YTTwgb*,Hyperspace Mining,Achronal Analysis,Wormhole Grid,UU➪YTTwbbbg*,6,8.5,1.417,10.5,1.750,1.235
+25,Caylion Plutocracy,Phases,,Reference,,,,,,,,,,,
+26,Caylion Plutocracy,Megastructures,3,Researched,UUU➪$$$$$wb,Temporal Dilation,Matter Generation,Dyson Swarms,UUU➪$$$$$$wbT,9,17,1.889,21.5,2.389,1.265
+27,Eni Et Ascendancy,Nanotechnology,1,Researched,bbb➪Uw,Genetic Engineering,Atomic Transmutation,Nanofabricators,bbb➪UwT,3,4,1.333,5.5,1.833,1.375
+28,Eni Et Ascendancy,Genetic Engineering,1,Researched,ggg➪YBb,Nanotechnology,Clinical Immortality,Genetic Resynthesis,ggg➪YBbB,3,4,1.333,5.5,1.833,1.375
+29,Eni Et Ascendancy,Universal Translator,1,Researched,www➪$+B,Ubiquitous Cultural Repository,Quantum Computers,Universal Empathic Communication,www➪$+Bgb,3,4.5,1.500,6.5,2.167,1.444
+30,Eni Et Ascendancy,Antimatter Power,2,Researched,bbbb➪YYBw,Hyperspace Mining,Organic Construction,Antimatter Compounds,bbbb➪YYBwgg,4,5.5,1.375,7.5,1.875,1.364
+31,Eni Et Ascendancy,Interspecies Medical Exchange,2,Researched,gggg➪$w+gb,Cross Species Ethical Equality,Organic Construction,Panbiologic Medicine,gggg➪$wbY+gb,4,6,1.500,8.5,2.125,1.417
+32,Eni Et Ascendancy,Cross Species Ethical Equality,2,Researched,wwww➪$+$b,Interspecies Medical Exchange,Achronal Analysis,Concrete Universal Metaethics,wwww➪$U+$b,4,7,1.750,10,2.500,1.429
+33,Eni Et Ascendancy,Xeno Cultural Exchange,3,Researched,bbbbb➪$Ywwgg+$,Megastructures,Social Exodus,Multispecies Hybrid Cultures,bbbbb➪$$Ywwgg+$Yg,5,11.5,2.300,17,3.400,1.478
+34,Eni Et Ascendancy,Poly Species Corporations,3,Researched,ggggg➪$YT**+bbgg,Galactic Telecomm Control,Xeno Cultural Exchange,Full Interspecies Integration,ggggg➪$$YT**+bbbgg,5,12,2.400,16,3.200,1.333
+35,Eni Et Ascendancy,Social Exodus,3,Researched,wwwww➪$**B+$**YB,Galactic Telecomm Control,Xeno Cultural Exchange,Galactic Colonization,wwwww➪$$**B+$**YBb,5,14.5,2.900,18.5,3.700,1.276
+36,Eni Et Ascendancy,Quantum Computers,1,Researched,BB➪YYg,Universal Translator,Clinical Immortality,Nondeterministic Polynomial Collapse,BB➪YYgY,3,4,1.333,5.5,1.833,1.375
+37,Eni Et Ascendancy,Clinical Immortality,1,Researched,TT➪$b,Genetic Engineering,Atomic Transmutation,Practical Immortality,TT➪$bB,3,4,1.333,5.5,1.833,1.375
+38,Eni Et Ascendancy,Ubiquitous Cultural Repository,1,Researched,YY➪$g,Universal Translator,Quantum Computers,Memetic Lifeforms,YY➪$gB,3,4,1.333,5.5,1.833,1.375
+39,Eni Et Ascendancy,Achronal Analysis,2,Researched,BBB➪UYwb,Antimatter Power,Singularity Control,Time Viewers,BBB➪UYwbbY,4.5,6.5,1.444,9,2.000,1.385
+40,Eni Et Ascendancy,Organic Construction,2,Researched,TTT➪**bbgg,Interspecies Medical Exchange,Cross Species Ethical Equality,Living Infrastructure,TTT➪**bbggB,4.5,6,1.333,7.5,1.667,1.250
+41,Eni Et Ascendancy,Hyperspace Mining,2,Researched,YYY➪UB+BT,Antimatter Power,Singularity Control,Hyperspace Settlements,YYY➪UBBgb+BT,4.5,7.5,1.667,11,2.444,1.467
+42,Eni Et Ascendancy,Galactic Telecomm Control,3,Researched,BBBB➪$$$bgw,Poly Species Corporations,Social Exodus,Galactic Domination,BBBB➪$$$$Tbgw,6,12,2.000,16.5,2.750,1.375
+43,Eni Et Ascendancy,Temporal Dilation,3,Researched,TTTT➪$$Ugbb,Megastructures,Matter Generation,Stasis Field,TTTT➪$$$Ugbb+U,6,12,2.000,18,3.000,1.500
+44,Eni Et Ascendancy,Matter Generation,3,Researched,YYYY➪$$UBwb,Poly Species Corporations,Temporal Dilation,Macroscale Teleportation,YYYY➪$$$UBwgb,6,12.5,2.083,16.5,2.750,1.320
+45,Eni Et Ascendancy,Bone Carving,0,Starting,TT➪wwbg,TTW→$,Nanotechnology,Nanocraft,TT➪wwwbg,3,4,1.333,5,1.667,1.250
+46,Eni Et Ascendancy,Deep Hunting,0,Starting,➪T*,TTW→$,Genetic Engineering,Pelagic Bounty,➪T*w,0,2.5,1000.000,3.5,1000.000,1.400
+47,Eni Et Ascendancy,Atomic Transmutation,1,Researched,U➪BTb,Ubiquitous Cultural Repository,Nanotechnology,Pseudomaterials,U➪YBTb,3,4,1.333,5.5,1.833,1.375
+48,Eni Et Ascendancy,Choral Song,0,Starting,wwwww➪UBg**,TTW→$,Clinical Immortality,Eternal Music,wwwww➪UBg**Y,5,7.5,1.500,9,1.800,1.200
+49,Eni Et Ascendancy,Universal Applied Metaethics,0,Starting,U➪$+www,TTW→$,Atomic Transmutation,Omnispecies Metaethical Models,U➪$+wwwgb,3,6,2.000,8,2.667,1.333
+50,Eni Et Ascendancy,Singularity Control,2,Researched,UU➪TBYggb*,Hyperspace Mining,Achronal Analysis,Wormhole Grid,UU➪YBTggbbw*,6,8.5,1.417,10.5,1.750,1.235
+51,Eni Et Ascendancy,Phases,,Reference,,,,,,,,,,,
+52,Eni Et Ascendancy,Megastructures,3,Researched,UUU➪$$$$$gb,Temporal Dilation,Matter Generation,Dyson Swarms,UUU➪$$$$$$gbB,9,17,1.889,21.5,2.389,1.265
+53,Eni Et Ascendancy,Cultural Charity,0,Starting,s8➪s13,Cross Species Ethical Equality,Antimatter Power,Omnicultural Dynamic Charity,ssssssss➪sssssss$$$,8,13,1.625,16,2.000,1.231
+54,Eni Et Ascendancy,Volunteer Medical Movement,0,Starting,s6➪s9,Interspecies Medical Exchange,Organic Construction,Universal Health,ssssss➪sssss$$,6,9,1.500,11,1.833,1.222
+55,Eni Et Ascendancy,Mutual Understanding,0,Starting,s2➪s4,Quantum Computers,Universal Translator,Interspecies Empathy,ss➪sss$,2,4,2.000,6,3.000,1.500
+56,Eni Et Ascendancy,Elder's Wisdom,0,Starting,L6➪L10,Quantum Computers,Clinical Immortality,Immortal’s Wisdom,LLLLLL➪LLLLLLL$$,9,15,1.667,16.5,1.833,1.100
+57,Eni Et Ascendancy,Intercultural Archive,0,Starting,L3➪L4,Ubiquitous Cultural Repository,Universal Translator,Ubiquitous Cultural Influence,LLL➪LLL$,4.5,6,1.333,7.5,1.667,1.250
+58,Eni Et Ascendancy,Xenotech Pool,0,Starting,U3➪U5,Hyperspace Mining,Singularity Control,Ultratech Community,UUU➪UUU$$$,9,15,1.667,18,2.000,1.200
+59,Faderan Conclave,Gift of the Duruntai,1,wwwwI→R,➪OTgb+T,,,,,0,8,1000.000,,,
+60,Faderan Conclave,Contextual Integrator Cache,1,wwwwI→R,"Variable $,Ack* upgraded",,,,,,,,,,
+61,Faderan Conclave,Automated Transport Network,1,wwwwI→R,"➪g,+2 colonies from deck",,,,,0,1,1000.000,,,
+62,Faderan Conclave,Relic Detector,1,wwwwI→R,gggN→R,,,,,,,,,,
+63,Faderan Conclave,Library of Entelechy,1,wwwwI→R,➪+$Bgw,,,,,0,6.5,1000.000,,,
+64,Faderan Conclave,Transmutive Decomposer,1,wwwwI→R,"$,**➪UbgY",,,,,2,6.5,3.250,,,
+65,Faderan Conclave,Nalgorian Grindstone,1,wwwwI→R,$➪TBbg,,,,,3,5,1.667,,,
+66,Faderan Conclave,Star's Ruin,1,wwwwI→R,$$X,,,,,,,,,,
+67,Faderan Conclave,Paradise Converter,1,wwwwI→R,"TB,N➾$$",,,,,,,,,,
+68,Faderan Conclave,Barian Trade Armada,1,wwwwI→R,$UTBYgbw****,,,,,,,,,,
+69,Faderan Conclave,Thil's Demiring,1,wwwwI→R,"gbw,YB➪$$",,,,,3,6,2.000,,,
+70,Faderan Conclave,The Grand Armilla,1,wwwwI→R,"$,➪****",,,,,0,3,1000.000,,,
+71,Faderan Conclave,Nanotechnology,1,Researched,bbb➪Ug,Genetic Engineering,Atomic Transmutation,Nanofabricators,bbb➪UgY,3,4,1.333,5.5,1.833,1.375
+72,Faderan Conclave,Genetic Engineering,1,Researched,ggg➪BTw,Nanotechnology,Clinical Immortality,Genetic Resynthesis,ggg➪BTwT,3,4,1.333,5.5,1.833,1.375
+73,Faderan Conclave,Universal Translator,1,Researched,www➪$+B,Ubiquitous Cultural Repository,Quantum Computers,Universal Empathic Communication,www➪$+Bbw,3,4.5,1.500,6.5,2.167,1.444
+74,Faderan Conclave,Antimatter Power,2,Researched,bbbb➪YYTg,Hyperspace Mining,Organic Construction,Antimatter Compounds,bbbb➪YYTggw,4,5.5,1.375,7.5,1.875,1.364
+75,Faderan Conclave,Interspecies Medical Exchange,2,Researched,gggg➪$b+gg,Cross Species Ethical Equality,Organic Construction,Panbiologic Medicine,gggg➪$bwT+gg,4,6,1.500,8.5,2.125,1.417
+76,Faderan Conclave,Cross Species Ethical Equality,2,Researched,wwww➪$+$w,Interspecies Medical Exchange,Achronal Analysis,Concrete Universal Metaethics,wwww➪$U+$w,4,7,1.750,10,2.500,1.429
+77,Faderan Conclave,Xeno Cultural Exchange,3,Researched,bbbbb➪$Bwwgg+$,Megastructures,Social Exodus,Multispecies Hybrid Cultures,bbbbb➪$$Bwwgg+$Tw,5,11.5,2.300,17,3.400,1.478
+78,Faderan Conclave,Poly Species Corporations,3,Researched,ggggg➪$YB**+bbgw,Galactic Telecomm Control,Xeno Cultural Exchange,Full Interspecies Integration,ggggg➪$$YB**+bbgww,5,12,2.400,16,3.200,1.333
+79,Faderan Conclave,Social Exodus,3,Researched,wwwww➪$**Y+$**YT,Galactic Telecomm Control,Xeno Cultural Exchange,Galactic Colonization,wwwww➪$$**Y+$**YgT,5,14.5,2.900,18.5,3.700,1.276
+80,Faderan Conclave,Quantum Computers,1,Researched,BB➪TYb,Universal Translator,Clinical Immortality,Nondeterministic Polynomial Collapse,BB➪TYbY,3,4,1.333,5.5,1.833,1.375
+81,Faderan Conclave,Clinical Immortality,1,Researched,TT➪$g,Genetic Engineering,Atomic Transmutation,Practical Immortality,TT➪$gB,3,4,1.333,5.5,1.833,1.375
+82,Faderan Conclave,Ubiquitous Cultural Repository,1,Researched,YY➪$w,Universal Translator,Quantum Computers,Memetic Lifeforms,YY➪$wB,3,4,1.333,5.5,1.833,1.375
+83,Faderan Conclave,Achronal Analysis,2,Researched,BBB➪UTwb,Antimatter Power,Singularity Control,Time Viewers,BBB➪UTwbwY,4.5,6.5,1.444,9,2.000,1.385
+84,Faderan Conclave,Organic Construction,2,Researched,TTT➪**bbwg,Interspecies Medical Exchange,Cross Species Ethical Equality,Living Infrastructure,TTT➪**bbwgY,4.5,6,1.333,7.5,1.667,1.250
+85,Faderan Conclave,Hyperspace Mining,2,Researched,YYY➪UB+BT,Antimatter Power,Singularity Control,Hyperspace Settlements,YYY➪UBBbb+BT,4.5,7.5,1.667,11,2.444,1.467
+86,Faderan Conclave,Galactic Telecomm Control,3,Researched,BBBB➪$$$wwg,Poly Species Corporations,Social Exodus,Galactic Domination,BBBB➪$$$$Ywwg,6,12,2.000,16.5,2.750,1.375
+87,Faderan Conclave,Temporal Dilation,3,Researched,TTTT➪$$Ubbg,Megastructures,Matter Generation,Stasis Field,TTTT➪$$$Ubbg+U,6,12,2.000,18,3.000,1.500
+88,Faderan Conclave,Matter Generation,3,Researched,YYYY➪$$UTgb,Poly Species Corporations,Temporal Dilation,Macroscale Teleportation,YYYY➪$$$UTgbb,6,12.5,2.083,16.5,2.750,1.320
+89,Faderan Conclave,Relic Repurposing,0,Starting,bb➪**w,Achronal Analysis,Antimatter Power,Relic Manufacturing,bb➪**wwg,2,3,1.500,5,2.500,1.667
+90,Faderan Conclave,Archaic Automated Support Network,0,Starting,➪wgb*,Singularity Control,Hyperspace Mining,Domesticated Automated Support Network,➪wgb*+BY,0,4,1000.000,7,1000.000,1.750
+91,Faderan Conclave,Atomic Transmutation,1,Researched,U➪YTb,Ubiquitous Cultural Repository,Nanotechnology,Pseudomaterials,U➪YTbT,3,4,1.333,5.5,1.833,1.375
+92,Faderan Conclave,Ritual Government,0,Starting,wwww➪UBg,Cross Species Ethical Equality,Interspecies Medical Exchange,Interspecies Capital,wwww➪UBg+$,4,5.5,1.375,8.5,2.125,1.545
+93,Faderan Conclave,Non-Indigenous Fauna,0,Starting,ggg➪YTb,Genetic Engineering,Clinical Immortality,Genetically Pliable Fauna,ggg➪YTTb,3,4,1.333,5.5,1.833,1.375
+94,Faderan Conclave,Singularity Control,2,Researched,UU➪TBBgwb*,Hyperspace Mining,Achronal Analysis,Wormhole Grid,UU➪TBBgwb*gg,6,8.5,1.417,10.5,1.750,1.235
+95,Faderan Conclave,Phases,,Reference,,,,,,,,,,,
+96,Faderan Conclave,Megastructures,3,Researched,UUU➪$$$$$wb,Temporal Dilation,Matter Generation,Dyson Swarms,UUU➪$$$$$$wbB,9,17,1.889,21.5,2.389,1.265
+97,Im'dril Nomads,Nanotechnology,1,Researched,bbbF➪Ug,Genetic Engineering,Atomic Transmutation,Nanofabricators,bbbF➪UgY,3,4,1.333,5.5,1.833,1.375
+98,Im'dril Nomads,Genetic Engineering,1,Researched,gggF➪YTw,Nanotechnology,Clinical Immortality,Genetic Resynthesis,gggF➪YTwT,3,4,1.333,5.5,1.833,1.375
+99,Im'dril Nomads,Universal Translator,1,Researched,wwwF➪$+T,Ubiquitous Cultural Repository,Quantum Computers,Universal Empathic Communication,wwwF➪$+Twg,3,4.5,1.500,6.5,2.167,1.444
+100,Im'dril Nomads,Antimatter Power,2,Researched,bbbbF➪YYBg,Hyperspace Mining,Organic Construction,Antimatter Compounds,bbbbF➪YYBggw,4,5.5,1.375,7.5,1.875,1.364
+101,Im'dril Nomads,Interspecies Medical Exchange,2,Researched,ggggF➪$w+wg,Cross Species Ethical Equality,Organic Construction,Panbiologic Medicine,ggggF➪$wwT+wg,4,6,1.500,8.5,2.125,1.417
+102,Im'dril Nomads,Cross Species Ethical Equality,2,Researched,wwwwF➪$+$w,Interspecies Medical Exchange,Achronal Analysis,Concrete Universal Metaethics,wwwwF➪$U+$w,4,7,1.750,10,2.500,1.429
+103,Im'dril Nomads,Xeno Cultural Exchange,3,Researched,bbbbbF➪$Bwwgg+$,Megastructures,Social Exodus,Multispecies Hybrid Cultures,bbbbbF➪$$Bwwgg+$Bw,5,11.5,2.300,17,3.400,1.478
+104,Im'dril Nomads,Poly Species Corporations,3,Researched,gggggF➪$YT**+wwgb,Galactic Telecomm Control,Xeno Cultural Exchange,Full Interspecies Integration,gggggF➪$$YT**+wwwgb,5,12,2.400,16,3.200,1.333
+105,Im'dril Nomads,Social Exodus,3,Researched,wwwwwF➪$**Y+$**YT,Galactic Telecomm Control,Xeno Cultural Exchange,Galactic Reunion,wwwwwF➪$$**Y+$**YTb,5,14.5,2.900,18.5,3.700,1.276
+106,Im'dril Nomads,Quantum Computers,1,Researched,BBF➪TYb,Universal Translator,Clinical Immortality,Nondeterministic Polynomial Collapse,BBF➪TYbT,3,4,1.333,5.5,1.833,1.375
+107,Im'dril Nomads,Clinical Immortality,1,Researched,TTF➪$w,Genetic Engineering,Atomic Transmutation,Practical Immortality,TTF➪$wY,3,4,1.333,5.5,1.833,1.375
+108,Im'dril Nomads,Ubiquitous Cultural Repository,1,Researched,YYF➪$w,Universal Translator,Quantum Computers,Memetic Lifeforms,YYF➪$wB,3,4,1.333,5.5,1.833,1.375
+109,Im'dril Nomads,Achronal Analysis,2,Researched,BBBF➪UTwg,Antimatter Power,Singularity Control,Time Viewers,BBBF➪UTwggT,4.5,6.5,1.444,9,2.000,1.385
+110,Im'dril Nomads,Organic Construction,2,Researched,TTTF➪**wbgg,Interspecies Medical Exchange,Cross Species Ethical Equality,Living Infrastructure,TTTF➪**wbggY,4.5,6,1.333,7.5,1.667,1.250
+111,Im'dril Nomads,Hyperspace Mining,2,Researched,YYYF➪UT+YT,Antimatter Power,Singularity Control,Hyperspace Settlements,YYYF➪UTYgb+YT,4.5,7.5,1.667,11,2.444,1.467
+112,Im'dril Nomads,Galactic Telecomm Control,3,Researched,BBBBF➪$$$gwg,Poly Species Corporations,Social Exodus,Galactic Domination,BBBBF➪$$$$Ygwb,6,12,2.000,16.5,2.750,1.375
+113,Im'dril Nomads,Temporal Dilation,3,Researched,TTTTF➪$$Uwgg,Megastructures,Matter Generation,Stasis Field,TTTTF➪$$$Uwgg+U,6,12,2.000,18,3.000,1.500
+114,Im'dril Nomads,Matter Generation,3,Researched,YYYYF➪$$UTwb,Poly Species Corporations,Temporal Dilation,Macroscale Teleportation,YYYYF➪$$$UTwbb,6,12.5,2.083,16.5,2.750,1.320
+115,Im'dril Nomads,Galactic Exploration,0,Starting,BBFF➪UTgww,Achronal Analysis,Hyperspace Mining,Galactic Windfall Cartography,BBF➪UTgwwY,3,7.5,2.500,9,3.000,1.200
+116,Im'dril Nomads,Asteroid Mining,0,Starting,FF➪*bb,Antimatter Power,Hyperspace Mining,Asteroid Construction Yards,"F➪*bb,Y➪Tg §",1.5,3,2.000,5.5,1.833,1.833
+117,Im'dril Nomads,Atomic Transmutation,1,Researched,UF➪YBg,Ubiquitous Cultural Repository,Nanotechnology,Pseudomaterials,UF➪YBgY,3,4,1.333,5.5,1.833,1.375
+118,Im'dril Nomads,Microgravity Assembly,0,Starting,bbbbFF➪YYBT****,Nanotechnology,Quantum Computers,Distributed Manufacturing,bbbbF➪YYBT****,4,10,2.500,10,2.500,1.000
+119,Im'dril Nomads,Faderan Relic Caches,0,Starting,UUFF➪TTBYYggbw,Atomic Transmutation,Clinical Immortality,Relic Resynthesis,UUF➪TTBYYggbbw,6,11.5,1.917,12.5,2.083,1.087
+120,Im'dril Nomads,Singularity Control,2,Researched,UUF➪TBYgbb*,Hyperspace Mining,Achronal Analysis,Wormhole Grid,UUF➪TBYgbb*wg,6,8.5,1.417,10.5,1.750,1.235
+121,Im'dril Nomads,"Fleet Support, 3",1,OOB→$,FFF,,,,,,,,,,
+122,Im'dril Nomads,Megastructures,3,Researched,UUUF➪$$$$$gb,Temporal Dilation,Matter Generation,Dyson Swarms,UUUF➪$$$$$$gbT,9,17,1.889,21.5,2.389,1.265
+123,Im'dril Nomads,Phases,,Reference,,,,,,,,,,,
+124,Im'dril Nomads,"Fleet Support, 1",1,BBB→$,F,,,,,,,,,,
+125,Im'dril Nomads,"Fleet Support, 1",1,Bbbb→$,F,,,,,,,,,,
+126,Im'dril Nomads,"Fleet Support, 1",1,OB→$,F,,,,,,,,,,
+127,Im'dril Nomads,"Fleet Support, 2",1,BBbbb→$,FF,,,,,,,,,,
+128,Im'dril Nomads,"Starting Fleet Support, 2",0,Starting,,,,,,,,,,,
+129,Im'dril Nomads,"Fleet Support, 2",1,Obbb→$,FF,,,,,,,,,,
+130,Kjasjavikalimm Directorate,Nanotechnology,1,Researched,bbb➪Ug,Genetic Engineering,Atomic Transmutation,Nanofabricators,bbb➪UgB,3,4,1.333,5.5,1.833,1.375
+131,Kjasjavikalimm Directorate,Genetic Engineering,1,Researched,ggg➪TBw,Nanotechnology,Clinical Immortality,Genetic Resynthesis,ggg➪TBwB,3,4,1.333,5.5,1.833,1.375
+132,Kjasjavikalimm Directorate,Universal Translator,1,Researched,www➪$+B,Ubiquitous Cultural Repository,Quantum Computers,Universal Empathic Communication,www➪$+Bwg,3,4.5,1.500,6.5,2.167,1.444
+133,Kjasjavikalimm Directorate,Antimatter Power,2,Researched,bbbb➪YBBw,Hyperspace Mining,Organic Construction,Antimatter Compounds,bbbb➪YBBwgw,4,5.5,1.375,7.5,1.875,1.364
+134,Kjasjavikalimm Directorate,Interspecies Medical Exchange,2,Researched,gggg➪$w+gg,Cross Species Ethical Equality,Organic Construction,Panbiologic Medicine,gggg➪$wwB+gg,4,6,1.500,8.5,2.125,1.417
+135,Kjasjavikalimm Directorate,Cross Species Ethical Equality,2,Researched,wwww➪$+$w,Interspecies Medical Exchange,Achronal Analysis,Concrete Universal Metaethics,wwww➪$U+$w,4,7,1.750,10,2.500,1.429
+136,Kjasjavikalimm Directorate,Xeno Cultural Exchange,3,Researched,bbbbb➪$Bwggg+$,Megastructures,Social Exodus,Multispecies Hybrid Cultures,bbbbb➪$$Bwggg+$Bb,5,11.5,2.300,17,3.400,1.478
+137,Kjasjavikalimm Directorate,Poly Species Corporations,3,Researched,ggggg➪$YY**+bgww,Galactic Telecomm Control,Xeno Cultural Exchange,Full Interspecies Integration,ggggg➪$$YY**+bbgww,5,12,2.400,16,3.200,1.333
+138,Kjasjavikalimm Directorate,Social Exodus,3,Researched,wwwww➪$**T+$**BT,Galactic Telecomm Control,Xeno Cultural Exchange,Galactic Colonization,wwwww➪$$**T+$**BTg,5,14.5,2.900,18.5,3.700,1.276
+139,Kjasjavikalimm Directorate,Quantum Computers,1,Researched,BB➪TYw,Universal Translator,Clinical Immortality,Nondeterministic Polynomial Collapse,BB➪TYwY,3,4,1.333,5.5,1.833,1.375
+140,Kjasjavikalimm Directorate,Clinical Immortality,1,Researched,TT➪$g,Genetic Engineering,Atomic Transmutation,Practical Immortality,TT➪$gB,3,4,1.333,5.5,1.833,1.375
+141,Kjasjavikalimm Directorate,Ubiquitous Cultural Repository,1,Researched,YY➪$g,Universal Translator,Quantum Computers,Memetic Lifeforms,YY➪$gB,3,4,1.333,5.5,1.833,1.375
+142,Kjasjavikalimm Directorate,Achronal Analysis,2,Researched,BBB➪UTwb,Antimatter Power,Singularity Control,Time Viewers,BBB➪UTwbgY,4.5,6.5,1.444,9,2.000,1.385
+143,Kjasjavikalimm Directorate,Organic Construction,2,Researched,TTT➪**wbgg,Interspecies Medical Exchange,Cross Species Ethical Equality,Living Infrastructure,TTT➪B**wbgg,4.5,6,1.333,7.5,1.667,1.250
+144,Kjasjavikalimm Directorate,Hyperspace Mining,2,Researched,YYY➪UB+BB,Antimatter Power,Singularity Control,Hyperspace Settlements,YYY➪UBTwg+BB,4.5,7.5,1.667,11,2.444,1.467
+145,Kjasjavikalimm Directorate,Galactic Telecomm Control,3,Researched,BBBB➪$$$bbw,Poly Species Corporations,Social Exodus,Galactic Domination,BBBB➪$$$$Tbbw,6,12,2.000,16.5,2.750,1.375
+146,Kjasjavikalimm Directorate,Temporal Dilation,3,Researched,TTTT➪$$Uggw,Megastructures,Matter Generation,Stasis Field,TTTT➪$$$Uggw+U,6,12,2.000,18,3.000,1.500
+147,Kjasjavikalimm Directorate,Matter Generation,3,Researched,YYYY➪$$UTwb,Poly Species Corporations,Temporal Dilation,Macroscale Teleportation,YYYY➪$$$UTwbb,6,12.5,2.083,16.5,2.750,1.320
+148,Kjasjavikalimm Directorate,Starstrider Jumpcores,0,Starting,TT➪g****,Hyperspace Mining,Singularity Control,Fastjump Network,TT➪$*****,3,5,1.667,8,2.667,1.600
+149,Kjasjavikalimm Directorate,Underground Cities,0,Starting,➪bb***,Organic Construction,Antimatter Power,Asteroid Mine Network,➪bb***T,0,5,1000.000,6.5,1000.000,1.300
+150,Kjasjavikalimm Directorate,Atomic Transmutation,1,Researched,U➪YBb,Ubiquitous Cultural Repository,Nanotechnology,Pseudomaterials,U➪YBbT,3,4,1.333,5.5,1.833,1.375
+151,Kjasjavikalimm Directorate,Perfume Pheromone Loyalty,0,Starting,bbbb➪YBTw,Genetic Engineering,Nanotechnology,Multiconformal Pheromonics,bbbb➪YBTw+gb,4,5.5,1.375,7.5,1.875,1.364
+152,Kjasjavikalimm Directorate,Singularity Control,2,Researched,UU➪YTBwwb*,Hyperspace Mining,Achronal Analysis,Wormhole Grid,UU➪YTBwwwbb*,6,8.5,1.417,10.5,1.750,1.235
+153,Kjasjavikalimm Directorate,Phases,,Reference,,,,,,,,,,,
+154,Kjasjavikalimm Directorate,Megastructures,3,Researched,UUU➪$$$$$wg,Temporal Dilation,Matter Generation,Dyson Swarms,UUU➪$$$$$$wgY,9,17,1.889,21.5,2.389,1.265
+155,Kt'Zr'Kt'Rtl Adhocracy,Nanotechnology,1,Researched,bbb➪Uw,Genetic Engineering,Atomic Transmutation,Nanofabricators,bbb➪UwB,3,4,1.333,5.5,1.833,1.375
+156,Kt'Zr'Kt'Rtl Adhocracy,Genetic Engineering,1,Researched,ggg➪TBb,Nanotechnology,Clinical Immortality,Genetic Resynthesis,ggg➪TBbB,3,4,1.333,5.5,1.833,1.375
+157,Kt'Zr'Kt'Rtl Adhocracy,Universal Translator,1,Researched,www➪$+T,Ubiquitous Cultural Repository,Quantum Computers,Universal Empathic Communication,www➪$+Twb,3,4.5,1.500,6.5,2.167,1.444
+158,Kt'Zr'Kt'Rtl Adhocracy,Antimatter Power,2,Researched,bbbb➪BBTw,Hyperspace Mining,Organic Construction,Antimatter Compounds,bbbb➪BBTwgw,4,5.5,1.375,7.5,1.875,1.364
+159,Kt'Zr'Kt'Rtl Adhocracy,Interspecies Medical Exchange,2,Researched,gggg➪$w+bb,Cross Species Ethical Equality,Organic Construction,Panbiologic Medicine,gggg➪$wbT+bb,4,6,1.500,8.5,2.125,1.417
+160,Kt'Zr'Kt'Rtl Adhocracy,Cross Species Ethical Equality,2,Researched,wwww➪$+$b,Interspecies Medical Exchange,Achronal Analysis,Concrete Universal Metaethics,wwww➪$U+$b,4,7,1.750,10,2.500,1.429
+161,Kt'Zr'Kt'Rtl Adhocracy,Xeno Cultural Exchange,3,Researched,bbbbb➪$Tgggw+$,Megastructures,Social Exodus,Multispecies Hybrid Cultures,bbbbb➪$$Tgggw+$Bb,5,11.5,2.300,17,3.400,1.478
+162,Kt'Zr'Kt'Rtl Adhocracy,Poly Species Corporations,3,Researched,ggggg➪$YT**+wwwb,Galactic Telecomm Control,Xeno Cultural Exchange,Full Interspecies Integration,ggggg➪$$YT**+wwwwb,5,12,2.400,16,3.200,1.333
+163,Kt'Zr'Kt'Rtl Adhocracy,Social Exodus,3,Researched,wwwww➪$**B+$**BT,Galactic Telecomm Control,Xeno Cultural Exchange,Galactic Colonization,wwwww➪$$**B+$**BTb,5,14.5,2.900,18.5,3.700,1.276
+164,Kt'Zr'Kt'Rtl Adhocracy,Quantum Computers,1,Researched,BB➪TYw,Universal Translator,Clinical Immortality,Nondeterministic Polynomial Collapse,BB➪TYwT,3,4,1.333,5.5,1.833,1.375
+165,Kt'Zr'Kt'Rtl Adhocracy,Clinical Immortality,1,Researched,TT➪$b,Genetic Engineering,Atomic Transmutation,Practical Immortality,TT➪$bB,3,4,1.333,5.5,1.833,1.375
+166,Kt'Zr'Kt'Rtl Adhocracy,Ubiquitous Cultural Repository,1,Researched,YY➪$b,Universal Translator,Quantum Computers,Memetic Lifeforms,YY➪$bT,3,4,1.333,5.5,1.833,1.375
+167,Kt'Zr'Kt'Rtl Adhocracy,Achronal Analysis,2,Researched,BBB➪UTwg,Antimatter Power,Singularity Control,Time Viewers,BBB➪UTwgbT,4.5,6.5,1.444,9,2.000,1.385
+168,Kt'Zr'Kt'Rtl Adhocracy,Organic Construction,2,Researched,TTT➪**wwbg,Interspecies Medical Exchange,Cross Species Ethical Equality,Living Infrastructure,TTT➪**wwbgB,4.5,6,1.333,7.5,1.667,1.250
+169,Kt'Zr'Kt'Rtl Adhocracy,Hyperspace Mining,2,Researched,YYY➪UT+TB,Antimatter Power,Singularity Control,Hyperspace Settlements,YYY➪UTBww+TB,4.5,7.5,1.667,11,2.444,1.467
+170,Kt'Zr'Kt'Rtl Adhocracy,Galactic Telecomm Control,3,Researched,BBBB➪$$$bbg,Poly Species Corporations,Social Exodus,Galactic Domination,BBBB➪$$$$Ybbg,6,12,2.000,16.5,2.750,1.375
+171,Kt'Zr'Kt'Rtl Adhocracy,Temporal Dilation,3,Researched,TTTT➪$$Ubbw,Megastructures,Matter Generation,Stasis Field,TTTT➪$$$Ubbw+U,6,12,2.000,18,3.000,1.500
+172,Kt'Zr'Kt'Rtl Adhocracy,Matter Generation,3,Researched,YYYY➪$$UBww,Poly Species Corporations,Temporal Dilation,Macroscale Teleportation,YYYY➪$$$UBwww,6,12.5,2.083,16.5,2.750,1.320
+173,Kt'Zr'Kt'Rtl Adhocracy,Polyutility Components,0,Starting,*,Atomic Transmutation,Quantum Computers,Adaptive Architecture,*T,,,,,,
+174,Kt'Zr'Kt'Rtl Adhocracy,Hand Crafted,0,Starting,➪T,Organic Construction,Achronal Analysis,Microfabricated,➪gbU,0,4,1000.000,7.5,1000.000,1.875
+175,Kt'Zr'Kt'Rtl Adhocracy,Atomic Transmutation,1,Researched,U➪BBg,Ubiquitous Cultural Repository,Nanotechnology,Pseudomaterials,U➪BBgY,3,4,1.333,5.5,1.833,1.375
+176,Kt'Zr'Kt'Rtl Adhocracy,High-Risk Laboratories,0,Starting,wgbb,Hyperspace Mining,Singularity Control,Stellar Power Harnessing,wwggbb,,,,,,
+177,Kt'Zr'Kt'Rtl Adhocracy,Anarchic Sacrificial,0,Starting,U➪,Clinical Immortality,Universal Translator,Polysystem,U➪B,3,4,1.333,7.5,2.500,1.875
+178,Kt'Zr'Kt'Rtl Adhocracy,Singularity Control,2,Researched,UU➪YYBwbg*,Hyperspace Mining,Achronal Analysis,Wormhole Grid,UU➪YYBwbg*wb,6,8.5,1.417,10.5,1.750,1.235
+179,Kt'Zr'Kt'Rtl Adhocracy,Diffusion,0,Starting,TYB****,Nanotechnology,Genetic Engineering,Teleological Redesign,TYB****+wb,,,,,,
+180,Kt'Zr'Kt'Rtl Adhocracy,Expansive Social,0,Starting,ggggg➪,Cross Species Ethical Equality,Interspecies Medical Exchange,Psychohistoric,ggggg➪wb,5,8.5,1.700,12.5,2.500,1.471
+181,Kt'Zr'Kt'Rtl Adhocracy,Megastructures,3,Researched,UUU➪$$$$$bb,Temporal Dilation,Matter Generation,Dyson Swarms,UUU➪$$$$$$bbT,9,17,1.889,21.5,2.389,1.265
+182,Kt'Zr'Kt'Rtl Adhocracy,Phases,,Reference,,,,,,,,,,,
+183,Kt'Zr'Kt'Rtl Adhocracy,Zd'Nx,1,Y→,"J,B➪wg",,,,,1.5,2,1.333,,,
+184,Kt'Zr'Kt'Rtl Adhocracy,Kz'Tlr,1,Y→,"J,w➪B",,,,,1,1.5,1.500,,,
+185,Kt'Zr'Kt'Rtl Adhocracy,Kln'Qn,1,YY→,"I,➪w",,,,,0,1,,,,
+186,Kt'Zr'Kt'Rtl Adhocracy,Nz'Cht'Qt'Rz,1,YY→,"W,Y➪U",,,,,1.5,3,2.000,,,
+187,Kt'Zr'Kt'Rtl Adhocracy,Tn'Rg'Tx'Tc,1,Y→,"D,B➪wg",,,,,1.5,2,1.333,,,
+188,Kt'Zr'Kt'Rtl Adhocracy,Gz'Zd,1,YY→,"J,➪w",,,,,0,1,1000.000,,,
+189,Kt'Zr'Kt'Rtl Adhocracy,!IN'ZR'KZ,1,YY→,"D,wb➪YB",,,,,2,3,1.500,,,
+190,Kt'Zr'Kt'Rtl Adhocracy,Tk'T!'Zk,1,YY→,"D,➪b",,,,,0,1,,,,
+191,Kt'Zr'Kt'Rtl Adhocracy,Kr'Xn'Xx,1,Y→,"I,b➪T",,,,,1,1.5,,,,
+192,Kt'Zr'Kt'Rtl Adhocracy,Kt'Dq'Rn'Nr,1,Y→,"W,b➪B",,,,,1,1.5,1.500,,,
+193,Kt'Zr'Kt'Rtl Adhocracy,Nx'Xt'!In,1,YY→,"I,➪b",,,,,0,1,,,,
+194,Kt'Zr'Kt'Rtl Adhocracy,Nx'Dr,1,Y→,"D,g➪T",,,,,1,1.5,1.500,,,
+195,Kt'Zr'Kt'Rtl Adhocracy,Nz'Tt,1,Y→,"W,T➪wb",,,,,1.5,2,1.333,,,
+196,Unity,Universal Translator,1,Researched,www➪$+B,Ubiquitous Cultural Repository,Quantum Computers,Universal Empathic Communication,sss➪$+BA,3,4,1.333,6,2.000,1.500
+197,Unity,Phases,,Reference,,,,,,,,,,,
+198,Unity,Limit,1,LLLN→$,U➪Aaaa,Universal Translator,Quantum Computers,Limit,U➪Aaaa+a,3,4.5,1.500,5.5,1.833,1.222
+199,Unity,Cross Species Ethical Equality,2,Researched,wwww➪$+$w,Interspecies Medical Exchange,Achronal Analysis,Concrete Universal Metaethics,wwww➪$Aa+$w,4,7,1.750,9.5,2.375,1.357
+200,Unity,Nanotechnology,1,Researched,bbb➪Uw,Genetic Engineering,Atomic Transmutation,Nanofabricators,sss➪Uwa,3,4,1.333,5,1.667,1.250
+201,Unity,Genetic Engineering,1,Researched,ggg➪TBb,Nanotechnology,Clinical Immortality,Genetic Resynthesis,sss➪YBba,3,4,1.333,5,1.667,1.250
+202,Unity,Social Exodus,3,Researched,wwwww➪$**B+$**YT,Galactic Telecomm Control,Xeno Cultural Exchange,Galactic Colonization,wwwww➪$$**B+$**YgT,5,14.5,2.900,18.5,3.700,1.276
+203,Unity,Antimatter Power,2,Researched,bbbb➪YYTg,Hyperspace Mining,Organic Construction,Antimatter Compounds,bbbb➪YYTgA,4,5.5,1.375,7,1.750,1.273
+204,Unity,Interspecies Medical Exchange,2,Researched,gggg➪$w+bb,Cross Species Ethical Equality,Organic Construction,Panbiologic Medicine,gggg➪$waa+bb,4,6,1.500,8,2.000,1.333
+205,Unity,Ubiquitous Cultural Repository,1,Researched,YY➪$b,Universal Translator,Quantum Computers,Memetic Lifeforms,LL➪$ba,3,4,1.333,5,1.667,1.250
+206,Unity,Xeno Cultural Exchange,3,Researched,bbbbb➪$Twwgg+$,Megastructures,Social Exodus,Multispecies Hybrid Cultures,bbbbb➪$$Twwgg+$Bw,5,11.5,2.300,17,3.400,1.478
+207,Unity,Poly Species Corporations,3,Researched,ggggg➪$YB**+bggw,Galactic Telecomm Control,Xeno Cultural Exchange,Full Interspecies Integration,ggggg➪$$YB**+bgggw,5,12,2.400,16,3.200,1.333
+208,Unity,Hyperspace Mining,2,Researched,YYY➪UT+BB,Antimatter Power,Singularity Control,Hyperspace Settlements,YYY➪UTAA+BB,4.5,7.5,1.667,10.5,2.333,1.400
+209,Unity,Quantum Computers,1,Researched,BB➪TYg,Universal Translator,Clinical Immortality,Nondeterministic Polynomial Collapse,LL➪TYga,3,4,1.333,5,1.667,1.250
+210,Unity,Clinical Immortality,1,Researched,TT➪$w,Genetic Engineering,Atomic Transmutation,Practical Immortality,LL➪$wa,3,4,1.333,5,1.667,1.250
+211,Unity,Matter Generation,3,Researched,YYYY➪$$UBbw,Poly Species Corporations,Temporal Dilation,Macroscale Teleportation,YYYY➪$$$UBbwb,6,12.5,2.083,16.5,2.750,1.320
+212,Unity,Achronal Analysis,2,Researched,BBB➪UTgg,Antimatter Power,Singularity Control,Time Viewers,BBB➪UTggaa,4.5,6.5,1.444,8.5,1.889,1.308
+213,Unity,Organic Construction,2,Researched,TTT➪**wwbg,Interspecies Medical Exchange,Cross Species Ethical Equality,Living Infrastructure,TTT➪**wwbgA,4.5,6,1.333,7.5,1.667,1.250
+214,Unity,Atomic Transmutation,1,Researched,U➪BTb,Ubiquitous Cultural Repository,Nanotechnology,Pseudomaterials,U➪BTba,3,4,1.333,5,1.667,1.250
+215,Unity,Galactic Telecomm Control,3,Researched,BBBB➪$$$ggb,Poly Species Corporations,Social Exodus,Galactic Domination,BBBB➪$$$$Tggb,6,12,2.000,16.5,2.750,1.375
+216,Unity,Temporal Dilation,3,Researched,TTTT➪$$Ubbw,Megastructures,Matter Generation,Stasis Field,TTTT➪$$$Ubbw+U,6,12,2.000,18,3.000,1.500
+217,Unity,Singularity Control,2,Researched,UU➪YBBgwb*,Hyperspace Mining,Achronal Analysis,Wormhole Grid,UU➪YBBgwb*A,6,8.5,1.417,10,1.667,1.176
+218,Unity,Fractal Symmetry,1,ssLN→$,ssL➪AU,Singularity Control,Hyperspace Mining,Fractal Symmetry,ssL➪AU+Aa,3.5,4.5,1.286,7,2.000,1.556
+219,Unity,Explorer Collection,0,Starting,sss➪**Bb,LLN→$,Achronal Analysis,Gravity Sunlens Sensor Array,sss➪**BbA,3,4.5,1.500,6,2.000,1.333
+220,Unity,Megastructures,3,Researched,UUU➪$$$$$wb,Temporal Dilation,Matter Generation,Dyson Swarms,UUU➪$$$$$$wbY,9,17,1.889,21.5,2.389,1.265
+221,Unity,Adamantine Synthesis,0,Starting,LL➪Ug,Atomic Transmutation,Clinical Immortality,Programmable Pseudomatter,LL➪Uga,3,4,1.333,5,1.667,1.250
+222,Unity,Adaptive Fabrication,0,Starting,➪Aa*,sssN→$,Nanotechnology,Predictive Fabrication,➪Aa*a,0,3.5,1000.000,4.5,1000.000,1.286
+223,Unity,Bézier,1,sssN→$,sss➪Aaa,Organic Construction,Antimatter Power,Bézier,sss➪Aaa+A,3,3.5,1.167,5,1.667,1.429
+224,Unity,Color Space,1,LLN→$,LL➪Aaa,Interspecies Medical Exchange,Cross Species Ethical Equality,Color Space,LL➪Aaa+A,3,3.5,1.167,5,1.667,1.429
+225,Yengii Society,Nanotechnology,1,Researched,bbb➪Ug,Genetic Engineering,Atomic Transmutation,Nanofabricators,bbb➪UgT,3,4,1.333,5.5,1.833,1.375
+226,Yengii Society,Genetic Engineering,1,Researched,ggg➪YBw,Nanotechnology,Clinical Immortality,Genetic Resynthesis,ggg➪YBwY,3,4,1.333,5.5,1.833,1.375
+227,Yengii Society,Universal Translator,1,Researched,www➪$+T,Ubiquitous Cultural Repository,Quantum Computers,Universal Empathic Communication,www➪$+Twg,3,4.5,1.500,6.5,2.167,1.444
+228,Yengii Society,Antimatter Power,2,Researched,bbbb➪YTBg,Hyperspace Mining,Organic Construction,Antimatter Compounds,bbbb➪YTBggw,4,5.5,1.375,7.5,1.875,1.364
+229,Yengii Society,Interspecies Medical Exchange,2,Researched,gggg➪$w+wb,Cross Species Ethical Equality,Organic Construction,Panbiologic Medicine,gggg➪$wbT+wb,4,6,1.500,8.5,2.125,1.417
+230,Yengii Society,Cross Species Ethical Equality,2,Researched,wwww➪$+$g,Interspecies Medical Exchange,Achronal Analysis,Concrete Universal Metaethics,wwww➪$U+$g,4,7,1.750,10,2.500,1.429
+231,Yengii Society,Xeno Cultural Exchange,3,Researched,bbbbb➪$Ywwgg+$,Megastructures,Social Exodus,Multispecies Hybrid Cultures,bbbbb➪$$Ywwgg+$Tg,5,11.5,2.300,17,3.400,1.478
+232,Yengii Society,Poly Species Corporations,3,Researched,ggggg➪$YT**+ggwb,Galactic Telecomm Control,Xeno Cultural Exchange,Full Interspecies Integration,ggggg➪$$YT**+ggwbw,5,12,2.400,16,3.200,1.333
+233,Yengii Society,Social Exodus,3,Researched,wwwww➪$**B+$**BT,Galactic Telecomm Control,Xeno Cultural Exchange,Galactic Colonization,wwwww➪$$**B+$**BTb,5,14.5,2.900,18.5,3.700,1.276
+234,Yengii Society,Quantum Computers,1,Researched,BB➪TYb,Universal Translator,Clinical Immortality,Nondeterministic Polynomial Collapse,BB➪TYbY,3,4,1.333,5.5,1.833,1.375
+235,Yengii Society,Clinical Immortality,1,Researched,TT➪$g,Genetic Engineering,Atomic Transmutation,Practical Immortality,TT➪$gB,3,4,1.333,5.5,1.833,1.375
+236,Yengii Society,Ubiquitous Cultural Repository,1,Researched,YY➪$w,Universal Translator,Quantum Computers,Memetic Lifeforms,YY➪$wT,3,4,1.333,5.5,1.833,1.375
+237,Yengii Society,Achronal Analysis,2,Researched,BBB➪UYwg,Antimatter Power,Singularity Control,Time Viewers,BBB➪UYwggT,4.5,6.5,1.444,9,2.000,1.385
+238,Yengii Society,Organic Construction,2,Researched,TTT➪**wbgg,Interspecies Medical Exchange,Cross Species Ethical Equality,Living Infrastructure,TTT➪**wbggY,4.5,6,1.333,7.5,1.667,1.250
+239,Yengii Society,Hyperspace Mining,2,Researched,YYY➪UT+TY,Antimatter Power,Singularity Control,Hyperspace Settlements,YYY➪UTbbB+TY,4.5,7.5,1.667,11,2.444,1.467
+240,Yengii Society,Galactic Telecomm Control,3,Researched,BBBB➪$$$bbw,Poly Species Corporations,Social Exodus,Galactic Domination,BBBB➪$$$$Ybbw,6,12,2.000,16.5,2.750,1.375
+241,Yengii Society,Temporal Dilation,3,Researched,TTTT➪$$Ubww,Megastructures,Matter Generation,Stasis Field,TTTT➪$$$Ubww+U,6,12,2.000,18,3.000,1.500
+242,Yengii Society,Matter Generation,3,Researched,YYYY➪$$UTbg,Poly Species Corporations,Temporal Dilation,Macroscale Teleportation,YYYY➪$$$UTbgw,6,12.5,2.083,16.5,2.750,1.320
+243,Yengii Society,Choice of Paths,0,Starting,wwB➪Ugg,TTW→$,Ubiquitous Cultural Repository,Alien Decision Integration,wwB➪Uggbb,3.5,5,1.429,7,2.000,1.400
+244,Yengii Society,Empathy of Words,0,Starting,bbT➪BBww,ggJ→$,Cross Species Ethical Equality,Interspecies Diplomatic Demesne,bbT➪BBwwY,3.5,5,1.429,6.5,1.857,1.300
+245,Yengii Society,Atomic Transmutation,1,Researched,U➪YBb,Ubiquitous Cultural Repository,Nanotechnology,Pseudomaterials,U➪YBTb,3,4,1.333,5.5,1.833,1.375
+246,Yengii Society,Innovation of Hands,0,Starting,U➪**Yg,BBD→$,Achronal Analysis,Cross-time Think Tank,U➪**Yg+gw,3,4.5,1.500,6.5,2.167,1.444
+247,Yengii Society,Work of Mules,0,Starting,ggY➪**Tbb,UI→$,Singularity Control,Gravitic Assembly,ggY➪**Tbbb+ww,3.5,5.5,1.571,8.5,2.429,1.545
+248,Yengii Society,Singularity Control,2,Researched,UU➪YBBbbw*,Hyperspace Mining,Achronal Analysis,Wormhole Grid,UU➪YBBwwbbg*,6,8.5,1.417,10.5,1.750,1.235
+249,Yengii Society,Phases,,Reference,,,,,,,,,,,
+250,Yengii Society,Megastructures,3,Researched,UUU➪$$$$$gb,Temporal Dilation,Matter Generation,Dyson Swarms,UUU➪$$$$$$gbB,9,17,1.889,21.5,2.389,1.265
+251,Yengii Society,Social Ecological Mutualism,0,Starting,➪Tb**,Interspecies Medical Exchange,Antimatter Power,Mutualistic Alien Integration,➪Tb**gw,0,4.5,1000.000,6.5,1000.000,1.444
+252,Zeth Anocracy,Smuggling Network,0,Starting,ZZZB/YYw➾U,Hyperspace Mining,,In-Hyperspace Hijacking,ZZB/YY➾Us,(1.5 or 4),3,,4,,
+253,Zeth Anocracy,Nanotechnology,1,Researched,bbb➪Ug,Genetic Engineering,Atomic Transmutation,Nanofabricators,bbb➪UgT,3,4,1.333,5.5,1.833,1.375
+254,Zeth Anocracy,Genetic Engineering,1,Researched,ggg➪YTb,Nanotechnology,Clinical Immortality,Genetic Resynthesis,ggg➪YTbT,3,4,1.333,5.5,1.833,1.375
+255,Zeth Anocracy,Universal Translator,1,Researched,www➪$+B,Ubiquitous Cultural Repository,Quantum Computers,Universal Empathic Communication,www➪$+Bgb,3,4.5,1.500,6.5,2.167,1.444
+256,Zeth Anocracy,Antimatter Power,2,Researched,bbbb➪TTYw,Hyperspace Mining,Organic Construction,Antimatter Compounds,bbbb➪TTYwgg,4,5.5,1.375,7.5,1.875,1.364
+257,Zeth Anocracy,Interspecies Medical Exchange,2,Researched,gggg➪$w+gb,Cross Species Ethical Equality,Organic Construction,Panbiologic Medicine,gggg➪$wTb+gb,4,6,1.500,8.5,2.125,1.417
+258,Zeth Anocracy,Cross Species Ethical Equality,2,Researched,wwww➪$+$g,Interspecies Medical Exchange,Achronal Analysis,Concrete Universal Metaethics,wwww➪$U+$g,4,7,1.750,10,2.500,1.429
+259,Zeth Anocracy,Xeno Cultural Exchange,3,Researched,bbbbb➪$Tgggw+$,Megastructures,Social Exodus,Multispecies Hybrid Cultures,bbbbb➪$$Tgggw+$Bw,5,11.5,2.300,17,3.400,1.478
+260,Zeth Anocracy,Poly Species Corporations,3,Researched,ggggg➪$YT**+bbgw,Galactic Telecomm Control,Xeno Cultural Exchange,Full Interspecies Integration,ggggg➪$$YT**+bbgwb,5,12,2.400,16,3.200,1.333
+261,Zeth Anocracy,Social Exodus,3,Researched,wwwww➪$**T+$**YB,Galactic Telecomm Control,Xeno Cultural Exchange,Galactic Colonization,wwwww➪$$**T+$**YBg,5,14.5,2.900,18.5,3.700,1.276
+262,Zeth Anocracy,Quantum Computers,1,Researched,BB➪TTw,Universal Translator,Clinical Immortality,Nondeterministic Polynomial Collapse,BB➪TTwY,3,4,1.333,5.5,1.833,1.375
+263,Zeth Anocracy,Clinical Immortality,1,Researched,TT➪$g,Genetic Engineering,Atomic Transmutation,Practical Immortality,TT➪$gB,3,4,1.333,5.5,1.833,1.375
+264,Zeth Anocracy,Ubiquitous Cultural Repository,1,Researched,YY➪$g,Universal Translator,Quantum Computers,Memetic Lifeforms,YY➪$gT,3,4,1.333,5.5,1.833,1.375
+265,Zeth Anocracy,Achronal Analysis,2,Researched,BBB➪UTwb,Antimatter Power,Singularity Control,Time Viewers,BBB➪UTwbwT,4.5,6.5,1.444,9,2.000,1.385
+266,Zeth Anocracy,Organic Construction,2,Researched,TTT➪**bbgg,Interspecies Medical Exchange,Cross Species Ethical Equality,Living Infrastructure,TTT➪**bbggY,4.5,6,1.333,7.5,1.667,1.250
+267,Zeth Anocracy,Hyperspace Mining,2,Researched,YYY➪UT+TB,Antimatter Power,Singularity Control,Hyperspace Settlements,YYY➪UTBwb+TB,4.5,7.5,1.667,11,2.444,1.467
+268,Zeth Anocracy,Galactic Telecomm Control,3,Researched,BBBB➪$$$bgg,Poly Species Corporations,Social Exodus,Galactic Domination,BBBB➪$$$$Tbgg,6,12,2.000,16.5,2.750,1.375
+269,Zeth Anocracy,Temporal Dilation,3,Researched,TTTT➪$$Uwwb,Megastructures,Matter Generation,Stasis Field,TTTT➪$$$Uwwb+U,6,12,2.000,18,3.000,1.500
+270,Zeth Anocracy,Matter Generation,3,Researched,YYYY➪$$UBbb,Poly Species Corporations,Temporal Dilation,Macroscale Teleportation,YYYY➪$$$UBbbg,6,12.5,2.083,16.5,2.750,1.320
+271,Zeth Anocracy,Envoys,0,Starting,www➪+ZTYgU,Cross Species Ethical Equality,,Zeth Diaspora,www➪$+Z$U,3,7,2.333,9,3.000,1.286
+272,Zeth Anocracy,Cascading Deception,0,Starting,"➪*BB,B➪**",Universal Translator,,Psychohistorical Deception,"➪*BBg,B➪** §",1.5,6,4.000,7,4.667,1.167
+273,Zeth Anocracy,Atomic Transmutation,1,Researched,U➪YBb,Ubiquitous Cultural Repository,Nanotechnology,Pseudomaterials,U➪YBbT,3,4,1.333,5.5,1.833,1.375
+274,Zeth Anocracy,Systemic Bribery,0,Starting,ZB/ww➾ss,Achronal Analysis,,Predictive Agent Insertion,ZZZ/ZB/ww➾sss,([0] / 1.5 /2),2,,3,,
+275,Zeth Anocracy,Black Market,0,Starting,ZZ/B➾L,Nanotechnology,,Undetectable Confidence Scams,ZZZ/ZB/BB➾LL,([0] / 1.5 /3),1.5,,3,,
+276,Zeth Anocracy,Singularity Control,2,Researched,UU➪TBYgbb*,Hyperspace Mining,Achronal Analysis,Wormhole Grid,UU➪TBYgbb*wb,6,8.5,1.417,10.5,1.750,1.235
+277,Zeth Anocracy,Phases,,Reference,,,,,,,,,,,
+278,Zeth Anocracy,Megastructures,3,Researched,UUU➪$$$$$gb,Temporal Dilation,Matter Generation,Dyson Swarms,UUU➪$$$$$$gbY,9,17,1.889,21.5,2.389,1.265
+279,Colonies,Acrux,1,Bid,"D,➪b",ww→,,Acrux,"I,➪bw",,,,,,
+280,Colonies,Spica,1,Bid,"I,➪w",gg→,,Spica,"W,➪wg",,,,,,
+281,Colonies,Antares,1,Bid,"J,➪g",U→,,Antares,"I,g➪U",,,,,,
+282,Colonies,Mimosa,1,Bid,"I,➪w",T→,,Mimosa,"J,➪T",,,,,,
+283,Colonies,Regulus,1,Bid,"J,➪w",Y→,,Regulus,"D,➪Y",,,,,,
+284,Colonies,Castor,1,Bid,"W,➪w",B→,,Castor,"I,➪B",,,,,,
+285,Colonies,Miaplacidus,1,Bid,"W,➪g",B→,,Miaplacidus,"D,➪B",,,,,,
+286,Colonies,Toliman,1,Bid,"D,➪w",B→,,Toliman,"I,➪B",,,,,,
+287,Colonies,Wezen,1,Bid,"J,➪b",B→,,Wezen,"W,➪B",,,,,,
+288,Colonies,Mirfak,1,Bid,"J,➪g",B→,,Mirfak,"I,➪B",,,,,,
+289,Colonies,Benetnasch,1,Bid,"W,➪g",T→,,Benetnasch,"J,➪T",,,,,,
+290,Colonies,Sargas,1,Bid,"D,➪b",Y→,,Sargas,"J,➪Y",,,,,,
+291,Colonies,Peacock,1,Bid,"D,➪b",B→,,Peacock,"J,➪B",,,,,,
+292,Colonies,Koo She,1,Bid,"D,➪b",T→,,Koo,"W,➪T",,,,,,
+293,Colonies,Polaris,1,Bid,"W,➪b",Y→,,Polaris,"D,➪Y",,,,,,
+294,Colonies,Fomalhaut,1,Bid,"I,➪b",U→,,Fomalhaut,"D,b➪U",,,,,,
+295,Colonies,Gacrux,1,Bid,"I,➪w",Y→,,Gacrux,"D,➪Y",,,,,,
+296,Colonies,Betelgeuse,1,Bid,"I,➪w",U→,,Betelgeuse,"J,w➪U",,,,,,
+297,Colonies,Arcturus,1,Bid,"I,➪b",T→,,Arcturus,"W,➪T",,,,,,
+298,Colonies,Alnair,1,Bid,"I,➪b",B→,,Alnair,"W,➪B",,,,,,
+299,Colonies,Alioth,1,Bid,"I,➪w",bb→,,Alioth,"D,➪wb",,,,,,
+300,Colonies,Adara,1,Bid,"J,➪g",ww→,,Adara,"I,➪gw",,,,,,
+301,Colonies,Sirius,1,Bid,"J,➪g",B→,,Sirius,"I,➪B",,,,,,
+302,Colonies,Rigel,1,Bid,"J,➪g",T→,,Rigel,"W,➪T",,,,,,
+303,Colonies,El Nath,1,Bid,"J,➪g",T→,,El,"W,➪T",,,,,,
+304,Colonies,Aldebaran,1,Bid,"J,➪b",Y→,,Aldebaran,"D,➪Y",,,,,,
+305,Colonies,Atria,1,Bid,"J,➪g",Y→,,Atria,"D,➪Y",,,,,,
+306,Colonies,Alnitak,1,Bid,"W,➪g",U→,,Alnitak,"I,g➪U",,,,,,
+307,Colonies,Hadar,1,Bid,"W,➪g",Y→,,Hadar,"J,➪Y",,,,,,
+308,Colonies,Capella,1,Bid,"W,➪g",T→,,Capella,"J,➪T",,,,,,
+309,Colonies,Shaula,1,Bid,"D,➪b",gg→,,Shaula,"J,➪gb",,,,,,
+310,Colonies,Canopus,1,Bid,"D,➪b",U→,,Canopus,"I,b➪U",,,,,,
+311,Colonies,Vega,1,Bid,"D,➪b",T→,,Vega,"J,➪T",,,,,,
+312,Colonies,Altair,1,Bid,"W,➪g",Y→,,Altair,"D,➪Y",,,,,,
+313,Colonies,Suhail,1,Bid,"W,➪w",B→,,Suhail,"I,➪B",,,,,,
+314,Colonies,Pollux,1,Bid,"D,➪w",T→,,Pollux,"W,➪T",,,,,,
+315,Colonies,Deneb,1,Bid,"I,➪w",B→,,Deneb,"W,➪B",,,,,,
+316,Colonies,Bellatrix,1,Bid,"W,➪w",Y→,,Bellatrix,"D,➪Y",,,,,,
+317,Colonies,Achernar,1,Bid,"I,➪w",T→,,Achernar,"J,➪T",,,,,,
+318,Colonies,Procyon,1,Bid,"D,➪b",Y→,,Procyon,"W,➪Y",,,,,,
+319,Research,Mechanical Engineers,1,Bid,Y4/U2→$1X,,,Nanotechnology,,,,,,,
+320,Research,Computational Theoreticians,1,Bid,w6/T4→$1X,,,Quantum Computers,,,,,,,
+321,Research,Linguistic Analysts,1,Bid,g6/B4→$1X,,,Universal Translator,,,,,,,
+322,Research,Organic Chemists,1,Bid,b6/T4→$1X,,,Genetic Engineering,,,,,,,
+323,Research,Pharmaceutical Scientists,1,Bid,g6/U2→$1X,,,Clinical Immortality,,,,,,,
+324,Research,Sociologists,1,Bid,w6/B4→$1X,,,Ubiquitous Cultural Repository,,,,,,,
+325,Research,Nuclear Physicists,1,Bid,b6/Y4→$1X,,,Atomic Transmutation,,,,,,,
+326,Research,Comparative Physiologists,2,Bid,b9/B6→$3X,,,Interspecies Medical Exchange,,,,,,,
+327,Research,N-Space Mathematicians,2,Bid,T8/U4→$4X,,,Hyperspace Mining,,,,,,,
+328,Research,Gravitic Topologists,2,Bid,b12/g12→$4X,,,Singularity Control,,,,,,,
+329,Research,Metaethicists,2,Bid,Y7/B7→$4X,,,Cross Species Ethical Equality,,,,,,,
+330,Research,Quantum Theoreticians,2,Bid,g9/T6→$3X,,,Antimatter Power,,,,,,,
+331,Research,Quantum Statisticians,2,Bid,w12/U4→$4X,,,Achronal Analysis,,,,,,,
+332,Research,Organic Architects,2,Bid,w9/Y6→$3X,,,Organic Construction,,,,,,,
+333,Research,Stellar Architectural Planners,3,Bid,T14/Y14→$11X,,,Megastructures,,,,,,,
+334,Research,Psychohistorians,3,Bid,B12/U6→$9X,,,Social Exodus,,,,,,,
+335,Research,Subquantum Manipulators,3,Bid,g18/w18→$9X,,,Matter Generation,,,,,,,
+336,Research,Memetic Artists,3,Bid,b18/w18→$9X,,,Galactic Telecomm Control,,,,,,,
+337,Research,Interspecies Managers,3,Bid,T11/B11→$8X,,,Poly Species Corporations,,,,,,,
+338,Research,Cultural Diffusionologists,3,Bid,g15/Y10→$7X,,,Xeno Cultural Exchange,,,,,,,
+339,Research,Chronophysicists,3,Bid,b18/U6→$9X,,,Temporal Dilation,,,,,,,
+340,Research,Cultural Polymorphologists,4,Bid,w18/b18/U6→$8X,,,Cultural Polymorphologists,,,,,,,
+341,Research,Reconstructive Paleobotanists,4,Bid,w21/g21/U7→$10X,,,Reconstructive Paleobotanists,,,,,,,
+342,Research,Abiotic Pathologists,4,Bid,w24/Y18/U8→$12X,,,Abiotic Pathologists,,,,,,,
+343,Research,Interphasal Theoreticians,4,Bid,b24/g24/U8→$12X,,,Interphasal Theoreticians,,,,,,,
+344,Research,Mesoscale Geoengineers,4,Bid,b27/Y18/U9→$14X,,,Mesoscale Geoengineers,,,,,,,
+345,Research,Sapience Developers,4,Bid,w21/Y14/B14→$10X,,,Sapience Developers,,,,,,,
+346,Research,Autonomic Teleoperators,4,Bid,T12/Y12/B12→$8X,,,Autonomic Teleoperators,,,,,,,
+347,Research,Fractal Microbiologists,4,Bid,w21/g21/T14→$10X,,,Fractal Microbiologists,,,,,,,
+348,Research,Stellar Plasma Flow Engineers,4,Bid,w21/T14/B14→$10X,,,Stellar Plasma Flow Engineers,,,,,,,
+349,Research,Chaos Theoreticians,4,Bid,g18/Y12/B12→$8X,,,Chaos Theoreticians,,,,,,,
+350,Research,Oceanographic Biotechnicians,4,Bid,b18/T12/U6→$8X,,,Oceanographic Biotechnicians,,,,,,,
+351,Research,Recursive Metatheoreticians,4,Bid,w30/b30/B20→$16X,,,Recursive Metatheoreticians,,,,,,,
+352,Research,Singularity Control Technicians,4,Bid,B20/T20/U10→$16X,,,Singularity Control Technicians,,,,,,,
+353,Research,Applied Topologists,4,Bid,w30/b30/Y20→$16X,,,Applied Topologists,,,,,,,
+354,Research,Metacognitive Ecologists,4,Bid,g30/T20/U10→$16X,,,Metacognitive Ecologists,,,,,,,
+355,Research,Plasma Auxonologists,4,Bid,g24/b24/Y16→$12X,,,Plasma Auxonologists,,,,,,,
+356,Research,Psychohistorical Ethicists,4,Bid,g27/w27/B18→$14X,,,Psychohistorical Ethicists,,,,,,,
+357,Research,Tachyon Astrotechnicians,4,Bid,g30/Y20/T20→$16X,,,Tachyon Astrotechnicians,,,,,,,
+358,Research,In Situ Genetic Editors,4,Bid,g24/b24/B16→$12X,,,In Situ Genetic Editors,,,,,,,
+359,Research,Macroscale Biophysicists,4,Bid,b27/B18/T18→$14X,,,Macroscale Biophysicists,,,,,,,
+360,Confluence,4 players; turn 6; bonus 2/0,0,Common,,,,,,,,,,,
+361,Confluence,7+ players; turn 6; bonus 0/0,0,Common,,,,,,,,,,,
+362,Confluence,"5,6 players; turn 6; bonus 1/0",0,Common,,,,,,,,,,,
+363,Confluence,7+ players; turn 1; bonus 7/2,0,Common,,,,,,,,,,,
+364,Confluence,4-6 players; turn 1; bonus 6/3,0,Common,,,,,,,,,,,
+365,Confluence,5+ players; turn 2; bonus 6/2,0,Common,,,,,,,,,,,
+366,Confluence,5+ players; turn 3; bonus 5/1,0,Common,,,,,,,,,,,
+367,Confluence,4 players; turn 2; bonus 5/2,0,Common,,,,,,,,,,,
+368,Confluence,4+ players; turn 4; bonus 4/1,0,Common,,,,,,,,,,,
+369,Confluence,4 players; turn 3; bonus 4/2,0,Common,,,,,,,,,,,
+370,Confluence,4-5 players; turn 5; bonus 3/1,0,Common,,,,,,,,,,,
+371,Confluence,6+ players; turn 5; bonus 2/0,0,Common,,,,,,,,,,,
+372,Unity,Starting Race Card,,Reference,UAAAaaaa,1 Colony,1 Research Team,,,,,,,,
+373,Kjasjavikalimm Directorate,Starting Race Card,,Reference,TYYBBgwbb****,2 Colonies,,,,,,,,,
+374,Faderan Conclave,Starting Race Card,,Reference,"UYTwwwb**, NR",1 Colony,1 Research Team,,,,,,,,
+375,Caylion Plutocracy,Starting Race Card,,Reference,BBgggggwwwwbb*,1 Colony with x2,,,,,,,,,
+376,Im'dril Nomads,Starting Race Card,,Reference,UTBYggwwbbb****,,1 Research Team,,,,,,,,
+377,Zeth Anocracy,Starting Race Card,,Reference,TTYBBgw*,,1 Research Team,,,,,,,,
+378,Eni Et Ascendancy,Starting Race Card,,Reference,Tbbwwg*,1 Colony,,,,,,,,,
+379,Kt'Zr'Kt'Rtl Adhocracy,Starting Race Card,,Reference,UTYBgggwwbbb,1 Colony,1 Research Team,,,,,,,,
+380,Yengii Society,Starting Race Card,,Reference,UTYYBgwb,1 Colony,1 Research Team,,,,,,,,
+381,Donation,Donation,,Starting,,,,Donation,,,,,,,
+382,Donation,Donation,,Starting,,,,Donation,,,,,,,
+383,Donation,Donation,,Starting,,,,Donation,,,,,,,
+384,Donation,Donation,,Starting,,,,Donation,,,,,,,
+385,Donation,Donation,,Starting,,,,Donation,,,,,,,
+386,Donation,Donation,,Starting,,,,Donation,,,,,,,
+387,Donation,Donation,,Starting,,,,Donation,,,,,,,
+388,Donation,Donation,,Starting,,,,Donation,,,,,,,
+389,Donation,Donation,,Starting,,,,Donation,,,,,,,
+B1,Kjasjavikalimm Directorate,Balkanized States' Colonies,1,DIbYY→$,"T➪Bb+w,g➪**+w §",WJDbb→$$,,Outer Reaches Hegemony,"T➪Bb+w,g➪**+w,U➪$Y+wgb §",5.5,6.5,,14,,
+B2,Kjasjavikalimm Directorate,Hadsja Vassal Territory,1,DJYYY→$$,BB➪UTbg,WDIYY→$$$,,Hadsja Empire,"BB➪UTbg,YYY➪Tbggww** §",7.5,6.5,0.867,15,2.000,
+B3,Kjasjavikalimm Directorate,Vagnleg Suzarainty,1,DWYYY→$$,ww➪$Yb,JDIYY→$$$,,Vagnleg Domination,"ww➪$Yb,bbbb➪$Ug* §",6,5.5,,13.5,,
