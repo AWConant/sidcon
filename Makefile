@@ -53,7 +53,7 @@ lint: flake blackcheck  ## Run pep8 linter and black.
 
 .PHONY: mypy
 mypy:              ## Run mypy type checker.
-	$(ENV_PREFIX)python -m mypy --ignore-missing-imports sidcon/
+	$(ENV_PREFIX)python -m mypy --ignore-missing-imports sidcon/ tests/
 
 .PHONY: check
 check: lint mypy   ## Run all linters and mypy.
