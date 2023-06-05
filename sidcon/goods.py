@@ -81,15 +81,110 @@ class OceanColony(Colony):
     key = "W"
 
 
+class Ultratech(ValuableGood):
+    name = "Ultratech"
+    key = "U"
+    value = 3
+
+
 class Ship(ValuableGood):
     name = "Ship"
     key = "*"
     value = 1
 
 
+class VictoryPoint(ValuableGood):
+    name = "Victory point"
+    key = "$"
+    value = 3
+
+
+class Yellow(Large):
+    name = "Yellow cube"
+    key = "Y"
+
+
+class Blue(Large):
+    name = "Blue cube"
+    key = "T"
+
+
+class Black(Large):
+    name = "Black cube"
+    key = "B"
+
+
+class White(Small):
+    name = "White cube"
+    key = "w"
+
+
+class Brown(Small):
+    name = "Brown cube"
+    key = "b"
+
+
+class Green(Small):
+    name = "Green cube"
+    key = "g"
+
+
+@typ.final
+class DonationUltratech(DonationGood, Ultratech):
+    name = "Ultratech (donation)"
+
+
 @typ.final
 class DonationShip(DonationGood, Ship):
     name = "Ship (donation)"
+
+
+@typ.final
+class DonationVictoryPoint(DonationGood, VictoryPoint):
+    name = "Victory point (donation)"
+
+
+@typ.final
+class DonationYellow(DonationGood, Yellow):
+    name = "Yellow cube (donation)"
+
+
+@typ.final
+class DonationBlue(DonationGood, Blue):
+    name = "Blue cube (donation)"
+
+
+@typ.final
+class DonationBlack(DonationGood, Black):
+    name = "Black cube (donation)"
+
+
+@typ.final
+class DonationWhite(DonationGood, White):
+    name = "White cube (donation)"
+
+
+@typ.final
+class DonationBrown(DonationGood, Brown):
+    name = "Brown cube (donation)"
+
+
+@typ.final
+class DonationGreen(DonationGood, Green):
+    name = "Green cube (donation)"
+
+
+# Weird stuff
+
+
+class AnyLarge(Large):
+    name = "Any large cube"
+    key = "L"
+
+
+@typ.final
+class DonationAnyLarge(DonationGood, AnyLarge):
+    name = "Any large cube (donation)"
 
 
 class AnySmall(Small):
@@ -113,46 +208,6 @@ class DonationSmallWild(DonationGood, SmallWild):
     name = "Small wild cube (donation)"
 
 
-class Green(Small):
-    name = "Green cube"
-    key = "g"
-
-
-@typ.final
-class DonationGreen(DonationGood, Green):
-    name = "Green cube (donation)"
-
-
-class White(Small):
-    name = "White cube"
-    key = "w"
-
-
-@typ.final
-class DonationWhite(DonationGood, White):
-    name = "White cube (donation)"
-
-
-class Brown(Small):
-    name = "Brown cube"
-    key = "b"
-
-
-@typ.final
-class DonationBrown(DonationGood, Brown):
-    name = "Brown cube (donation)"
-
-
-class AnyLarge(Large):
-    name = "Any large cube"
-    key = "L"
-
-
-@typ.final
-class DonationAnyLarge(DonationGood, AnyLarge):
-    name = "Any large cube (donation)"
-
-
 class LargeWild(Large):
     name = "Large wild cube"
     key = "A"
@@ -163,62 +218,10 @@ class DonationLargeWild(DonationGood, LargeWild):
     ...
 
 
-class Blue(Large):
-    name = "Blue cube"
-    key = "T"
-
-
-@typ.final
-class DonationBlue(DonationGood, Blue):
-    name = "Blue cube (donation)"
-
-
-class Yellow(Large):
-    name = "Yellow cube"
-    key = "Y"
-
-
-@typ.final
-class DonationYellow(DonationGood, Yellow):
-    name = "Yellow cube (donation)"
-
-
-class Black(Large):
-    name = "Black cube"
-    key = "B"
-
-
-@typ.final
-class DonationBlack(DonationGood, Black):
-    name = "Black cube (donation)"
-
-
-class Ultratech(ValuableGood):
-    name = "Ultratech"
-    key = "U"
-    value = 3
-
-
-@typ.final
-class DonationUltratech(DonationGood, Ultratech):
-    name = "Ultratech (donation)"
-
-
 @typ.final
 class KtZrKtRtlUltratechCost(Ultratech):
     name = "Kt'Zr'Kt'Rtl Ultratech cost"
     key = "K"
-
-
-class VictoryPoint(ValuableGood):
-    name = "Victory point"
-    key = "$"
-    value = 3
-
-
-@typ.final
-class DonationVictoryPoint(DonationGood, VictoryPoint):
-    name = "Victory point (donation)"
 
 
 class Envoy(Good):
