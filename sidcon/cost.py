@@ -17,21 +17,21 @@ Cost = typ.Union[PurpleConverter, Collection[type[Technology]], "FactionSpecific
 @enum.unique
 class FactionSpecificCost(enum.Enum):
     # Deep Unity
-    NOT_TRIPLES = "Dice not triples"
-    SINGLE_ZERO = "Die 0"
-    SINGLE_ONE = "Die 1"
-    SINGLE_TWO = "Die 2"
-    SINGLE_THREE = "Die 3"
-    SINGLE_FOUR = "Die 4"
-    SINGLE_FIVE = "Die 5"
-    SINGLE_SIX = "Die 6"
-    SINGLE_SEVEN = "Die 7"
+    DEEP_UNITY_NOT_TRIPLES = "Dice not triples"
+    DEEP_UNITY_SINGLE_ZERO = "Die 0"
+    DEEP_UNITY_SINGLE_ONE = "Die 1"
+    DEEP_UNITY_SINGLE_TWO = "Die 2"
+    DEEP_UNITY_SINGLE_THREE = "Die 3"
+    DEEP_UNITY_SINGLE_FOUR = "Die 4"
+    DEEP_UNITY_SINGLE_FIVE = "Die 5"
+    DEEP_UNITY_SINGLE_SIX = "Die 6"
+    DEEP_UNITY_SINGLE_SEVEN = "Die 7"
 
     # Caylion Collaborative
-    THREE_VOTES = "3 votes"
-    FOUR_VOTES = "4 votes"
-    FIVE_VOTES = "5 votes"
-    SIX_VOTES = "6 votes"
+    CAYLION_COLLABORATIVE_THREE_VOTES = "3 votes"
+    CAYLION_COLLABORATIVE_FOUR_VOTES = "4 votes"
+    CAYLION_COLLABORATIVE_FIVE_VOTES = "5 votes"
+    CAYLION_COLLABORATIVE_SIX_VOTES = "6 votes"
 
     # Yengii Jii
     JII_CONSTRAINT = "Jii Constraint"
