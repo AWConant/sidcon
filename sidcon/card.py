@@ -172,7 +172,7 @@ class StartingRaceCard(FactionCard, Starting):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class InterestConverterCard(StartingCard):
-    all_front_names: typ.Final[Collection[str]] = frozenset(
+    _all_front_names: typ.Final[Collection[str]] = frozenset(
         [
             "Cultural Charity",
             "Volunteer Medical Movement",
@@ -266,7 +266,7 @@ class CreatedCard(FactionCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class KtColonyCard(CreatedCard, FrontedColonyCard):
-    all_front_names: typ.Final[Collection[str]] = frozenset(
+    _all_front_names: typ.Final[Collection[str]] = frozenset(
         [
             "Zd'Nx",
             "Kz'Tlr",
@@ -450,7 +450,7 @@ class KtDualCard(Starting):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class UndesirableCard(SpeciesCard):
-    all_front_names: typ.Final[Collection[str]] = frozenset(
+    _all_front_names: typ.Final[Collection[str]] = frozenset(
         [
             "The Uprooted",  # Caylion
             "Hadopelagic Exiles",  # Eni Et
@@ -477,7 +477,7 @@ class UndesirableCard(SpeciesCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class ProjectCard(CreatedCard):
-    all_front_names: typ.Final[Collection[str]] = frozenset(
+    _all_front_names: typ.Final[Collection[str]] = frozenset(
         [
             "Hyperspace Consortium",
             "Low Caylius Orbital Factories",
@@ -510,7 +510,7 @@ class ProjectCard(CreatedCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class RelicWorldCard(CreatedCard):
-    all_front_names: typ.Final[Collection[str]] = frozenset(
+    _all_front_names: typ.Final[Collection[str]] = frozenset(
         [
             "Gift of the Duruntai",
             "Contextual Integrator Cache",

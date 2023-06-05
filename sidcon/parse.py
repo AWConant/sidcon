@@ -75,9 +75,9 @@ def cards_from_filepath(filepath: str) -> list["Card | KtDualCard"]:
                 source = Source.from_string(r.cost)
                 card: Card
                 if source == Source.CREATED:
-                    if r.front_name in ProjectCard.all_front_names:
+                    if r.front_name in ProjectCard._all_front_names:
                         card = ProjectCard.from_row(r)
-                    elif r.front_name in KtColonyCard.all_front_names:
+                    elif r.front_name in KtColonyCard._all_front_names:
                         card = KtColonyCard.from_row(r)
                     else:
                         card = CreatedCard.from_row(r)
