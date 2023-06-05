@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 class Face(object):
     name: str
     features: Sequence[Feature]  # must have at least one
-    upgrades: Mapping[Collection[Upgrade], Face]
+    upgrades: Collection[tuple[Collection[Upgrade], Face]]
 
     def __post_init__(self):
         if not self.name:
@@ -75,8 +75,8 @@ class Face(object):
         upgrade_string_map: Mapping[Collection[str], Face],
     ) -> Face:
         features = [sidcon.feature.from_string(s) for s in feature_strings]
-        upgrades: Mapping[Collection[Upgrade], Face] = {
-            frozenset([sidcon.upgrade.from_string(s) for s in upgrade_strings]): face
+        upgrades = [
+            ([sidcon.upgrade.from_string(s) for s in upgrade_strings], face)
             for upgrade_strings, face in upgrade_string_map.items()
-        }
+        ]
         return cls(name=name, features=features, upgrades=upgrades)
