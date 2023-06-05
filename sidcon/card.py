@@ -65,8 +65,9 @@ class Card(object):
         feature_strings = sidcon.feature.front_strings_from_row(r)
 
         upgrade_string_map: dict[Collection[str], Face] = dict()
-        if back is not None:
-            upgrade_strings = sidcon.row.upgrade_strings_from_row(r)
+        upgrade_strings = sidcon.row.upgrade_strings_from_row(r)
+        if back is not None and len(upgrade_strings) > 0:
+            # Assumption: no card upgrades for free.
             upgrade_string_map[frozenset(upgrade_strings)] = back
 
         front = Face.from_strings(r.front_name, feature_strings, upgrade_string_map)
