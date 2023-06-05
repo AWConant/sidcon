@@ -24,8 +24,8 @@ logger = logging.getLogger(__name__)
 
 skipped_card_factions = [
     "Donation",
-    "Confluence",
-    "Research",
+    "Confluence",  # TODO
+    "Research",  # TODO
 ]
 
 skipped_front_names = [
@@ -113,6 +113,8 @@ def all_cards() -> list["Card | KtDualCard"]:
 
 if __name__ == "__main__":
     cards = all_cards()
-    starting_cards = list(filter(lambda c: isinstance(c, Starting), cards))
-    pprint.pprint(starting_cards)
-    print(len(starting_cards))
+    #starting_cards = list(filter(lambda c: isinstance(c, Starting), cards))
+    #pprint.pprint(starting_cards)
+    #print(len(starting_cards))
+    pprint.pprint(cards)
+    print(len(cards))
