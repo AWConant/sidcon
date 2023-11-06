@@ -9,9 +9,7 @@ _STRIPPED_SUBSTRINGS = [" §"]
 
 
 CountedUnits = Mapping[type[Unit], int]
-
-# TODO: Unexport this if possible.
-MutableCountedUnits = MutableMapping[type[Unit], int]
+_MutableCountedUnits = MutableMapping[type[Unit], int]
 
 
 def value(units: CountedUnits) -> float:
@@ -47,7 +45,7 @@ def _from_string(s: str, key_map: Mapping[str, type[Unit]]) -> CountedUnits:
         if not key.isdigit() and key not in key_map:
             raise ValueError(f"input string '{s}' contains unmapped key '{key}'")
 
-    d: MutableCountedUnits = dict()
+    d: _MutableCountedUnits = dict()
 
     unit: type[Unit] | None = None
     digits: list[str] = []
@@ -74,7 +72,7 @@ def _from_string(s: str, key_map: Mapping[str, type[Unit]]) -> CountedUnits:
 
 
 def add(a: CountedUnits, b: CountedUnits) -> CountedUnits:
-    summ: MutableCountedUnits = dict()
+    summ: _MutableCountedUnits = dict()
     for k, v in a.items():
         try:
             summ[k] += v
@@ -89,7 +87,7 @@ def add(a: CountedUnits, b: CountedUnits) -> CountedUnits:
 
 
 def subtract(left: CountedUnits, right: CountedUnits) -> CountedUnits:
-    difference: MutableCountedUnits = dict(left)
+    difference: _MutableCountedUnits = dict(left)
     for k, v in right.items():
         try:
             difference[k] -= v
