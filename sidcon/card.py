@@ -19,9 +19,9 @@ from sidcon.converter import Converter
 from sidcon.cost import Cost
 from sidcon.face import Face
 from sidcon.feature import Feature
-from sidcon.goods import Colony
 from sidcon.row import Row
 from sidcon.technology import Era, Technology
+from sidcon.units import Colony
 from sidcon.upgrade import Upgrade
 
 logging.basicConfig()
@@ -437,7 +437,7 @@ class KtDualCard(Starting):
             if isinstance(lf, Converter) and isinstance(rf, Mapping):
                 # Right halves of Kt converters do not include the arrow, so they need to be mapped
                 # to "free" converters before being merged.
-                rf = lf.__class__.from_counted_goods(rf)
+                rf = lf.__class__.from_counted_units(rf)
             mf = sidcon.feature.merged(lf, rf)
             merged.append(mf)
         return merged

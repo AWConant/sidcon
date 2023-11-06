@@ -10,39 +10,39 @@ logging.basicConfig()
 logger = logging.getLogger(__name__)
 
 
-class Good(acp.Abstract):
+class Unit(acp.Abstract):
     name: typ.ClassVar[str] = acp.abstract_class_property(str)
     key: typ.ClassVar[str] = acp.abstract_class_property(str)
 
 
-GoodT = typ.TypeVar("GoodT", bound=Good)
+UnitT = typ.TypeVar("UnitT", bound=Unit)
 
 
-class ConsumableGood(Good, acp.Abstract):
-    """A Good that is destroyed when fed as input to a Converter."""
+class ConsumableUnit(Unit, acp.Abstract):
+    """A Unit that is destroyed when fed as input to a Converter."""
 
     ...
 
 
-class DonationGood(Good, acp.Abstract):
+class DonationUnit(Unit, acp.Abstract):
     ...
 
 
-class ValuableGood(ConsumableGood, acp.Abstract):
-    """A Good that has a prescribed fair trade value."""
+class ValuableUnit(ConsumableUnit, acp.Abstract):
+    """A Unit that has a prescribed fair trade value."""
 
     value: typ.ClassVar[float] = acp.abstract_class_property(float)
 
 
-class Small(ValuableGood, acp.Abstract):
+class Small(ValuableUnit, acp.Abstract):
     value = 1
 
 
-class Large(ValuableGood, acp.Abstract):
+class Large(ValuableUnit, acp.Abstract):
     value = 1.5
 
 
-class Colony(ConsumableGood, acp.Abstract):
+class Colony(ConsumableUnit, acp.Abstract):
     @classmethod
     def from_key(cls, key: str) -> type["Colony"]:
         for subclass in cls.__subclasses__():
@@ -81,19 +81,19 @@ class OceanColony(Colony):
     key = "W"
 
 
-class Ultratech(ValuableGood):
+class Ultratech(ValuableUnit):
     name = "Ultratech"
     key = "U"
     value = 3
 
 
-class Ship(ValuableGood):
+class Ship(ValuableUnit):
     name = "Ship"
     key = "*"
     value = 1
 
 
-class VictoryPoint(ValuableGood):
+class VictoryPoint(ValuableUnit):
     name = "Victory point"
     key = "$"
     value = 3
@@ -130,47 +130,47 @@ class Green(Small):
 
 
 @typ.final
-class DonationUltratech(DonationGood, Ultratech):
+class DonationUltratech(DonationUnit, Ultratech):
     name = "Ultratech (donation)"
 
 
 @typ.final
-class DonationShip(DonationGood, Ship):
+class DonationShip(DonationUnit, Ship):
     name = "Ship (donation)"
 
 
 @typ.final
-class DonationVictoryPoint(DonationGood, VictoryPoint):
+class DonationVictoryPoint(DonationUnit, VictoryPoint):
     name = "Victory point (donation)"
 
 
 @typ.final
-class DonationYellow(DonationGood, Yellow):
+class DonationYellow(DonationUnit, Yellow):
     name = "Yellow cube (donation)"
 
 
 @typ.final
-class DonationBlue(DonationGood, Blue):
+class DonationBlue(DonationUnit, Blue):
     name = "Blue cube (donation)"
 
 
 @typ.final
-class DonationBlack(DonationGood, Black):
+class DonationBlack(DonationUnit, Black):
     name = "Black cube (donation)"
 
 
 @typ.final
-class DonationWhite(DonationGood, White):
+class DonationWhite(DonationUnit, White):
     name = "White cube (donation)"
 
 
 @typ.final
-class DonationBrown(DonationGood, Brown):
+class DonationBrown(DonationUnit, Brown):
     name = "Brown cube (donation)"
 
 
 @typ.final
-class DonationGreen(DonationGood, Green):
+class DonationGreen(DonationUnit, Green):
     name = "Green cube (donation)"
 
 
@@ -183,7 +183,7 @@ class AnyLarge(Large):
 
 
 @typ.final
-class DonationAnyLarge(DonationGood, AnyLarge):
+class DonationAnyLarge(DonationUnit, AnyLarge):
     name = "Any large cube (donation)"
 
 
@@ -193,7 +193,7 @@ class AnySmall(Small):
 
 
 @typ.final
-class DonationAnySmall(DonationGood, Small):
+class DonationAnySmall(DonationUnit, Small):
     name = "Any small cube (donation)"
     key = "s"
 
@@ -204,7 +204,7 @@ class SmallWild(Small):
 
 
 @typ.final
-class DonationSmallWild(DonationGood, SmallWild):
+class DonationSmallWild(DonationUnit, SmallWild):
     name = "Small wild cube (donation)"
 
 
@@ -214,7 +214,7 @@ class LargeWild(Large):
 
 
 @typ.final
-class DonationLargeWild(DonationGood, LargeWild):
+class DonationLargeWild(DonationUnit, LargeWild):
     ...
 
 
@@ -224,66 +224,66 @@ class KtZrKtRtlUltratechCost(Ultratech):
     key = "K"
 
 
-class Envoy(Good):
+class Envoy(Unit):
     name = "Envoy"
     key = "Z"  # "Zeth envoy"
 
 
 @typ.final
-class DonationEnvoy(DonationGood, Envoy):
+class DonationEnvoy(DonationUnit, Envoy):
     name = "Envoy (donation)"
 
 
 @typ.final
-class FleetSupport(Good):
+class FleetSupport(Unit):
     name = "Fleet support"
     key = "F"
 
 
 @typ.final
-class RelicWorld(Good):
+class RelicWorld(Unit):
     name = "Relic world"
     key = "R"
 
 
 @typ.final
-class ServiceToken(Good):
+class ServiceToken(Unit):
     name = "Service token"
     key = "½"
 
 
 @typ.final
-class SmallOrbitalFactory(Good):
+class SmallOrbitalFactory(Unit):
     name = "Small orbital factory"
     key = "o"
 
 
 @typ.final
-class LargeOrbitalFactory(Good):
+class LargeOrbitalFactory(Unit):
     name = "Large orbital factory"
     key = "O"
 
 
 @typ.final
-class SharingBonus(Good):
+class SharingBonus(Unit):
     name = "Sharing bonus"
     key = "X"
 
 
-key_to_non_donation_good: Mapping[str, type[Good]] = {
+key_to_non_donation_unit: Mapping[str, type[Unit]] = {
     c.key: c
     for name, c in inspect.getmembers(sys.modules[__name__])
     if inspect.isclass(c)
     and acp.Abstract not in c.__bases__
-    and issubclass(c, Good)
-    and not issubclass(c, DonationGood)
+    and issubclass(c, Unit)
+    and not issubclass(c, DonationUnit)
 }
 
-key_to_donation_good: Mapping[str, type[DonationGood]] = {
+key_to_donation_unit: Mapping[str, type[DonationUnit]] = {
     c.key: c
     for name, c in inspect.getmembers(sys.modules[__name__])
     if inspect.isclass(c)
     and acp.Abstract not in c.__bases__
-    and issubclass(c, Good)
-    and issubclass(c, DonationGood)
+    and issubclass(c, Unit)
+    and issubclass(c, DonationUnit)
 }

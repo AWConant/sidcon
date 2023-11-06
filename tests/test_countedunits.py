@@ -1,7 +1,7 @@
 import pytest
 
-import sidcon.countedgoods
-from sidcon.goods import Green, Ultratech, Blue
+import sidcon.countedunits
+from sidcon.units import Green, Ultratech, Blue
 
 
 class TestAdd(object):
@@ -9,7 +9,7 @@ class TestAdd(object):
         a = {Green: 1, Ultratech: 2}
         b = {Green: 2}
         want = {Green: 3, Ultratech: 2}
-        got = sidcon.countedgoods.add(a, b)
+        got = sidcon.countedunits.add(a, b)
         assert got == want
 
 
@@ -26,7 +26,7 @@ class TestSubtract(object):
         ],
     )
     def test_basic(self, left, right, want):
-        got = sidcon.countedgoods.subtract(left, right)
+        got = sidcon.countedunits.subtract(left, right)
         assert got == want
 
     @pytest.mark.parametrize(
@@ -46,4 +46,4 @@ class TestSubtract(object):
     )
     def test_raises_ValueError(self, left, right):
         with pytest.raises(ValueError):
-            _ = sidcon.countedgoods.subtract(left, right)
+            _ = sidcon.countedunits.subtract(left, right)

@@ -7,10 +7,10 @@ from collections.abc import Mapping, Sequence
 
 import abstractcp as acp
 
-import sidcon.countedgoods
+import sidcon.countedunits
 import sidcon.exception
-import sidcon.goods
-from sidcon.countedgoods import CountedGoods
+import sidcon.units
+from sidcon.countedunits import CountedUnits
 
 logging.basicConfig()
 logger = logging.getLogger(__name__)
@@ -21,29 +21,29 @@ _ALTERNATE_INPUT_OUTPUT_KEY = "/"
 ConverterT = typ.TypeVar("ConverterT", bound="Converter")
 
 
-Input = CountedGoods
+Input = CountedUnits
 Inputs = Input | Sequence[Input]
 
 
 def inputs_from_string(s: str) -> Inputs:
     strings = s.split(_ALTERNATE_INPUT_OUTPUT_KEY)
-    goods: Inputs
+    units: Inputs
     if len(strings) == 1:
-        goods = sidcon.countedgoods.from_string(strings[0])
+        units = sidcon.countedunits.from_string(strings[0])
     else:
-        goods = [sidcon.countedgoods.from_string(s) for s in strings]
-    return goods
+        units = [sidcon.countedunits.from_string(s) for s in strings]
+    return units
 
 
 def _merged_inputs(a: Inputs, b: Inputs) -> Inputs:
     if isinstance(a, Mapping) and isinstance(b, Mapping):
-        return sidcon.countedgoods.add(a, b)
+        return sidcon.countedunits.add(a, b)
     elif isinstance(a, Sequence) or isinstance(b, Sequence):
         if not isinstance(a, Sequence):
             a = [a]
         if not isinstance(b, Sequence):
             b = [b]
-        return [sidcon.countedgoods.add(inp_a, inp_b) for inp_a, inp_b in itertools.product(a, b)]
+        return [sidcon.countedunits.add(inp_a, inp_b) for inp_a, inp_b in itertools.product(a, b)]
     else:
         raise ValueError(
             "unhandled inputs merge types:\n"
@@ -54,7 +54,7 @@ def _merged_inputs(a: Inputs, b: Inputs) -> Inputs:
 
 
 @typ.overload
-def _inputs_value(inputs: CountedGoods) -> float:
+def _inputs_value(inputs: CountedUnits) -> float:
     ...
 
 
@@ -70,10 +70,10 @@ def _inputs_value(inputs: Inputs) -> float | list[float]:
 
 
 def _input_value(inp: Input) -> float:
-    return sidcon.countedgoods.value(inp)
+    return sidcon.countedunits.value(inp)
 
 
-Output = typ.Union[CountedGoods, "UniqueOutput"]
+Output = typ.Union[CountedUnits, "UniqueOutput"]
 Outputs = Output | Sequence[Output]
 
 
@@ -107,7 +107,7 @@ def _merged_outputs(a: Outputs, b: Outputs) -> Outputs:
 
 def _merged_output(a: Output, b: Output) -> Output:
     if isinstance(a, Mapping) and isinstance(b, Mapping):
-        return sidcon.countedgoods.add(a, b)
+        return sidcon.countedunits.add(a, b)
     else:
         raise ValueError(
             "unhandled output merge types:\n"
@@ -118,7 +118,7 @@ def _merged_output(a: Output, b: Output) -> Output:
 
 
 @typ.overload
-def _outputs_value(outputs: CountedGoods) -> float:
+def _outputs_value(outputs: CountedUnits) -> float:
     ...
 
 
@@ -136,7 +136,7 @@ def _outputs_value(outputs: Outputs) -> float | list[float]:
 def _output_value(o: Output) -> float:
     if isinstance(o, UniqueOutput):
         return 0.0
-    return sidcon.countedgoods.value(o)
+    return sidcon.countedunits.value(o)
 
 
 @typ.final
@@ -249,7 +249,7 @@ class Converter(acp.Abstract):
         return cls(inputs=inputs, outputs=outputs)
 
     @classmethod
-    def from_counted_goods(cls: type[ConverterT], cg: CountedGoods) -> ConverterT:
+    def from_counted_units(cls: type[ConverterT], cg: CountedUnits) -> ConverterT:
         return cls(inputs={}, outputs=cg)
 
     @classmethod
