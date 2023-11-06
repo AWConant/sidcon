@@ -30,7 +30,7 @@ class UniqueFeature(enum.Enum):
     UNDESIRABLE_LIMIT_THREE = "Undesirable Limit: 3"
     UNDESIRABLE_LIMIT_FIVE = "Undesirable Limit: 5"
 
-    NINE_TIEBREAKER = "9 Tie Breaker"
+    NINE_TIEBREAKER_THIS_TURN = "9 Tie Breaker"
 
     PLUS_ONE_TO_A_DIE = "+1 to a die"
     MINUS_ONE_TO_A_DIE = "-1 to a die"
