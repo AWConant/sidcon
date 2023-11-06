@@ -3,7 +3,7 @@ import csv
 import logging
 import pprint
 
-from sidcon.alien import *
+from sidcon.alien import Kjasjavikalimm
 from sidcon.card import (
     Card,
     CreatedCard,
@@ -12,7 +12,6 @@ from sidcon.card import (
     KtDualCard,
     ProjectCard,
     Source,
-    Starting,
     StartingCard,
     StartingRaceCard,
     TechnologyCard,
