@@ -1,4 +1,9 @@
 # Actual files
+design.txt
+imdril.txt
+kjas.txt
+out.txt
+ttl.py
 
 # profiling
 /prof.py
@@ -144,3 +149,6 @@ dmypy.json
 
 # templates
 .github/templates/*
+
+# macos
+.DS_Store
