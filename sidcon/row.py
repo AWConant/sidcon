@@ -1,4 +1,4 @@
-from __future__ import annotations
+
 
 import dataclasses
 import enum
@@ -45,7 +45,7 @@ class Row(object):
     back_converter: str
 
     @classmethod
-    def from_dict(cls, d: dict[str, str]) -> Row:
+    def from_dict(cls, d: dict[str, str]) -> "Row":
         upgrade3: str
         try:
             upgrade3 = d[Column.UPGRADE3.value]
@@ -80,7 +80,7 @@ class Row(object):
         upgrade3: typ.Optional[str] = None,
         back_name: typ.Optional[str] = None,
         back_converter: typ.Optional[str] = None,
-    ) -> Row:
+    ) -> "Row":
         return Row(
             card_number=card_number if card_number is not None else self.card_number,
             faction_title=faction_title if faction_title is not None else self.faction_title,
