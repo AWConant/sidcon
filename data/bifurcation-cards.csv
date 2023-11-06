@@ -26,12 +26,12 @@ s,Faction,Front Name,Era,Cost,Front Factory,Upgrade1,Upgrade2,Upgrade3,Back Name
 25,Grand Fleet,Grand Fleet 1,,Starting,F,,,,,,,,,,,
 26,Grand Fleet,Starting Race Card,,Reference,UUYYTTTBB5g4w3b***,,1 Research Team,,,,,,,,,
 27,Im'dril,Disaffected Artists,1,Undesirable,BBF➪UYbw,Ubiquitous Cultural Repository,Genetic Engineering,,Smuggling Guild,BB➪UYTbw,3,6.5,2.167,8,2.667,1.231
-28,Kjasjavikalimm Independent Nations,Oskir Nation,1,Starting,➪**+wb,+Ubiquitous Cultural Repository,+Quantum Computers,+Genetic Engineering,Oskir Stellar Nation,➪**+Ywb,0,4,1000.000,5.5,1000.000,1.375
-29,Kjasjavikalimm Independent Nations,Republic of Katkaseni,1,Starting,bbb➪**+Twg,+Nanotechnology,+Universal Translator,+Atomic Transmutation,Katkaseni Trade Republic,bbb➪**+Twwgg,3,5.5,1.833,7.5,2.500,1.364
-30,Kjasjavikalimm Independent Nations,Lattik Domain,1,Starting,TT➪+wYBB,+Clinical Immortality,+Universal Translator,+Ubiquitous Cultural Repository,Lattik Interstellar Domain,TT➪+wwbYBB,3,5.5,1.833,7.5,2.500,1.364
-31,Kjasjavikalimm Independent Nations,People's Monarchy of Korlynd,2,Starting,YYY➪+gbTU**,+Cross Species Ethical Equality,+Hyperspace Mining,+Antimatter Power,Multispecies Monarchy of Korlynd,YYY➪+gbbTTU***,4.5,8.5,1.889,12,2.667,1.412
-32,Kjasjavikalimm Independent Nations,Hoslonik Collective,2,Starting,+L➪+Bb*,+Cross Species Ethical Equality,+Achronal Analysis,+Interspecies Medical Exchange,Hoslonik Diplomatic Understanding,+L➪+Bb*$,1.5,3.5,2.333,6.5,4.333,1.857
-33,Kjasjavikalimm Independent Nations,Arjsend Commonwealth,2,Starting,+ss➪+TYB,+Interspecies Medical Exchange,+Singularity Control,+Organic Construction,Arjsend Multiplanetary ENclaves,+ss➪+TYBBgw,2,4.5,2.250,8,4.000,1.778
+28,Kjasjavikalimm Independent Nations,Oskir Nation,1,Starting,➪**+wb,Ubiquitous Cultural Repository,Quantum Computers,Genetic Engineering,Oskir Stellar Nation,➪**+Ywb,0,4,1000.000,5.5,1000.000,1.375
+29,Kjasjavikalimm Independent Nations,Republic of Katkaseni,1,Starting,bbb➪**+Twg,Nanotechnology,Universal Translator,Atomic Transmutation,Katkaseni Trade Republic,bbb➪**+Twwgg,3,5.5,1.833,7.5,2.500,1.364
+30,Kjasjavikalimm Independent Nations,Lattik Domain,1,Starting,TT➪+wYBB,Clinical Immortality,Universal Translator,Ubiquitous Cultural Repository,Lattik Interstellar Domain,TT➪+wwbYBB,3,5.5,1.833,7.5,2.500,1.364
+31,Kjasjavikalimm Independent Nations,People's Monarchy of Korlynd,2,Starting,YYY➪+gbTU**,Cross Species Ethical Equality,Hyperspace Mining,Antimatter Power,Multispecies Monarchy of Korlynd,YYY➪+gbbTTU***,4.5,8.5,1.889,12,2.667,1.412
+32,Kjasjavikalimm Independent Nations,Hoslonik Collective,2,Starting,+L➪+Bb*,Cross Species Ethical Equality,Achronal Analysis,Interspecies Medical Exchange,Hoslonik Diplomatic Understanding,+L➪+Bb*$,1.5,3.5,2.333,6.5,4.333,1.857
+33,Kjasjavikalimm Independent Nations,Arjsend Commonwealth,2,Starting,+ss➪+TYB,Interspecies Medical Exchange,Singularity Control,Organic Construction,Arjsend Multiplanetary Enclaves,+ss➪+TYBBgw,2,4.5,2.250,8,4.000,1.778
 34,Kjasjavikalimm Independent Nations,Incoming Donations,,,,,,,Incoming Donations,,,,,,,
 35,Kjasjavikalimm Independent Nations,Starting Race Card,,Reference,+YYBTbbwggg,2 Colonies,+Linguistic Analysis,,,,,,,,,
 36,Kjasjavikalimm,Anosmia,1,Undesirable,Y➪TBb*,Ubiquitous Cultural Repository,Universal Translator,,Spy Network,Y➪TBbwg*,1.5,5,3.333,7,4.667,1.400
