@@ -77,6 +77,7 @@ class Card(object):
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class SpeciesCard(Card):
+    # TODO(P1): Era is probably a facet of a face, not a card.
     era: Era | None
     species: type[Species]
 
@@ -146,6 +147,7 @@ class StartingCard(FactionCard, Starting):
         )
 
 
+# TODO: Rename this to something that doesn't sound like it inherits from StartingCard.
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class StartingRaceCard(FactionCard, Starting):
@@ -211,6 +213,7 @@ class FrontedColonyCard(ColonyCard):
     @classmethod
     def from_row(cls, r: Row) -> FrontedColonyCard:
         front_colony_key, front_converter = r.front_converter.split(",", 1)
+        # TODO: Why do we need to copy this?
         copied_row = r.copy(
             front_converter=front_converter,
         )
@@ -229,6 +232,7 @@ class DualFacedColonyCard(FrontedColonyCard):
     @classmethod
     def from_row(cls, r: Row) -> DualFacedColonyCard:
         back_colony_key, back_converter = r.back_converter.split(",", 1)
+        # TODO: Why do we need to copy this?
         copied_row = r.copy(
             back_converter=back_converter,
         )
@@ -249,6 +253,8 @@ class ResearchTeam(Card):
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class CreatedCard(FactionCard):
     cost: Cost
+    # TODO: Should cost move to Face...? It's a failure of abstraction, but I have no idea how to
+    # deal with Kt.
 
     @classmethod
     def from_row(cls, r: Row) -> CreatedCard:

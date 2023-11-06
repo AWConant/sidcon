@@ -68,6 +68,7 @@ class Row(object):
     def copy(
         self,
         *,
+        # TODO: use `| None` rather than Optional.
         card_number: typ.Optional[str] = None,
         faction_title: typ.Optional[str] = None,
         era: typ.Optional[str] = None,
@@ -97,6 +98,7 @@ class Row(object):
         )
 
 
+# TODO: This should be an instance method.
 def upgrade_strings_from_row(r: Row) -> list[str]:
     strings = [r.upgrade1, r.upgrade2, r.upgrade3]
     return list(filter(lambda s: s != "", strings))

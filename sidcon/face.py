@@ -19,6 +19,9 @@ logger = logging.getLogger(__name__)
 @typ.final
 class Face(object):
     name: str
+    # TODO(P1): Era is probably a facet of a face, not a card.
+    # TODO(P1): Face should probably have species and faction copied to it so it can be the main
+    # entity.
     features: Sequence[Feature]  # must have at least one
     upgrades: Collection[tuple[Collection[Upgrade], Face]]
 

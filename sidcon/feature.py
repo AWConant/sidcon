@@ -19,6 +19,7 @@ Feature = typ.Union[Converter, CountedGoods, "UniqueFeature"]
 @typ.final
 @enum.unique
 class UniqueFeature(enum.Enum):
+    # TODO: Add MAY_NOT_BE_TRADED and UPGRADES_WITH_OTHER_PLAYERS_TECH for alt Kjas.
     PLUS_ONE_COLONY_SUPPRT_THIS_TURN = "+1 Colony Support This Turn"
 
     CONTEXTUAL_INTEGRATOR_CACHE_VPS = "Variable $"
