@@ -95,8 +95,6 @@ class Row(object):
             back_converter=back_converter if back_converter is not None else self.back_converter,
         )
 
-
-# TODO: This should be an instance method.
-def upgrade_strings_from_row(r: Row) -> list[str]:
-    strings = [r.upgrade1, r.upgrade2, r.upgrade3]
-    return list(filter(lambda s: s != "", strings))
+    @property
+    def upgrade_strings(self) -> list[str]:
+        return list(filter(lambda s: s != "", [self.upgrade1, self.upgrade2, self.upgrade3]))

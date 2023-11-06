@@ -65,10 +65,9 @@ class Card(object):
         feature_strings = sidcon.feature.front_strings_from_row(r)
 
         upgrade_string_map: dict[Collection[str], Face] = dict()
-        upgrade_strings = sidcon.row.upgrade_strings_from_row(r)
-        if back is not None and len(upgrade_strings) > 0:
+        if back is not None and len(r.upgrade_strings) > 0:
             # Assumption: no card upgrades for free.
-            upgrade_string_map[frozenset(upgrade_strings)] = back
+            upgrade_string_map[frozenset(r.upgrade_strings)] = back
 
         front = Face.from_strings(r.front_name, feature_strings, upgrade_string_map)
 
@@ -137,6 +136,7 @@ class Starting(object):
     ...
 
 
+# TODO: Maybe add Star/Moon to this?
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class StartingCard(FactionCard, Starting):
     @classmethod
@@ -519,6 +519,9 @@ class ProjectCard(CreatedCard):
 class RelicWorldCard(CreatedCard):
     _all_front_names: typ.Final[Collection[str]] = frozenset(
         [
+            # TODO: Gift of the Duruntai is technically not a Faderan card, since it can be traded
+            # permanently... There isn't really a good way to express this, since RelicWorldCards
+            # are CreatedCards, which are FactionCards, which cannot be traded permanently.
             "Gift of the Duruntai",
             "Contextual Integrator Cache",
             "Automated Transport Network",
