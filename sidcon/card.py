@@ -21,7 +21,7 @@ from sidcon.face import Face
 from sidcon.feature import Feature
 from sidcon.row import Row
 from sidcon.technology import Era, Technology
-from sidcon.units import Colony
+from sidcon.unit import Colony
 from sidcon.upgrade import Upgrade
 
 logging.basicConfig()

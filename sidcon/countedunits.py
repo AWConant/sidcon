@@ -1,7 +1,7 @@
 from collections.abc import Mapping, MutableMapping
 
-import sidcon.units
-from sidcon.units import Unit, ValuableUnit
+import sidcon.unit
+from sidcon.unit import Unit, ValuableUnit
 
 # All units after _DONATION_KEY in a string are donation units.
 _DONATION_KEY = "+"
@@ -33,10 +33,10 @@ def from_string(s: str) -> CountedUnits:
         )
 
     non_donation_string = units_strings[0]
-    counted_units = _from_string(non_donation_string, sidcon.units.key_to_non_donation_unit)
+    counted_units = _from_string(non_donation_string, sidcon.unit.key_to_non_donation_unit)
     if len(units_strings) == 2:
         donation_string = units_strings[1]
-        counted_donation_units = _from_string(donation_string, sidcon.units.key_to_donation_unit)
+        counted_donation_units = _from_string(donation_string, sidcon.unit.key_to_donation_unit)
         counted_units = add(counted_units, counted_donation_units)
 
     return counted_units

@@ -4,7 +4,7 @@ import typing as typ
 from collections.abc import Mapping
 
 import sidcon.countedunits
-import sidcon.units
+import sidcon.unit
 from sidcon.converter import Converter
 from sidcon.countedunits import CountedUnits
 from sidcon.row import Row

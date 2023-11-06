@@ -1,7 +1,7 @@
 import pytest
 
 import sidcon.countedunits
-from sidcon.units import Green, Ultratech, Blue
+from sidcon.unit import Green, Ultratech, Blue
 
 
 class TestAdd(object):

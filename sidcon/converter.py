@@ -9,7 +9,7 @@ import abstractcp as acp
 
 import sidcon.countedunits
 import sidcon.exception
-import sidcon.units
+import sidcon.unit
 from sidcon.countedunits import CountedUnits
 
 logging.basicConfig()
