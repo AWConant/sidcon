@@ -4,7 +4,7 @@ import dataclasses
 import enum
 import logging
 import typing as typ
-from collections.abc import Collection, Mapping, Sequence
+from collections.abc import Collection, Mapping, Sequence, Set
 
 from frozendict import frozendict
 
@@ -64,7 +64,7 @@ class Card(object):
 
         feature_strings = sidcon.feature.front_strings_from_row(r)
 
-        upgrade_string_map: dict[Collection[str], Face] = dict()
+        upgrade_string_map: dict[Set[str], Face] = dict()
         if back is not None and len(r.upgrade_strings) > 0:
             # Assumption: no card upgrades for free.
             upgrade_string_map[frozenset(r.upgrade_strings)] = back
@@ -159,7 +159,8 @@ class StartingRaceCard(FactionCard, Starting):
     @classmethod
     def from_row(cls, r: Row) -> StartingRaceCard:
         copied_row = r.copy(upgrade1="", upgrade2="")
-        # DO NOT SUBMIT: TODO: Parse upgrade1 and upgrade2 as colonies/research teams here.
+        # TODO: Parse upgrade1 and upgrade2 as colonies/research teams here. When you do, consider
+        # updating the type hint from Collection to Set, or list, or something.
         c = super().from_row(copied_row)
         return StartingRaceCard(
             front=c.front,
@@ -175,7 +176,7 @@ class StartingRaceCard(FactionCard, Starting):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class InterestConverterCard(StartingCard):
-    _all_front_names: typ.Final[Collection[str]] = frozenset(
+    _all_front_names: typ.Final[Set[str]] = frozenset(
         [
             "Cultural Charity",
             "Volunteer Medical Movement",
@@ -273,7 +274,7 @@ class CreatedCard(FactionCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class KtColonyCard(CreatedCard, FrontedColonyCard):
-    _all_front_names: typ.Final[Collection[str]] = frozenset(
+    _all_front_names: typ.Final[Set[str]] = frozenset(
         [
             "Zd'Nx",
             "Kz'Tlr",
@@ -457,7 +458,7 @@ class KtDualCard(Starting):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class UndesirableCard(SpeciesCard):
-    _all_front_names: typ.Final[Collection[str]] = frozenset(
+    _all_front_names: typ.Final[Set[str]] = frozenset(
         [
             "The Uprooted",  # Caylion
             "Hadopelagic Exiles",  # Eni Et
@@ -484,7 +485,7 @@ class UndesirableCard(SpeciesCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class ProjectCard(CreatedCard):
-    _all_front_names: typ.Final[Collection[str]] = frozenset(
+    _all_front_names: typ.Final[Set[str]] = frozenset(
         [
             "Hyperspace Consortium",
             "Low Caylius Orbital Factories",
@@ -517,7 +518,7 @@ class ProjectCard(CreatedCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class RelicWorldCard(CreatedCard):
-    _all_front_names: typ.Final[Collection[str]] = frozenset(
+    _all_front_names: typ.Final[Set[str]] = frozenset(
         [
             # TODO: Gift of the Duruntai is technically not a Faderan card, since it can be traded
             # permanently... There isn't really a good way to express this, since RelicWorldCards
