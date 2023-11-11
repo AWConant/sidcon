@@ -151,10 +151,10 @@ class Card(object):
 
         feature_strings = sidcon.feature.front_strings_from_row(r)
 
-        upgrade_string_map: dict[Set[str], Face] = dict()
+        upgrade_string_map: Mapping[Collection[str], Face] = dict()
         if back is not None and len(r.upgrade_strings) > 0:
             # Assumption: no card upgrades for free.
-            upgrade_string_map[frozenset(r.upgrade_strings)] = back
+            upgrade_string_map = {frozenset(r.upgrade_strings): back}
 
         front = Face.from_strings(r.front_name, feature_strings, upgrade_string_map)
 
