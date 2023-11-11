@@ -181,49 +181,24 @@ def validate_tech_cards():
 
 def pprint_species_cards(species):
     cards = all_cards()
-    for card in cards:
-        object.__setattr__(
-            card.front, "upgrades", [(us, uface.name) for us, uface in card.front.upgrades]
-        )
-        if card.back is not None:
-            object.__setattr__(
-                card.back, "upgrades", [(us, uface.name) for us, uface in card.back.upgrades]
-            )
     cards = [card for card in cards if hasattr(card, "species") and card.species == species]
 
     starting_cards = [c for c in cards if isinstance(c, StartingCard)]
-    tech_cards = sorted(
-        [c for c in cards if isinstance(c, TechnologyCard)], key=lambda c: c.era.value
-    )
+    tech_cards = sorted([c for c in cards if isinstance(c, TechnologyCard)], key=lambda c: c.era.value)
     other_cards = [
         c for c in cards if not isinstance(c, TechnologyCard) and not isinstance(c, StartingCard)
     ]
 
-    starting_faces = []
-    for card in starting_cards:
-        starting_faces.append(card.front)
-        starting_faces.append(card.back)
-
-    tech_faces = []
-    for card in tech_cards:
-        tech_faces.append(card.front)
-        tech_faces.append(card.back)
-
-    other_faces = []
-    for card in other_cards:
-        other_faces.append(card.front)
-        other_faces.append(card.back)
-
     print("############## STARTING CARDS ##############")
-    pprint.pprint(starting_faces)
+    pprint.pprint(starting_cards)
     print()
     print()
     # print("############## TECH CARDS ##############")
-    # pprint.pprint(tech_faces)
+    # pprint.pprint(tech_cards)
     # print()
     # print()
     print("############## OTHER CARDS ##############")
-    pprint.pprint(other_faces)
+    pprint.pprint(other_cards)
     print()
     print()
 

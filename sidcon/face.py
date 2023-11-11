@@ -22,6 +22,8 @@ class Face(object):
     # TODO(P1): Face should probably have species and faction copied to it so it can be the main
     # entity.
     features: Sequence[Feature]  # must have at least one
+    # TODO: allow this to be a single tuple, since every card except Kt has one Face it upgrades
+    # to. Probably requires a name change too.
     upgrades: Collection[tuple[Collection[Upgrade], Face]]
 
     def __post_init__(self):

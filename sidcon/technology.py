@@ -8,6 +8,7 @@ logging.basicConfig()
 logger = logging.getLogger(__name__)
 
 
+# TODO: make this an IntEnum, to support comparison natively.
 @typ.final
 @enum.unique
 class Era(enum.Enum):
