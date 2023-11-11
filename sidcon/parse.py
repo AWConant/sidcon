@@ -144,7 +144,7 @@ def validate_tech_cards():
         ]
         assert len(set(upgrade_pairs)) == 1
 
-    backs = [c.back for c in cards]
+    backs = [c.front.upgrades[0][1] for c in cards]
     assert all(len(f.features) == 1 for f in backs)
 
     back_names = set([f.name for f in backs])
@@ -185,9 +185,9 @@ def pprint_species_cards(species):
     cards = [card for card in cards if hasattr(card, "species") and card.species == species]
 
     starting_cards = [c for c in cards if isinstance(c, StartingCard)]
-    tech_cards = sorted(
-        [c for c in cards if isinstance(c, TechnologyCard)], key=lambda c: c.era.value
-    )
+    # tech_cards = sorted(
+    #    [c for c in cards if isinstance(c, TechnologyCard)], key=lambda c: c.era.value
+    # )
     other_cards = [
         c for c in cards if not isinstance(c, TechnologyCard) and not isinstance(c, StartingCard)
     ]

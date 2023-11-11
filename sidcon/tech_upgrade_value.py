@@ -34,7 +34,6 @@ logger = logging.getLogger(__name__)
 @typ.runtime_checkable
 class StartingCardlike(typ.Protocol):
     front: Face
-    back: Face | None
     era: Era
     species: type[Species]
     faction: type[Faction]

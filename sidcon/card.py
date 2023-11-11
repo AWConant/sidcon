@@ -136,7 +136,6 @@ class Source(enum.Enum):
 class Card(object):
     # TODO: Card number
     front: Face
-    back: Face | None
 
     @property
     def name(self):
@@ -158,7 +157,7 @@ class Card(object):
 
         front = Face.from_strings(r.front_name, feature_strings, upgrade_string_map)
 
-        return Card(front=front, back=back)
+        return Card(front=front)
 
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
@@ -182,7 +181,7 @@ class SpeciesCard(Card):
         except (TypeError, ValueError):
             era = None
 
-        return SpeciesCard(front=c.front, back=c.back, species=species, era=era)
+        return SpeciesCard(front=c.front, species=species, era=era)
 
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
@@ -195,9 +194,7 @@ class FactionCard(SpeciesCard):
         faction_title = r.faction_title
         faction = sidcon.alien.faction_title_to_faction[faction_title]
 
-        return FactionCard(
-            front=c.front, back=c.back, species=c.species, era=c.era, faction=faction
-        )
+        return FactionCard(front=c.front, species=c.species, era=c.era, faction=faction)
 
 
 @typ.final
@@ -213,9 +210,7 @@ class TechnologyCard(SpeciesCard):
             raise ValueError(
                 "couldn't identify a technology for card with front name '{r.front_name}'"
             )
-        return TechnologyCard(
-            front=c.front, back=c.back, species=c.species, era=c.era, technology=technology
-        )
+        return TechnologyCard(front=c.front, species=c.species, era=c.era, technology=technology)
 
 
 class Starting(object):
@@ -228,9 +223,7 @@ class StartingCard(FactionCard, Starting):
     @classmethod
     def from_row(cls, r: Row) -> StartingCard:
         c = super().from_row(r)
-        return StartingCard(
-            front=c.front, back=c.back, species=c.species, era=c.era, faction=c.faction
-        )
+        return StartingCard(front=c.front, species=c.species, era=c.era, faction=c.faction)
 
 
 # TODO: Rename this to something that doesn't sound like it inherits from StartingCard.
@@ -248,7 +241,6 @@ class StartingRaceCard(FactionCard, Starting):
         c = super().from_row(copied_row)
         return StartingRaceCard(
             front=c.front,
-            back=c.back,
             species=c.species,
             era=c.era,
             faction=c.faction,
@@ -265,7 +257,6 @@ class InterestConverterCard(StartingCard):
         c = super().from_row(r)
         return InterestConverterCard(
             front=c.front,
-            back=c.back,
             faction=c.faction,
             species=c.species,
             era=c.era,
@@ -277,7 +268,7 @@ class ColonyCard(Card):
     @classmethod
     def from_row(cls, r: Row) -> ColonyCard:
         c = super().from_row(r)
-        return ColonyCard(front=c.front, back=c.back)
+        return ColonyCard(front=c.front)
 
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
@@ -294,7 +285,6 @@ class FrontedColonyCard(ColonyCard):
         c = super().from_row(copied_row)
         return FrontedColonyCard(
             front=c.front,
-            back=c.back,
             front_type=Colony.from_key(front_colony_key),
         )
 
@@ -313,7 +303,6 @@ class DualFacedColonyCard(FrontedColonyCard):
         c = super().from_row(copied_row)
         return DualFacedColonyCard(
             front=c.front,
-            back=c.back,
             front_type=c.front_type,
             back_type=Colony.from_key(back_colony_key),
         )
@@ -336,7 +325,6 @@ class CreatedCard(FactionCard):
         cost = sidcon.cost.from_string(r.cost)
         return CreatedCard(
             front=c.front,
-            back=c.back,
             species=c.species,
             era=c.era,
             faction=c.faction,
@@ -356,7 +344,6 @@ class KtColonyCard(CreatedCard, FrontedColonyCard):
         fronted_colony_card = FrontedColonyCard.from_row(r)
         return KtColonyCard(
             front=created_card.front,
-            back=None,
             species=created_card.species,
             era=created_card.era,
             faction=created_card.faction,
@@ -383,24 +370,6 @@ class KtDualCard(Starting):
     @property
     def front(self) -> Face:
         return self._merged_face(self.left.front, self.right.front)
-
-    @property
-    def back(self) -> Face | None:
-        if self.left.back is None or self.right.back is None:
-            return None
-        return self._merged_face(self.left.back, self.right.back)
-
-    @property
-    def frontback(self) -> Face | None:
-        if self.right.back is None:
-            return None
-        return self._merged_face(self.left.front, self.right.back)
-
-    @property
-    def backfront(self) -> Face | None:
-        if self.left.back is None:
-            return None
-        return self._merged_face(self.left.back, self.right.front)
 
     def __post_init__(self):
         both_cards = [self.left, self.right]
@@ -505,7 +474,6 @@ class UndesirableCard(SpeciesCard):
         c = super().from_row(r)
         return UndesirableCard(
             front=c.front,
-            back=c.back,
             species=c.species,
             era=c.era,
         )
@@ -527,7 +495,6 @@ class ProjectCard(CreatedCard):
         back_cost = sidcon.cost.from_string(r.upgrade3)
         return ProjectCard(
             front=c.front,
-            back=c.back,
             species=c.species,
             era=c.era,
             faction=c.faction,
@@ -544,7 +511,6 @@ class RelicWorldCard(CreatedCard):
         c = super().from_row(r)
         return RelicWorldCard(
             front=c.front,
-            back=c.back,
             species=c.species,
             era=c.era,
             faction=c.faction,
