@@ -28,6 +28,93 @@ logging.basicConfig()
 logger = logging.getLogger(__name__)
 
 
+starting_race_card_front_name: str = "Starting Race Card"
+
+interest_converter_card_front_names: Set[str] = frozenset(
+    [
+        "Cultural Charity",
+        "Volunteer Medical Movement",
+        "Mutual Understanding",
+        "Elder's Wisdom",
+        "Intercultural Archive",
+        "Xenotech Pool",
+    ]
+)
+
+kt_colony_card_front_names: Set[str] = frozenset(
+    [
+        "Zd'Nx",
+        "Kz'Tlr",
+        "Kln'Qn",
+        "Nz'Cht'Qt'Rz",
+        "Tn'Rg'Tx'Tc",
+        "Gz'Zd",
+        "!IN'ZR'KZ",
+        "Tk'T!'Zk",
+        "Kr'Xn'Xx",
+        "Kt'Dq'Rn'Nr",
+        "Nx'Xt'!In",
+        "Nx'Dr",
+        "Nz'Tt",
+    ]
+)
+
+undesirable_card_front_names: Set[str] = frozenset(
+    [
+        "The Uprooted",  # Caylion
+        "Hadopelagic Exiles",  # Eni Et
+        "Zealots",  # Faderan
+        "Disaffected Artists",  # Im'dril
+        "Anosmia",  # Kjasjavikalimm
+        "Loafers",  # Kt'Zr'Kt'Rtl
+        "Free Slices",  # Unity
+        "Iconoclasts",  # Yengii
+    ]
+)
+
+project_card_front_names: typ.Final[Set[str]] = frozenset(
+    [
+        "Hyperspace Consortium",
+        "Low Caylius Orbital Factories",
+        "Oceanic Settlement",
+        "Gamified Research",
+    ]
+)
+
+relic_world_card_front_names: Set[str] = frozenset(
+    [
+        # TODO: Gift of the Duruntai is technically not a Faderan card, since it can be traded
+        # permanently... There isn't really a good way to express this, since RelicWorldCards
+        # are CreatedCards, which are FactionCards, which cannot be traded permanently.
+        "Gift of the Duruntai",
+        "Contextual Integrator Cache",
+        "Automated Transport Network",
+        "Relic Detector",
+        "Library of Entelechy",
+        "Transmutive Decomposer",
+        "Nalgorian Grindstone",
+        "Star's Ruin",
+        "Paradise Converter",
+        "Barian Trade Armada",
+        "Thil's Demiring",
+        "The Grand Armilla",
+    ]
+)
+
+kt_left_name_to_right_name: Mapping[str, str] = frozendict(
+    {
+        # Base game
+        "Expansive Social": "Diffusion",
+        "Hand Crafted": "Polyutility Components",
+        "Anarchic Sacrificial": "High-Risk Laboratories",
+        # Bifurcation
+        "Vast Distance": "Bending Engines",
+        "Diverse": "Interspecies Housing",
+        "Alien Cultural": "Inspiration",
+    }
+)
+
+
 @typ.final
 @enum.unique
 class Source(enum.Enum):
@@ -150,8 +237,6 @@ class StartingCard(FactionCard, Starting):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class StartingRaceCard(FactionCard, Starting):
-    front_name: typ.Final[str] = "Starting Race Card"
-
     colonies: Collection["Colony"]
     research_teams: Collection["ResearchTeam"]
 
@@ -175,17 +260,6 @@ class StartingRaceCard(FactionCard, Starting):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class InterestConverterCard(StartingCard):
-    _all_front_names: typ.Final[Set[str]] = frozenset(
-        [
-            "Cultural Charity",
-            "Volunteer Medical Movement",
-            "Mutual Understanding",
-            "Elder's Wisdom",
-            "Intercultural Archive",
-            "Xenotech Pool",
-        ]
-    )
-
     @classmethod
     def from_row(cls, r: Row) -> InterestConverterCard:
         c = super().from_row(r)
@@ -273,24 +347,6 @@ class CreatedCard(FactionCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class KtColonyCard(CreatedCard, FrontedColonyCard):
-    _all_front_names: typ.Final[Set[str]] = frozenset(
-        [
-            "Zd'Nx",
-            "Kz'Tlr",
-            "Kln'Qn",
-            "Nz'Cht'Qt'Rz",
-            "Tn'Rg'Tx'Tc",
-            "Gz'Zd",
-            "!IN'ZR'KZ",
-            "Tk'T!'Zk",
-            "Kr'Xn'Xx",
-            "Kt'Dq'Rn'Nr",
-            "Nx'Xt'!In",
-            "Nx'Dr",
-            "Nz'Tt",
-        ]
-    )
-
     # TODO: Is the FactionCard data model actually right? The spreadsheet has these as era 1 cards,
     # but I don't see any indication that they are era 1 on the actual card. If they aren't, then
     # faction cards don't necessarily have an era, or these aren't faction cards.
@@ -312,19 +368,6 @@ class KtColonyCard(CreatedCard, FrontedColonyCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class KtDualCard(Starting):
-    left_name_to_right_name: typ.Final[Mapping[str, str]] = frozendict(
-        {
-            # Base game
-            "Expansive Social": "Diffusion",
-            "Hand Crafted": "Polyutility Components",
-            "Anarchic Sacrificial": "High-Risk Laboratories",
-            # Bifurcation
-            "Vast Distance": "Bending Engines",
-            "Diverse": "Interspecies Housing",
-            "Alien Cultural": "Inspiration",
-        }
-    )
-
     left: FactionCard
     right: FactionCard
     species = KtZrKtRtl
@@ -376,7 +419,7 @@ class KtDualCard(Starting):
             and self.right.faction is not KtZrKtRtlTechnophiles
         ):
             raise ValueError(f"faction must be a Kt'Zr'Kt'Rtl faction; not {self.faction}")
-        for left_name, right_name in self.left_name_to_right_name.items():
+        for left_name, right_name in kt_left_name_to_right_name.items():
             if self.left.name == left_name:
                 if self.right.name != right_name:
                     raise ValueError(
@@ -392,7 +435,7 @@ class KtDualCard(Starting):
         left_name_to_index: dict[str, int] = dict()
         right_name_to_index: dict[str, int] = dict()
         for i, c in enumerate(cs):
-            for left_name, right_name in cls.left_name_to_right_name.items():
+            for left_name, right_name in kt_left_name_to_right_name.items():
                 if c.name == left_name:
                     left_name_to_index[left_name] = i
                 elif c.name == right_name:
@@ -402,7 +445,7 @@ class KtDualCard(Starting):
 
         for name, index in left_name_to_index.items():
             left_card = cs[index]
-            right_card = cs[right_name_to_index[cls.left_name_to_right_name[name]]]
+            right_card = cs[right_name_to_index[kt_left_name_to_right_name[name]]]
             assert isinstance(left_card, FactionCard)
             assert isinstance(right_card, FactionCard)
             card = KtDualCard(left=left_card, right=right_card)
@@ -457,19 +500,6 @@ class KtDualCard(Starting):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class UndesirableCard(SpeciesCard):
-    _all_front_names: typ.Final[Set[str]] = frozenset(
-        [
-            "The Uprooted",  # Caylion
-            "Hadopelagic Exiles",  # Eni Et
-            "Zealots",  # Faderan
-            "Disaffected Artists",  # Im'dril
-            "Anosmia",  # Kjasjavikalimm
-            "Loafers",  # Kt'Zr'Kt'Rtl
-            "Free Slices",  # Unity
-            "Iconoclasts",  # Yengii
-        ]
-    )
-
     @classmethod
     def from_row(cls, r: Row) -> UndesirableCard:
         c = super().from_row(r)
@@ -484,14 +514,6 @@ class UndesirableCard(SpeciesCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class ProjectCard(CreatedCard):
-    _all_front_names: typ.Final[Set[str]] = frozenset(
-        [
-            "Hyperspace Consortium",
-            "Low Caylius Orbital Factories",
-            "Oceanic Settlement",
-            "Gamified Research",
-        ]
-    )
     back_cost: Cost
 
     @classmethod
@@ -517,26 +539,6 @@ class ProjectCard(CreatedCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class RelicWorldCard(CreatedCard):
-    _all_front_names: typ.Final[Set[str]] = frozenset(
-        [
-            # TODO: Gift of the Duruntai is technically not a Faderan card, since it can be traded
-            # permanently... There isn't really a good way to express this, since RelicWorldCards
-            # are CreatedCards, which are FactionCards, which cannot be traded permanently.
-            "Gift of the Duruntai",
-            "Contextual Integrator Cache",
-            "Automated Transport Network",
-            "Relic Detector",
-            "Library of Entelechy",
-            "Transmutive Decomposer",
-            "Nalgorian Grindstone",
-            "Star's Ruin",
-            "Paradise Converter",
-            "Barian Trade Armada",
-            "Thil's Demiring",
-            "The Grand Armilla",
-        ]
-    )
-
     @classmethod
     def from_row(cls, r: Row) -> RelicWorldCard:
         c = super().from_row(r)

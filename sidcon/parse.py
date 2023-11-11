@@ -3,6 +3,7 @@ import csv
 import logging
 import pprint
 
+import sidcon.card
 from sidcon.alien import Kjasjavikalimm
 from sidcon.card import (
     Card,
@@ -89,16 +90,16 @@ def cards_from_filepath(filepath: str) -> list["Card | KtDualCard"]:
                 source = Source.from_string(r.cost)
                 card: Card
                 if source == Source.CREATED:
-                    if r.front_name in ProjectCard._all_front_names:
+                    if r.front_name in sidcon.card.project_card_front_names:
                         card = ProjectCard.from_row(r)
-                    elif r.front_name in KtColonyCard._all_front_names:
+                    elif r.front_name in sidcon.card.kt_colony_card_front_names:
                         card = KtColonyCard.from_row(r)
                     else:
                         card = CreatedCard.from_row(r)
                 elif source == Source.RESEARCH:
                     card = TechnologyCard.from_row(r)
                 elif source == Source.STARTING:
-                    if r.front_name == StartingRaceCard.front_name:
+                    if r.front_name == sidcon.card.starting_race_card_front_name:
                         card = StartingRaceCard.from_row(r)
                     else:
                         card = StartingCard.from_row(r)
@@ -184,7 +185,9 @@ def pprint_species_cards(species):
     cards = [card for card in cards if hasattr(card, "species") and card.species == species]
 
     starting_cards = [c for c in cards if isinstance(c, StartingCard)]
-    tech_cards = sorted([c for c in cards if isinstance(c, TechnologyCard)], key=lambda c: c.era.value)
+    tech_cards = sorted(
+        [c for c in cards if isinstance(c, TechnologyCard)], key=lambda c: c.era.value
+    )
     other_cards = [
         c for c in cards if not isinstance(c, TechnologyCard) and not isinstance(c, StartingCard)
     ]
