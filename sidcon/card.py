@@ -76,7 +76,6 @@ class Card(object):
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class SpeciesCard(Card):
-    # TODO(P1): Era is probably a facet of a face, not a card.
     era: Era | None
     species: type[Species]
 
