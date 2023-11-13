@@ -78,14 +78,13 @@ class Face(object):
     def max_output_value(self):
         return max(c.output_value for c in self.features)
 
-    # TODO: era_string and upgrade_string_map can both be default None.
     @classmethod
     def from_strings(
         cls,
         name: str,
-        era_string: str,
         feature_strings: Collection[str],
-        upgrade_string_map: Mapping[Collection[str], Face],
+        era_string: str = "",
+        upgrade_string_map: Mapping[Collection[str], Face] = dict(),
     ) -> Face:
         era = Era.from_string(era_string)
         features = [sidcon.feature.from_string(s) for s in feature_strings]

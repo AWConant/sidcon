@@ -179,14 +179,19 @@ class Card(object):
     def from_row(cls, r: Row) -> Card:
         back: Face | None = None
         if r.back_name:
-            back = Face.from_strings(r.back_name, "", r.back_feature_strings, dict())
+            back = Face.from_strings(r.back_name, r.back_feature_strings)
 
         upgrade_string_map: Mapping[Collection[str], Face] = dict()
         if back is not None and len(r.upgrade_strings) > 0:
             # Assumption: no card upgrades for free.
             upgrade_string_map = {frozenset(r.upgrade_strings): back}
 
-        front = Face.from_strings(r.front_name, r.era, r.front_feature_strings, upgrade_string_map)
+        front = Face.from_strings(
+            r.front_name,
+            r.front_feature_strings,
+            era_string=r.era,
+            upgrade_string_map=upgrade_string_map,
+        )
 
         return Card(front=front)
 
