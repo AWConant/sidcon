@@ -38,6 +38,8 @@ def merged(a: Upgrade, b: Upgrade) -> Upgrade:
     if isinstance(a, PurpleConverter) and isinstance(b, PurpleConverter):
         # WARNING: This doesn't ensure that a and b are the same Converter subtype. Here, this
         # doesn't matter unless PurpleConverter has descendents in the future.
+        # TODO: Figure out how to ensure that a and b are both exactly PurpleConverters, rather
+        # than simply within the type.
         return a.__class__.merged(a, b)
     else:
         raise ValueError(f"input upgrades have differing or unhandled types: {type(a)}, {type(b)}")

@@ -17,6 +17,13 @@ class Era(enum.Enum):
     III = 3
     IV = 4
 
+    @classmethod
+    def from_string(cls, s: str) -> typ.Optional["Era"]:
+        try:
+            return cls(int(s))
+        except (TypeError, ValueError):
+            return None
+
 
 class Technology(acp.Abstract):
     name: typ.ClassVar[str] = acp.abstract_class_property(str)

@@ -42,6 +42,8 @@ class Row(object):
     back_name: str
     back_converter: str
 
+    # TODO: rename this to from_csv_row_dict, to disambiguate from the ods parsing logic, when that
+    # exists.
     @classmethod
     def from_dict(cls, d: dict[str, str]) -> "Row":
         upgrade3: str

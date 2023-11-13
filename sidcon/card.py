@@ -14,8 +14,7 @@ import sidcon.cost
 import sidcon.exception
 import sidcon.feature
 import sidcon.upgrade
-from sidcon.alien import Faction, KtZrKtRtl, KtZrKtRtlAdhocracy, KtZrKtRtlTechnophiles, Species
-from sidcon.converter import Converter
+from sidcon.alien import Faction, KtZrKtRtl, Species
 from sidcon.cost import Cost
 from sidcon.face import Face
 from sidcon.feature import Feature
@@ -28,6 +27,8 @@ logging.basicConfig()
 logger = logging.getLogger(__name__)
 
 
+# TODO: All of these name lists should be unexported, and instead the constructors should raise an
+# exception when the name doesn't match.
 starting_race_card_front_name: str = "Starting Race Card"
 
 interest_converter_card_front_names: Set[str] = frozenset(
@@ -101,16 +102,45 @@ relic_world_card_front_names: Set[str] = frozenset(
     ]
 )
 
-kt_left_name_to_right_name: Mapping[str, str] = frozendict(
+# TODO: use mypy literals for card names.
+
+kt_left_card_names: Set[str] = frozenset(
     {
-        # Base game
+        "Expansive Social",
+        "Hand Crafted",
+        "Anarchic Sacrificial",
+        "Vast Distance",
+        "Diverse",
+        "Alien Cultural",
+    }
+)
+
+kt_right_card_names: Set[str] = frozenset(
+    {
+        "Diffusion",
+        "Polyutility Components",
+        "High-Risk Laboratories",
+        "Bending Engines",
+        "Interspecies Housing",
+        "Inspiration",
+    }
+)
+
+# bidirectional
+kt_card_name_mapping: Mapping[str, str] = frozendict(
+    {
         "Expansive Social": "Diffusion",
+        "Diffusion": "Expansive Social",
         "Hand Crafted": "Polyutility Components",
+        "Polyutility Components": "Hand Crafted",
         "Anarchic Sacrificial": "High-Risk Laboratories",
-        # Bifurcation
+        "High-Risk Laboratories": "Anarchic Sacrificial",
         "Vast Distance": "Bending Engines",
+        "Bending Engines": "Vast Distance",
         "Diverse": "Interspecies Housing",
+        "Interspecies Housing": "Diverse",
         "Alien Cultural": "Inspiration",
+        "Inspiration": "Alien Cultural",
     }
 )
 
@@ -141,12 +171,16 @@ class Card(object):
     def name(self):
         return self.front.name
 
+    @property
+    def era(self) -> Era | None:
+        return self.front.era
+
     @classmethod
     def from_row(cls, r: Row) -> Card:
         back: Face | None = None
         if r.back_name:
             feature_strings = sidcon.feature.back_strings_from_row(r)
-            back = Face.from_strings(r.back_name, feature_strings, dict())
+            back = Face.from_strings(r.back_name, "", feature_strings, dict())
 
         feature_strings = sidcon.feature.front_strings_from_row(r)
 
@@ -155,14 +189,13 @@ class Card(object):
             # Assumption: no card upgrades for free.
             upgrade_string_map = {frozenset(r.upgrade_strings): back}
 
-        front = Face.from_strings(r.front_name, feature_strings, upgrade_string_map)
+        front = Face.from_strings(r.front_name, r.era, feature_strings, upgrade_string_map)
 
         return Card(front=front)
 
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class SpeciesCard(Card):
-    era: Era | None
     species: type[Species]
 
     @classmethod
@@ -174,14 +207,7 @@ class SpeciesCard(Card):
         except ValueError:
             faction = sidcon.alien.faction_title_to_faction[faction_title]
             species = sidcon.alien.faction_to_species[faction]
-
-        era_string = r.era
-        try:
-            era = Era(int(era_string))
-        except (TypeError, ValueError):
-            era = None
-
-        return SpeciesCard(front=c.front, species=species, era=era)
+        return SpeciesCard(front=c.front, species=species)
 
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
@@ -194,7 +220,7 @@ class FactionCard(SpeciesCard):
         faction_title = r.faction_title
         faction = sidcon.alien.faction_title_to_faction[faction_title]
 
-        return FactionCard(front=c.front, species=c.species, era=c.era, faction=faction)
+        return FactionCard(front=c.front, species=c.species, faction=faction)
 
 
 @typ.final
@@ -210,7 +236,7 @@ class TechnologyCard(SpeciesCard):
             raise ValueError(
                 "couldn't identify a technology for card with front name '{r.front_name}'"
             )
-        return TechnologyCard(front=c.front, species=c.species, era=c.era, technology=technology)
+        return TechnologyCard(front=c.front, species=c.species, technology=technology)
 
 
 class Starting(object):
@@ -223,7 +249,7 @@ class StartingCard(FactionCard, Starting):
     @classmethod
     def from_row(cls, r: Row) -> StartingCard:
         c = super().from_row(r)
-        return StartingCard(front=c.front, species=c.species, era=c.era, faction=c.faction)
+        return StartingCard(front=c.front, species=c.species, faction=c.faction)
 
 
 # TODO: Rename this to something that doesn't sound like it inherits from StartingCard.
@@ -242,7 +268,6 @@ class StartingRaceCard(FactionCard, Starting):
         return StartingRaceCard(
             front=c.front,
             species=c.species,
-            era=c.era,
             faction=c.faction,
             colonies=[],
             research_teams=[],
@@ -259,7 +284,6 @@ class InterestConverterCard(StartingCard):
             front=c.front,
             faction=c.faction,
             species=c.species,
-            era=c.era,
         )
 
 
@@ -326,7 +350,6 @@ class CreatedCard(FactionCard):
         return CreatedCard(
             front=c.front,
             species=c.species,
-            era=c.era,
             faction=c.faction,
             cost=cost,
         )
@@ -335,9 +358,6 @@ class CreatedCard(FactionCard):
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class KtColonyCard(CreatedCard, FrontedColonyCard):
-    # TODO: Is the FactionCard data model actually right? The spreadsheet has these as era 1 cards,
-    # but I don't see any indication that they are era 1 on the actual card. If they aren't, then
-    # faction cards don't necessarily have an era, or these aren't faction cards.
     @classmethod
     def from_row(cls, r: Row) -> KtColonyCard:
         created_card = CreatedCard.from_row(r)
@@ -345,7 +365,6 @@ class KtColonyCard(CreatedCard, FrontedColonyCard):
         return KtColonyCard(
             front=created_card.front,
             species=created_card.species,
-            era=created_card.era,
             faction=created_card.faction,
             front_type=fronted_colony_card.front_type,
             cost=created_card.cost,
@@ -354,86 +373,29 @@ class KtColonyCard(CreatedCard, FrontedColonyCard):
 
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
-class KtDualCard(Starting):
-    left: FactionCard
-    right: FactionCard
-    species = KtZrKtRtl
-
-    @property
-    def name(self) -> str:
-        return f"{self.left.name} {self.right.name}"
-
-    @property
-    def faction(self) -> type[Faction]:
-        return self.left.faction
-
-    @property
-    def front(self) -> Face:
-        return self._merged_face(self.left.front, self.right.front)
-
-    def __post_init__(self):
-        both_cards = [self.left, self.right]
-        if not all(c.species is KtZrKtRtl for c in both_cards):
-            raise ValueError(
-                "KtDualCard must consist of KtZrKtRtl cards, "
-                f"not {[c.species for c in both_cards]}"
-            )
-        if self.left.faction != self.right.faction:
-            raise ValueError(
-                "KtDualCard.left and right must have same faction; "
-                f"got '{self.left.faction}' and '{self.right.faction}'"
-            )
-        if (
-            self.left.faction is not KtZrKtRtlAdhocracy
-            and self.right.faction is not KtZrKtRtlTechnophiles
-        ):
-            raise ValueError(f"faction must be a Kt'Zr'Kt'Rtl faction; not {self.faction}")
-        for left_name, right_name in kt_left_name_to_right_name.items():
-            if self.left.name == left_name:
-                if self.right.name != right_name:
-                    raise ValueError(
-                        f"KtDualCard has valid left name '{self.left.name}' with "
-                        f"non-matching right name '{self.right.name}'"
-                    )
-                break
-        else:
-            raise ValueError(f"KtDualCard has invalid left name '{self.left.name}'")
-
+class KtDualCard(StartingCard):
     @classmethod
-    def coalesced_cards(cls, cs: Sequence[Card]) -> list["Card | KtDualCard"]:
-        left_name_to_index: dict[str, int] = dict()
-        right_name_to_index: dict[str, int] = dict()
-        for i, c in enumerate(cs):
-            for left_name, right_name in kt_left_name_to_right_name.items():
-                if c.name == left_name:
-                    left_name_to_index[left_name] = i
-                elif c.name == right_name:
-                    right_name_to_index[right_name] = i
-
-        coalesced: list["Card | KtDualCard"] = []
-
-        for name, index in left_name_to_index.items():
-            left_card = cs[index]
-            right_card = cs[right_name_to_index[kt_left_name_to_right_name[name]]]
-            assert isinstance(left_card, FactionCard)
-            assert isinstance(right_card, FactionCard)
-            card = KtDualCard(left=left_card, right=right_card)
-            coalesced.append(card)
-
-        indices_to_exclude = set().union(left_name_to_index.values(), right_name_to_index.values())
-        for i, c in enumerate(cs):
-            if i not in indices_to_exclude:
-                coalesced.append(c)
-
-        return coalesced
+    def from_rows(cls, left_row: Row, right_row: Row) -> KtDualCard:
+        left_card = super().from_row(left_row)
+        right_card = super().from_row(right_row)
+        return KtDualCard(
+            front=cls._merged_face(
+                left_card.front,
+                right_card.front,
+            ),
+            species=KtZrKtRtl,
+            faction=left_card.faction,
+        )
 
     @staticmethod
     def _merged_face(left_face: Face, right_face: Face) -> Face:
-        name = f"{left_face.name} {right_face.name}"
-        features = KtDualCard._merged_features(left_face.features, right_face.features)
-        # TODO: Figure out how to express upgrades.
-        # upgrade = KtDualCard._merged_upgrades(left_face.upgrades, right_face.upgrades)
-        return Face(name=name, features=features, upgrades=dict())
+        return Face(
+            name=f"{left_face.name} {right_face.name}",
+            features=KtDualCard._merged_features(left_face.features, right_face.features),
+            upgrades=KtDualCard._merged_upgrades(
+                left_face, right_face, left_face.upgrades, right_face.upgrades
+            ),
+        )
 
     @staticmethod
     def _merged_features(
@@ -446,24 +408,27 @@ class KtDualCard(Starting):
             )
         merged: list[Feature] = []
         for lf, rf in zip(left_features, right_features):
-            if isinstance(lf, Converter) and isinstance(rf, Mapping):
-                # Right halves of Kt converters do not include the arrow, so they need to be mapped
-                # to "free" converters before being merged.
-                rf = lf.__class__.from_counted_units(rf)
             mf = sidcon.feature.merged(lf, rf)
             merged.append(mf)
         return merged
 
     @staticmethod
     def _merged_upgrades(
-        left_upgrades: Sequence[Upgrade], right_upgrades: Sequence[Upgrade]
-    ) -> list[Upgrade]:
-        if len(left_upgrades) != len(right_upgrades):
-            raise ValueError(
-                "len of input sequences must be identical; "
-                f"{len(left_upgrades)} != {len(right_upgrades)}"
+        left_face: Face,
+        right_face: Face,
+        left_upgrades: Sequence[tuple[Era | None, Collection[Upgrade], Face]],
+        right_upgrades: Sequence[tuple[Era | None, Collection[Upgrade], Face]],
+    ) -> list[tuple[Era | None, Collection[Upgrade], Face]]:
+        merged_upgrades = []
+        for (left_era, left_upgrade, left_upgraded_face) in left_upgrades:
+            merged_upgrades.append(
+                (left_era, left_upgrade, KtDualCard._merged_face(left_upgraded_face, right_face))
             )
-        return [sidcon.upgrade.merged(lf, rf) for lf, rf in zip(left_upgrades, right_upgrades)]
+        for (right_era, right_upgrade, right_upgraded_face) in right_upgrades:
+            merged_upgrades.append(
+                (right_era, right_upgrade, KtDualCard._merged_face(left_face, right_upgraded_face))
+            )
+        return merged_upgrades
 
 
 @typ.final
@@ -472,11 +437,7 @@ class UndesirableCard(SpeciesCard):
     @classmethod
     def from_row(cls, r: Row) -> UndesirableCard:
         c = super().from_row(r)
-        return UndesirableCard(
-            front=c.front,
-            species=c.species,
-            era=c.era,
-        )
+        return UndesirableCard(front=c.front, species=c.species)
 
 
 @typ.final
@@ -496,7 +457,6 @@ class ProjectCard(CreatedCard):
         return ProjectCard(
             front=c.front,
             species=c.species,
-            era=c.era,
             faction=c.faction,
             cost=c.cost,
             back_cost=back_cost,
@@ -512,7 +472,6 @@ class RelicWorldCard(CreatedCard):
         return RelicWorldCard(
             front=c.front,
             species=c.species,
-            era=c.era,
             faction=c.faction,
             cost=c.cost,
         )

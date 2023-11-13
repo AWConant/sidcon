@@ -44,10 +44,12 @@ class UniqueFeature(enum.Enum):
     MAY_NOT_USE_ULTRATECH = "may not use U"
 
 
+# TODO: Make this a Row method.
 def front_strings_from_row(r: Row) -> list[str]:
     return _strings_from_string(r.front_converter)
 
 
+# TODO: Make this a Row method.
 def back_strings_from_row(r: Row) -> list[str]:
     return _strings_from_string(r.back_converter)
 

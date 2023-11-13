@@ -13,7 +13,11 @@ logging.basicConfig()
 logger = logging.getLogger(__name__)
 
 
+# TODO: Split this file into species.py and faction.py
+
+
 class Species(acp.Abstract):
+    # TODO: Rename title to species_name, to disambiguate from faction name.
     name: typ.ClassVar[str] = acp.abstract_class_property(str)
 
     @classmethod
@@ -34,6 +38,8 @@ class Species(acp.Abstract):
 
 
 class Faction(Species, acp.Abstract):
+    # TODO: Rename title to faction_name, to disambiguate from species name. Also update
+    # `faction_title_to_faction`.
     title: typ.ClassVar[str] = acp.abstract_class_property(str)
     colony_support: typ.ClassVar[float] = acp.abstract_class_property(float)
     tiebreaker: typ.ClassVar[float] = acp.abstract_class_property(float)

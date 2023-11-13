@@ -9,6 +9,7 @@ import sidcon.feature
 import sidcon.upgrade
 from sidcon.converter import Converter
 from sidcon.feature import Feature
+from sidcon.technology import Era
 from sidcon.upgrade import Upgrade
 
 logging.basicConfig()
@@ -23,8 +24,9 @@ class Face(object):
     # entity.
     features: Sequence[Feature]  # must have at least one
     # TODO: allow this to be a single tuple, since every card except Kt has one Face it upgrades
-    # to. Probably requires a name change too.
-    upgrades: Collection[tuple[Collection[Upgrade], Face]]
+    # to. Probably requires a name change too. Alternatively, define an `upgrade` @property that
+    # fetches either `None` or exactly the single upgrade. (ValueError on len(upgrades)>1)
+    upgrades: Sequence[tuple[Era | None, Collection[Upgrade], Face]]
 
     def __post_init__(self):
         if not self.name:
@@ -33,6 +35,13 @@ class Face(object):
         if not self.features:
             raise ValueError(f"Face named '{self.name}' must have at least one Feature")
 
+    @property
+    def era(self) -> Era | None:
+        if len(self.upgrades) != 1:
+            raise ValueError(f"Face '{self.name}' has no unambiguous single Upgrade")
+        return self.upgrades[0][0]
+
+    # TODO: type hint @properties everywhere that lack return types.
     @property
     def converter(self):
         if len(self.features) != 1 or not isinstance(self.features[0], Converter):
@@ -71,16 +80,19 @@ class Face(object):
     def max_output_value(self):
         return max(c.output_value for c in self.features)
 
+    # TODO: era_string and upgrade_string_map can both be default None.
     @classmethod
     def from_strings(
         cls,
         name: str,
+        era_string: str,
         feature_strings: Collection[str],
         upgrade_string_map: Mapping[Collection[str], Face],
     ) -> Face:
+        era = Era.from_string(era_string)
         features = [sidcon.feature.from_string(s) for s in feature_strings]
         upgrades = [
-            ([sidcon.upgrade.from_string(s) for s in upgrade_strings], face)
+            (era, [sidcon.upgrade.from_string(s) for s in upgrade_strings], face)
             for upgrade_strings, face in upgrade_string_map.items()
         ]
         return cls(name=name, features=features, upgrades=upgrades)

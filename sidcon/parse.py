@@ -4,7 +4,7 @@ import logging
 import pprint
 
 import sidcon.card
-from sidcon.alien import Kjasjavikalimm
+from sidcon.alien import KtZrKtRtl
 from sidcon.card import (
     Card,
     CreatedCard,
@@ -31,19 +31,6 @@ skipped_card_factions = [
 ]
 
 skipped_front_names = [
-    "Expansive Social",
-    "Diffusion",
-    "Hand Crafted",
-    "Polyutility Components",
-    "Anarchic Sacrificial",
-    "High-Risk Laboratories",
-    "Vast Distance",
-    "Bending Engines",
-    "Diverse",
-    "Interspecies Housing",
-    "Alien Cultural",
-    "Inspiration",
-    #
     "Incoming Donations",
     "Starting Race Card",
     "Phases",
@@ -75,17 +62,22 @@ skipped_front_names = [
 filenames = ["data/cards.csv", "data/bifurcation-cards.csv"]
 
 
-def cards_from_filepath(filepath: str) -> list["Card | KtDualCard"]:
+def cards_from_filepath(filepath: str) -> list[Card]:
     cards = []
     with open(filepath) as csvfile:
         pp = pprint.PrettyPrinter(sort_dicts=False)
         dr = csv.DictReader(csvfile)
+        kt_rows: dict[str, Row] = dict()
         for d in dr:
             r = Row.from_dict(d)
             if r.faction_title in skipped_card_factions:
                 continue
             if r.front_name in skipped_front_names:
                 continue
+            if r.front_name in sidcon.card.kt_card_name_mapping:
+                kt_rows[r.front_name] = r
+                if sidcon.card.kt_card_name_mapping[r.front_name] not in kt_rows:
+                    continue
             try:
                 source = Source.from_string(r.cost)
                 card: Card
@@ -99,7 +91,15 @@ def cards_from_filepath(filepath: str) -> list["Card | KtDualCard"]:
                 elif source == Source.RESEARCH:
                     card = TechnologyCard.from_row(r)
                 elif source == Source.STARTING:
-                    if r.front_name == sidcon.card.starting_race_card_front_name:
+                    if r.front_name in sidcon.card.kt_card_name_mapping:
+                        if r.front_name in sidcon.card.kt_left_card_names:
+                            left_row = kt_rows[r.front_name]
+                            right_row = kt_rows[sidcon.card.kt_card_name_mapping[r.front_name]]
+                        else:
+                            left_row = kt_rows[sidcon.card.kt_card_name_mapping[r.front_name]]
+                            right_row = kt_rows[r.front_name]
+                        card = KtDualCard.from_rows(left_row, right_row)
+                    elif r.front_name == sidcon.card.starting_race_card_front_name:
                         card = StartingRaceCard.from_row(r)
                     else:
                         card = StartingCard.from_row(r)
@@ -116,10 +116,10 @@ def cards_from_filepath(filepath: str) -> list["Card | KtDualCard"]:
             except Exception as e:
                 logger.fatal(f"couldn't parse row dict:\n{pp.pformat(r)}\n")
                 raise e
-    return KtDualCard.coalesced_cards(cards)
+    return cards
 
 
-def all_cards() -> list["Card | KtDualCard"]:
+def all_cards() -> list[Card]:
     cards = []
     for fname in filenames:
         cards.extend(cards_from_filepath(fname))
@@ -140,11 +140,11 @@ def validate_tech_cards():
     for front_name, like_fronts in fronts_by_name.items():
         assert len(set([f.input_value for f in like_fronts])) == 1
         upgrade_pairs = [
-            tuple(sorted(f.upgrades[0][0], key=lambda t: str(t))) for f in like_fronts
+            tuple(sorted(f.upgrades[0][1], key=lambda t: str(t))) for f in like_fronts
         ]
         assert len(set(upgrade_pairs)) == 1
 
-    backs = [c.front.upgrades[0][1] for c in cards]
+    backs = [c.front.upgrades[0][2] for c in cards]
     assert all(len(f.features) == 1 for f in backs)
 
     back_names = set([f.name for f in backs])
@@ -208,5 +208,5 @@ def pprint_species_cards(species):
 
 if __name__ == "__main__":
     validate_tech_cards()
-    pprint_species_cards(Kjasjavikalimm)
+    pprint_species_cards(KtZrKtRtl)
     _ = all_cards()
