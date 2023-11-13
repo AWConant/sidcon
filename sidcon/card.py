@@ -254,20 +254,19 @@ class StartingCard(FactionCard, Starting):
         return StartingCard(front=c.front, species=c.species, faction=c.faction)
 
 
-# TODO: Rename this to something that doesn't sound like it inherits from StartingCard.
 @typ.final
 @dataclasses.dataclass(frozen=True, kw_only=True)
-class StartingRaceCard(FactionCard, Starting):
+class SetupCard(FactionCard, Starting):
     colonies: Collection["Colony"]
     research_teams: Collection["ResearchTeam"]
 
     @classmethod
-    def from_row(cls, r: Row) -> StartingRaceCard:
+    def from_row(cls, r: Row) -> SetupCard:
         copied_row = r.copy(upgrade1="", upgrade2="")
         # TODO: Parse upgrade1 and upgrade2 as colonies/research teams here. When you do, consider
         # updating the type hint from Collection to Set, or list, or something.
         c = super().from_row(copied_row)
-        return StartingRaceCard(
+        return SetupCard(
             front=c.front,
             species=c.species,
             faction=c.faction,

@@ -11,9 +11,9 @@ from sidcon.card import (
     KtColonyCard,
     KtDualCard,
     ProjectCard,
+    SetupCard,
     Source,
     StartingCard,
-    StartingRaceCard,
     TechnologyCard,
     UndesirableCard,
 )
@@ -100,7 +100,7 @@ def cards_from_filepath(filepath: str) -> list[Card]:
                             right_row = kt_rows[r.front_name]
                         card = KtDualCard.from_rows(left_row, right_row)
                     elif r.front_name == sidcon.card.starting_race_card_front_name:
-                        card = StartingRaceCard.from_row(r)
+                        card = SetupCard.from_row(r)
                     else:
                         card = StartingCard.from_row(r)
                 elif source == Source.UNDESIRABLE:
