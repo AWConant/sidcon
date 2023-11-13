@@ -4,7 +4,7 @@ import logging
 import pprint
 
 import sidcon.card
-from sidcon.alien import KtZrKtRtl
+from sidcon.faction import KtZrKtRtl
 from sidcon.card import (
     Card,
     CreatedCard,

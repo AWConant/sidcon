@@ -13,9 +13,6 @@ logging.basicConfig()
 logger = logging.getLogger(__name__)
 
 
-# TODO: Split this file into species.py and faction.py
-
-
 class Species(acp.Abstract):
     species_name: typ.ClassVar[str] = acp.abstract_class_property(str)
 
@@ -223,13 +220,13 @@ class CharitySyndicate(Zeth, Faction):
     impact = 1
 
 
-faction_to_species: Mapping[type[Faction], type[Species]] = {
+to_species: Mapping[type[Faction], type[Species]] = {
     c: next(b for b in c.__bases__ if issubclass(b, Species))
     for name, c in inspect.getmembers(sys.modules[__name__])
     if inspect.isclass(c) and acp.Abstract not in c.__bases__ and issubclass(c, Faction)
 }
 
-faction_name_to_faction: Mapping[str, type[Faction]] = {
+name_to_faction: Mapping[str, type[Faction]] = {
     c.faction_name: c
     for name, c in inspect.getmembers(sys.modules[__name__])
     if inspect.isclass(c) and acp.Abstract not in c.__bases__ and issubclass(c, Faction)

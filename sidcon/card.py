@@ -8,13 +8,13 @@ from collections.abc import Collection, Mapping, Sequence, Set
 
 from frozendict import frozendict
 
-import sidcon.alien
+import sidcon.faction
 import sidcon.converter
 import sidcon.cost
 import sidcon.exception
 import sidcon.feature
 import sidcon.upgrade
-from sidcon.alien import Faction, KtZrKtRtl, Species
+from sidcon.faction import Faction, KtZrKtRtl, Species
 from sidcon.cost import Cost
 from sidcon.face import Face
 from sidcon.feature import Feature
@@ -205,8 +205,8 @@ class SpeciesCard(Card):
         try:
             species = Species.from_string(faction_name)
         except ValueError:
-            faction = sidcon.alien.faction_name_to_faction[faction_name]
-            species = sidcon.alien.faction_to_species[faction]
+            faction = sidcon.faction.name_to_faction[faction_name]
+            species = sidcon.faction.to_species[faction]
         return SpeciesCard(front=c.front, species=species)
 
 
@@ -218,7 +218,7 @@ class FactionCard(SpeciesCard):
     def from_row(cls, r: Row) -> FactionCard:
         c = super().from_row(r)
         faction_name = r.faction_name
-        faction = sidcon.alien.faction_name_to_faction[faction_name]
+        faction = sidcon.faction.name_to_faction[faction_name]
 
         return FactionCard(front=c.front, species=c.species, faction=faction)
 

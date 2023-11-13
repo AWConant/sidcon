@@ -7,7 +7,7 @@ from collections.abc import Sequence
 from pprint import pprint  # noqa
 
 import sidcon.parse
-from sidcon.alien import (
+from sidcon.faction import (
     Caylion,
     CharitySyndicate,
     EniEt,
