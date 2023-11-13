@@ -7,6 +7,8 @@ from collections.abc import Sequence
 from pprint import pprint  # noqa
 
 import sidcon.parse
+from sidcon.card import Card, KtDualCard, Starting, StartingCard, UndesirableCard
+from sidcon.converter import Converter
 from sidcon.faction import (
     Caylion,
     CharitySyndicate,
@@ -20,8 +22,6 @@ from sidcon.faction import (
     Yengii,
     Zeth,
 )
-from sidcon.card import Card, KtDualCard, Starting, StartingCard, UndesirableCard
-from sidcon.converter import Converter
 
 logging.basicConfig()
 logger = logging.getLogger(__name__)

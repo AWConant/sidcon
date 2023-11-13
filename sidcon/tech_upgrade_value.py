@@ -8,6 +8,9 @@ from collections.abc import Sequence
 from pprint import pprint  # noqa
 
 import sidcon.parse
+from sidcon.card import Card, KtDualCard, Starting, StartingCard, UndesirableCard
+from sidcon.converter import Converter
+from sidcon.face import Face
 from sidcon.faction import (
     Caylion,
     CharitySyndicate,
@@ -22,9 +25,6 @@ from sidcon.faction import (
     Yengii,
     Zeth,
 )
-from sidcon.card import Card, KtDualCard, Starting, StartingCard, UndesirableCard
-from sidcon.converter import Converter
-from sidcon.face import Face
 from sidcon.technology import Era
 
 logging.basicConfig()

@@ -4,7 +4,6 @@ import logging
 import pprint
 
 import sidcon.card
-from sidcon.faction import KtZrKtRtl
 from sidcon.card import (
     Card,
     CreatedCard,
@@ -18,6 +17,7 @@ from sidcon.card import (
     TechnologyCard,
     UndesirableCard,
 )
+from sidcon.faction import KtZrKtRtl
 from sidcon.row import Row
 
 logging.basicConfig()

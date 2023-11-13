@@ -8,15 +8,15 @@ from collections.abc import Collection, Mapping, Sequence, Set
 
 from frozendict import frozendict
 
-import sidcon.faction
 import sidcon.converter
 import sidcon.cost
 import sidcon.exception
+import sidcon.faction
 import sidcon.feature
 import sidcon.upgrade
-from sidcon.faction import Faction, KtZrKtRtl, Species
 from sidcon.cost import Cost
 from sidcon.face import Face
+from sidcon.faction import Faction, KtZrKtRtl, Species
 from sidcon.feature import Feature
 from sidcon.row import Row
 from sidcon.technology import Era, Technology
