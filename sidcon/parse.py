@@ -70,7 +70,7 @@ def cards_from_filepath(filepath: str) -> list[Card]:
         kt_rows: dict[str, Row] = dict()
         for d in dr:
             r = Row.from_dict(d)
-            if r.faction_title in skipped_card_factions:
+            if r.faction_name in skipped_card_factions:
                 continue
             if r.front_name in skipped_front_names:
                 continue
@@ -107,7 +107,7 @@ def cards_from_filepath(filepath: str) -> list[Card]:
                     card = UndesirableCard.from_row(r)
                 elif source == Source.BID:
                     # TODO: Implement research teams and colonies.
-                    if r.faction_title == "Colonies":
+                    if r.faction_name == "Colonies":
                         card = DualFacedColonyCard.from_row(r)
                 else:
                     pass

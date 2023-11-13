@@ -201,11 +201,11 @@ class SpeciesCard(Card):
     @classmethod
     def from_row(cls, r: Row) -> SpeciesCard:
         c = super().from_row(r)
-        faction_title = r.faction_title
+        faction_name = r.faction_name
         try:
-            species = Species.from_string(faction_title)
+            species = Species.from_string(faction_name)
         except ValueError:
-            faction = sidcon.alien.faction_title_to_faction[faction_title]
+            faction = sidcon.alien.faction_name_to_faction[faction_name]
             species = sidcon.alien.faction_to_species[faction]
         return SpeciesCard(front=c.front, species=species)
 
@@ -217,8 +217,8 @@ class FactionCard(SpeciesCard):
     @classmethod
     def from_row(cls, r: Row) -> FactionCard:
         c = super().from_row(r)
-        faction_title = r.faction_title
-        faction = sidcon.alien.faction_title_to_faction[faction_title]
+        faction_name = r.faction_name
+        faction = sidcon.alien.faction_name_to_faction[faction_name]
 
         return FactionCard(front=c.front, species=c.species, faction=faction)
 

@@ -77,7 +77,7 @@ def main() -> None:
 
     for faction, converter in overall_converter_by_faction.items():
         print(
-            f"{faction.title}: {overall_converter_by_faction[faction].max_input_value} -> "
+            f"{faction.faction_name}: {overall_converter_by_faction[faction].max_input_value} -> "
             f"{overall_converter_by_faction[faction].output_value}"
         )
 

@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 @typ.final
 class Column(enum.Enum):
     CARD_NUMBER = "s"
-    FACTION_TITLE = "Faction"
+    FACTION_NAME = "Faction"
     FRONT_NAME = "Front Name"
     ERA = "Era"
     COST = "Cost"
@@ -31,7 +31,7 @@ class Column(enum.Enum):
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class Row(object):
     card_number: str
-    faction_title: str
+    faction_name: str
     era: str
     cost: str
     front_name: str
@@ -53,7 +53,7 @@ class Row(object):
             upgrade3 = ""
         return cls(
             card_number=d[Column.CARD_NUMBER.value],
-            faction_title=d[Column.FACTION_TITLE.value],
+            faction_name=d[Column.FACTION_NAME.value],
             era=d[Column.ERA.value],
             cost=d[Column.COST.value],
             front_name=d[Column.FRONT_NAME.value],
@@ -69,7 +69,7 @@ class Row(object):
         self,
         *,
         card_number: str | None = None,
-        faction_title: str | None = None,
+        faction_name: str | None = None,
         era: str | None = None,
         cost: str | None = None,
         front_name: str | None = None,
@@ -82,7 +82,7 @@ class Row(object):
     ) -> "Row":
         return Row(
             card_number=card_number if card_number is not None else self.card_number,
-            faction_title=faction_title if faction_title is not None else self.faction_title,
+            faction_name=faction_name if faction_name is not None else self.faction_name,
             era=era if era is not None else self.era,
             cost=cost if cost is not None else self.cost,
             front_name=front_name if front_name is not None else self.front_name,

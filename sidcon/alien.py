@@ -17,8 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 class Species(acp.Abstract):
-    # TODO: Rename title to species_name, to disambiguate from faction name.
-    name: typ.ClassVar[str] = acp.abstract_class_property(str)
+    species_name: typ.ClassVar[str] = acp.abstract_class_property(str)
 
     @classmethod
     def from_string(cls, s: str) -> type["Species"]:
@@ -31,60 +30,58 @@ class Species(acp.Abstract):
             if (
                 acp.Abstract not in subclass.__bases__
                 and Faction not in subclass.__bases__
-                and subclass.name == s
+                and subclass.species_name == s
             ):
                 return subclass
         raise ValueError(f"couldn't parse Species from string '{s}'")
 
 
 class Faction(Species, acp.Abstract):
-    # TODO: Rename title to faction_name, to disambiguate from species name. Also update
-    # `faction_title_to_faction`.
-    title: typ.ClassVar[str] = acp.abstract_class_property(str)
+    faction_name: typ.ClassVar[str] = acp.abstract_class_property(str)
     colony_support: typ.ClassVar[float] = acp.abstract_class_property(float)
     tiebreaker: typ.ClassVar[float] = acp.abstract_class_property(float)
     impact: typ.ClassVar[int] = acp.abstract_class_property(int)
 
 
 class KtZrKtRtl(Species):
-    name = "Kt'Zr'Kt'Rtl"
+    species_name = "Kt'Zr'Kt'Rtl"
 
 
 class Kjasjavikalimm(Species):
-    name = "Kjasjavikalimm"
+    species_name = "Kjasjavikalimm"
 
 
 class Caylion(Species):
-    name = "Caylion"
+    species_name = "Caylion"
 
 
 class Faderan(Species):
-    name = "Faderan"
+    species_name = "Faderan"
 
 
 class Imdril(Species):
-    name = "Im'dril"
+    species_name = "Im'dril"
 
 
 class EniEt(Species):
-    name = "Eni Et"
+    species_name = "Eni Et"
 
 
 class Unity(Species):
-    name = "Unity"
+    species_name = "Unity"
 
 
 class Yengii(Species):
-    name = "Yengii"
+    species_name = "Yengii"
 
 
 class Zeth(Species):
-    name = "Zeth"
+    species_name = "Zeth"
 
 
 @typ.final
 class CaylionPlutocracy(Caylion, Faction):
-    title = "Caylion Plutocracy"
+    faction_name = "Caylion Plutocracy"
     colony_support = 3
     tiebreaker = 1
     impact = 0
@@ -92,7 +89,7 @@ class CaylionPlutocracy(Caylion, Faction):
 
 @typ.final
 class CaylionCollaborative(Caylion, Faction):
-    title = "Caylion Collaborative"
+    faction_name = "Caylion Collaborative"
     colony_support = 3
     tiebreaker = 0
     impact = 3
@@ -100,7 +97,7 @@ class CaylionCollaborative(Caylion, Faction):
 
 @typ.final
 class EniEtAscendancy(EniEt, Faction):
-    title = "Eni Et Ascendancy"
+    faction_name = "Eni Et Ascendancy"
     colony_support = 3
     tiebreaker = 3
     impact = 1
@@ -108,7 +105,7 @@ class EniEtAscendancy(EniEt, Faction):
 
 @typ.final
 class EniEtEngineers(EniEt, Faction):
-    title = "Eni Et Engineers"
+    faction_name = "Eni Et Engineers"
     colony_support = 3
     tiebreaker = 1.5
     impact = 0
@@ -116,7 +113,7 @@ class EniEtEngineers(EniEt, Faction):
 
 @typ.final
 class FaderanConclave(Faderan, Faction):
-    title = "Faderan Conclave"
+    faction_name = "Faderan Conclave"
     colony_support = 4
     tiebreaker = 7
     impact = 0
@@ -124,7 +121,7 @@ class FaderanConclave(Faderan, Faction):
 
 @typ.final
 class SocietyofFallingLight(Faderan, Faction):
-    title = "Society of Falling Light"
+    faction_name = "Society of Falling Light"
     colony_support = 8
     tiebreaker = -1
     impact = 2
@@ -132,7 +129,7 @@ class SocietyofFallingLight(Faderan, Faction):
 
 @typ.final
 class ImdrilNomads(Imdril, Faction):
-    title = "Im'dril Nomads"
+    faction_name = "Im'dril Nomads"
     colony_support = 0
     tiebreaker = 8
     impact = 0
@@ -140,7 +137,7 @@ class ImdrilNomads(Imdril, Faction):
 
 @typ.final
 class GrandFleet(Imdril, Faction):
-    title = "Grand Fleet"
+    faction_name = "Grand Fleet"
     colony_support = 0
     tiebreaker = 5.5
     impact = 0
@@ -148,7 +145,7 @@ class GrandFleet(Imdril, Faction):
 
 @typ.final
 class KjasjavikalimmDirectorate(Kjasjavikalimm, Faction):
-    title = "Kjasjavikalimm Directorate"
+    faction_name = "Kjasjavikalimm Directorate"
     colony_support = 6
     tiebreaker = 6
     impact = 0
@@ -156,7 +153,7 @@ class KjasjavikalimmDirectorate(Kjasjavikalimm, Faction):
 
 @typ.final
 class KjasjavikalimmIndependentNations(Kjasjavikalimm, Faction):
-    title = "Kjasjavikalimm Independent Nations"
+    faction_name = "Kjasjavikalimm Independent Nations"
     colony_support = 5
     tiebreaker = 7.5
     impact = 0
@@ -164,7 +161,7 @@ class KjasjavikalimmIndependentNations(Kjasjavikalimm, Faction):
 
 @typ.final
 class KtZrKtRtlAdhocracy(KtZrKtRtl, Faction):
-    title = "Kt'Zr'Kt'Rtl Adhocracy"
+    faction_name = "Kt'Zr'Kt'Rtl Adhocracy"
     colony_support = math.inf
     tiebreaker = math.inf
     impact = 0
@@ -172,7 +169,7 @@ class KtZrKtRtlAdhocracy(KtZrKtRtl, Faction):
 
 @typ.final
 class KtZrKtRtlTechnophiles(KtZrKtRtl, Faction):
-    title = "Kt'Zr'Kt'Rtl Technophiles"
+    faction_name = "Kt'Zr'Kt'Rtl Technophiles"
     colony_support = 3
     tiebreaker = 10
     impact = 1
@@ -180,7 +177,7 @@ class KtZrKtRtlTechnophiles(KtZrKtRtl, Faction):
 
 @typ.final
 class ShallowUnity(Unity, Faction):
-    title = "Unity"
+    faction_name = "Unity"
     colony_support = 1
     tiebreaker = 4
     impact = 0
@@ -188,7 +185,7 @@ class ShallowUnity(Unity, Faction):
 
 @typ.final
 class DeepUnity(Unity, Faction):
-    title = "Deep Unity"
+    faction_name = "Deep Unity"
     colony_support = 3
     tiebreaker = math.pi
     impact = 0
@@ -196,7 +193,7 @@ class DeepUnity(Unity, Faction):
 
 @typ.final
 class YengiiSociety(Yengii, Faction):
-    title = "Yengii Society"
+    faction_name = "Yengii Society"
     colony_support = 3
     tiebreaker = 5
     impact = 0
@@ -204,7 +201,7 @@ class YengiiSociety(Yengii, Faction):
 
 @typ.final
 class YengiiJii(Yengii, Faction):
-    title = "Yengii Jii"
+    faction_name = "Yengii Jii"
     colony_support = 3
     tiebreaker = 6.5
     impact = 2
@@ -212,7 +209,7 @@ class YengiiJii(Yengii, Faction):
 
 @typ.final
 class ZethAnocracy(Zeth, Faction):
-    title = "Zeth Anocracy"
+    faction_name = "Zeth Anocracy"
     colony_support = 3
     tiebreaker = 2
     impact = 2
@@ -220,7 +217,7 @@ class ZethAnocracy(Zeth, Faction):
 
 @typ.final
 class CharitySyndicate(Zeth, Faction):
-    title = "Charity Syndicate"
+    faction_name = "Charity Syndicate"
     colony_support = 0
     tiebreaker = 4.5
     impact = 1
@@ -232,8 +229,8 @@ faction_to_species: Mapping[type[Faction], type[Species]] = {
     if inspect.isclass(c) and acp.Abstract not in c.__bases__ and issubclass(c, Faction)
 }
 
-faction_title_to_faction: Mapping[str, type[Faction]] = {
-    c.title: c
+faction_name_to_faction: Mapping[str, type[Faction]] = {
+    c.faction_name: c
     for name, c in inspect.getmembers(sys.modules[__name__])
     if inspect.isclass(c) and acp.Abstract not in c.__bases__ and issubclass(c, Faction)
 }
