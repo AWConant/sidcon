@@ -20,8 +20,6 @@ logger = logging.getLogger(__name__)
 @typ.final
 class Face(object):
     name: str
-    # TODO(P1): Face should probably have species and faction copied to it so it can be the main
-    # entity.
     features: Sequence[Feature]  # must have at least one
     # TODO: allow this to be a single tuple, since every card except Kt has one Face it upgrades
     # to. Probably requires a name change too. Alternatively, define an `upgrade` @property that

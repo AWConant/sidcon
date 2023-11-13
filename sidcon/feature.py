@@ -7,7 +7,6 @@ import sidcon.countedunits
 import sidcon.unit
 from sidcon.converter import Converter
 from sidcon.countedunits import CountedUnits
-from sidcon.row import Row
 
 logging.basicConfig()
 logger = logging.getLogger(__name__)
@@ -42,21 +41,6 @@ class UniqueFeature(enum.Enum):
     MAY_NOT_USE_BLACK = "may not use B"
     MAY_NOT_USE_BLUE = "may not use T"
     MAY_NOT_USE_ULTRATECH = "may not use U"
-
-
-# TODO: Make this a Row method.
-def front_strings_from_row(r: Row) -> list[str]:
-    return _strings_from_string(r.front_converter)
-
-
-# TODO: Make this a Row method.
-def back_strings_from_row(r: Row) -> list[str]:
-    return _strings_from_string(r.back_converter)
-
-
-def _strings_from_string(s: str) -> list[str]:
-    strings = s.split(",")
-    return list(filter(lambda s: s != "", strings))
 
 
 def from_string(s: str) -> Feature:

@@ -99,3 +99,16 @@ class Row(object):
     @property
     def upgrade_strings(self) -> list[str]:
         return list(filter(lambda s: s != "", [self.upgrade1, self.upgrade2, self.upgrade3]))
+
+    @property
+    def front_feature_strings(self) -> list[str]:
+        return self._strings_from_string(self.front_converter)
+
+    @property
+    def back_feature_strings(self) -> list[str]:
+        return self._strings_from_string(self.back_converter)
+
+    @staticmethod
+    def _strings_from_string(s: str) -> list[str]:
+        strings = s.split(",")
+        return list(filter(lambda s: s != "", strings))
