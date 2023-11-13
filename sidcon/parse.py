@@ -185,9 +185,7 @@ def pprint_species_cards(species):
     cards = [card for card in cards if hasattr(card, "species") and card.species == species]
 
     starting_cards = [c for c in cards if isinstance(c, StartingCard)]
-    # tech_cards = sorted(
-    #    [c for c in cards if isinstance(c, TechnologyCard)], key=lambda c: c.era.value
-    # )
+    tech_cards = sorted([c for c in cards if isinstance(c, TechnologyCard)], key=lambda c: c.era)
     other_cards = [
         c for c in cards if not isinstance(c, TechnologyCard) and not isinstance(c, StartingCard)
     ]
@@ -196,14 +194,12 @@ def pprint_species_cards(species):
     pprint.pprint(starting_cards)
     print()
     print()
-    # print("############## TECH CARDS ##############")
-    # pprint.pprint(tech_cards)
-    # print()
-    # print()
+    print("############## TECH CARDS ##############")
+    pprint.pprint(tech_cards)
+    print()
+    print()
     print("############## OTHER CARDS ##############")
     pprint.pprint(other_cards)
-    print()
-    print()
 
 
 if __name__ == "__main__":
