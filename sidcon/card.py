@@ -168,7 +168,7 @@ class Card(object):
     front: Face
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self.front.name
 
     @property

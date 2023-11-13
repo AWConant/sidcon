@@ -39,44 +39,35 @@ class Face(object):
             raise ValueError(f"Face '{self.name}' has no unambiguous single Upgrade")
         return self.upgrades[0][0]
 
-    # TODO: type hint @properties everywhere that lack return types.
     @property
-    def converter(self):
+    def converter(self) -> Converter:
         if len(self.features) != 1 or not isinstance(self.features[0], Converter):
             raise ValueError(f"Face '{self.name}' has no unambiguous single Converter")
         return self.features[0]
 
     @property
-    def input_value(self):
-        if len(self.features) > 1:
-            raise ValueError(
-                f"Face '{self.name}' with multiple features has no unambiguous input value"
-            )
-        return self.features[0].input_value
+    def input_value(self) -> float:
+        return self.converter.input_value
 
     @property
-    def output_value(self):
-        if len(self.features) > 1:
-            raise ValueError(
-                f"Face '{self.name}' with multiple features has no unambiguous output value"
-            )
-        return self.features[0].output_value
+    def output_value(self) -> float:
+        return self.converter.output_value
 
     @property
-    def min_input_value(self):
-        return min(c.min_input_value for c in self.features)
+    def min_input_value(self) -> float:
+        return min(c.min_input_value for c in self.features if isinstance(c, Converter))
 
     @property
-    def max_input_value(self):
-        return max(c.max_input_value for c in self.features)
+    def max_input_value(self) -> float:
+        return max(c.max_input_value for c in self.features if isinstance(c, Converter))
 
     @property
-    def min_output_value(self):
-        return min(c.output_value for c in self.features)
+    def min_output_value(self) -> float:
+        return min(c.output_value for c in self.features if isinstance(c, Converter))
 
     @property
-    def max_output_value(self):
-        return max(c.output_value for c in self.features)
+    def max_output_value(self) -> float:
+        return max(c.output_value for c in self.features if isinstance(c, Converter))
 
     @classmethod
     def from_strings(
