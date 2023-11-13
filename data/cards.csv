@@ -171,13 +171,13 @@ s,Faction,Front Name,Era,Cost,Front Factory,Upgrade1,Upgrade2,Back Name,Back Fac
 170,Kt'Zr'Kt'Rtl Adhocracy,Galactic Telecomm Control,3,Researched,BBBB➪$$$bbg,Poly Species Corporations,Social Exodus,Galactic Domination,BBBB➪$$$$Ybbg,6,12,2.000,16.5,2.750,1.375
 171,Kt'Zr'Kt'Rtl Adhocracy,Temporal Dilation,3,Researched,TTTT➪$$Ubbw,Megastructures,Matter Generation,Stasis Field,TTTT➪$$$Ubbw+U,6,12,2.000,18,3.000,1.500
 172,Kt'Zr'Kt'Rtl Adhocracy,Matter Generation,3,Researched,YYYY➪$$UBww,Poly Species Corporations,Temporal Dilation,Macroscale Teleportation,YYYY➪$$$UBwww,6,12.5,2.083,16.5,2.750,1.320
-173,Kt'Zr'Kt'Rtl Adhocracy,Polyutility Components,0,Starting,*,Atomic Transmutation,Quantum Computers,Adaptive Architecture,*T,,,,,,
+173,Kt'Zr'Kt'Rtl Adhocracy,Polyutility Components,0,Starting,➪*,Atomic Transmutation,Quantum Computers,Adaptive Architecture,➪*T,,,,,,
 174,Kt'Zr'Kt'Rtl Adhocracy,Hand Crafted,0,Starting,➪T,Organic Construction,Achronal Analysis,Microfabricated,➪gbU,0,4,1000.000,7.5,1000.000,1.875
 175,Kt'Zr'Kt'Rtl Adhocracy,Atomic Transmutation,1,Researched,U➪BBg,Ubiquitous Cultural Repository,Nanotechnology,Pseudomaterials,U➪BBgY,3,4,1.333,5.5,1.833,1.375
-176,Kt'Zr'Kt'Rtl Adhocracy,High-Risk Laboratories,0,Starting,wgbb,Hyperspace Mining,Singularity Control,Stellar Power Harnessing,wwggbb,,,,,,
+176,Kt'Zr'Kt'Rtl Adhocracy,High-Risk Laboratories,0,Starting,➪wgbb,Hyperspace Mining,Singularity Control,Stellar Power Harnessing,➪wwggbb,,,,,,
 177,Kt'Zr'Kt'Rtl Adhocracy,Anarchic Sacrificial,0,Starting,U➪,Clinical Immortality,Universal Translator,Polysystem,U➪B,3,4,1.333,7.5,2.500,1.875
 178,Kt'Zr'Kt'Rtl Adhocracy,Singularity Control,2,Researched,UU➪YYBwbg*,Hyperspace Mining,Achronal Analysis,Wormhole Grid,UU➪YYBwbg*wb,6,8.5,1.417,10.5,1.750,1.235
-179,Kt'Zr'Kt'Rtl Adhocracy,Diffusion,0,Starting,TYB****,Nanotechnology,Genetic Engineering,Teleological Redesign,TYB****+wb,,,,,,
+179,Kt'Zr'Kt'Rtl Adhocracy,Diffusion,0,Starting,➪TYB****,Nanotechnology,Genetic Engineering,Teleological Redesign,➪TYB****+wb,,,,,,
 180,Kt'Zr'Kt'Rtl Adhocracy,Expansive Social,0,Starting,ggggg➪,Cross Species Ethical Equality,Interspecies Medical Exchange,Psychohistoric,ggggg➪wb,5,8.5,1.700,12.5,2.500,1.471
 181,Kt'Zr'Kt'Rtl Adhocracy,Megastructures,3,Researched,UUU➪$$$$$bb,Temporal Dilation,Matter Generation,Dyson Swarms,UUU➪$$$$$$bbT,9,17,1.889,21.5,2.389,1.265
 182,Kt'Zr'Kt'Rtl Adhocracy,Phases,,Reference,,,,,,,,,,,
